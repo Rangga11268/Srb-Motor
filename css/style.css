@@ -341,23 +341,26 @@ section {
 
 .our-advantages .box-container .box {
   background: #fff;
-  padding: 2.5rem;
+  padding: 2rem;
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   border: var(--border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .our-advantages .box-container .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 1.5rem rgba(4, 54, 128, 0.15);
+  background: var(--dark-blue);
 }
 
 .our-advantages .box-container .box i {
-  font-size: 4rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: var(--primary);
+  color: var(--dark-blue);
 }
 
 .our-advantages .box-container .box h3 {
@@ -366,10 +369,19 @@ section {
   margin-bottom: 1rem;
 }
 
+.our-advantages .box-container .box:hover h3 {
+  color: #fff;
+}
+
 .our-advantages .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--light-color);
-  line-height: 1.7;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.our-advantages .box-container .box:hover p {
+  color: var(--light-blue);
 }
 
 .services .box-container {
