@@ -135,14 +135,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var motorDetailModal = document.getElementById('motorDetailModal');
   if (motorDetailModal) {
     motorDetailModal.addEventListener('show.bs.modal', function (event) {
-      // Tombol yang memicu modal
+      // Tombol yang klik modal
       var button = event.relatedTarget;
 
       // Ekstrak informasi dari atribut data-*
       var motorName = button.getAttribute('data-motor-name');
       var motorPriceValue = button.getAttribute('data-motor-price-value');
       var motorImage = button.getAttribute('data-motor-image');
-      var motorDetailsHtml = button.getAttribute('data-motor-details-html');
+      // motorDetailsHtml adalah untuk ringkasan di kartu, kita akan gunakan motorSpecificationsHtml untuk modal
+      var motorSpecificationsHtml = button.getAttribute('data-motor-specifications-html');
 
       // Update konten modal
       var modalTitle = motorDetailModal.querySelector('.modal-title');
@@ -158,11 +159,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (modalMotorPriceSpan) modalMotorPriceSpan.textContent = motorPriceValue || 'N/A';
       
       if (modalMotorDetailsP && modalMotorDetailsFullDiv) {
-        if (motorDetailsHtml && motorDetailsHtml.trim() !== "") {
-          modalMotorDetailsP.innerHTML = motorDetailsHtml;
+        if (motorSpecificationsHtml && motorSpecificationsHtml.trim() !== "") {
+          modalMotorDetailsP.innerHTML = motorSpecificationsHtml;
           modalMotorDetailsFullDiv.style.display = 'block';
         } else {
-          modalMotorDetailsP.innerHTML = 'Informasi detail tidak tersedia.';
+          modalMotorDetailsP.innerHTML = 'Spesifikasi lengkap tidak tersedia.';
           modalMotorDetailsFullDiv.style.display = 'block';
         }
       }
