@@ -32,6 +32,10 @@ section {
   padding: 2rem 9%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .heading {
   padding-bottom: 2rem;
   text-align: center;
@@ -399,16 +403,15 @@ section {
 }
 
 .about-us .box-container .box .about-us-image {
-  display: block; /* Memastikan margin auto bekerja untuk centering */
-  width: 90%; /* Lebar responsif di dalam box */
-  max-width: 550px; /* Lebar maksimal agar tidak terlalu besar di layar lebar */
-  height: auto; /* Menjaga rasio aspek gambar */
-  margin: 0 auto 2.5rem auto; /* Margin atas 0, kiri/kanan auto, bawah 2.5rem */
-  border-radius: .5rem; /* Sesuai dengan elemen lain */
-  object-fit: cover; /* Memastikan gambar mengisi area dengan baik */
-  box-shadow: var(--box-shadow); /* Menggunakan variabel shadow yang sudah ada */
+  display: block;
+  width: 90%;
+  max-width: 550px;
+  height: auto;
+  margin: 0 auto 2.5rem auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: var(--box-shadow);
 }
-
 
 .about-us .box-container .box i {
   height: 6rem;
@@ -424,7 +427,6 @@ section {
 .about-us .box-container .box h3 {
   font-size: 2.2rem;
   color: var(--dark-blue);
-  /* text-align: center; sudah diatur oleh .box */
 }
 
 .about-us .box-container .box p {
@@ -432,24 +434,35 @@ section {
   padding: 1rem 0;
   font-size: 1.4rem;
   color: var(--light-color);
-  /* text-align: center; sudah diatur oleh .box */
 }
 
-.about-us .box-container .box:hover {
+/* .about-us .box-container .box:hover {
   background: var(--dark-blue);
-}
+} */
 
-.about-us .box-container .box:hover h3 {
+/* .about-us .box-container .box:hover h3 {
   color: #fff;
 }
 
 .about-us .box-container .box:hover p {
   color: var(--light-blue);
-}
+} */
 
 .featured .featured-slider {
   padding: 1rem;
   padding-bottom: 4rem;
+}
+
+.featured h2.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured h2.heading .brand-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
 }
 
 .featured .featured-slider .box {
@@ -487,23 +500,21 @@ section {
   color: var(--dark-blue);
 }
 
-/* promotions section styles */
 .promotions {
-  background-color: var(--light-blue); /* Memberi sedikit perbedaan latar belakang */
+  background-color: var(--light-blue);
   text-align: center;
 }
 
 .promotions .heading {
-  /* Menggunakan style .heading global */
-  margin-bottom: 1rem; /* Sedikit ruang setelah heading */
+  margin-bottom: 1rem;
 }
 
-.promotions > p { /* Target paragraf deskripsi langsung di bawah .promotions */
+.promotions > p {
   font-size: 1.5rem;
   color: var(--light-color);
   line-height: 1.8;
   max-width: 70rem;
-  margin: 0 auto 3rem auto; /* Tengah dan beri jarak bawah sebelum box */
+  margin: 0 auto 3rem auto;
 }
 
 .promotions .box-container {
@@ -522,7 +533,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .promotions .box-container .box:hover {
@@ -552,7 +563,7 @@ section {
   color: var(--light-color);
   line-height: 1.8;
   padding-bottom: 1.5rem;
-  flex-grow: 1; /* Agar paragraf mengisi ruang yang tersedia */
+  flex-grow: 1;
 }
 
 .reviews .review-slider {
@@ -755,4 +766,25 @@ section {
   .heading {
     font-size: 3rem;
   }
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+}
+
+.modal-header {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  border-bottom: var(--border);
+}
+
+.modal-header .modal-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top: var(--border);
 }

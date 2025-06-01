@@ -9,12 +9,20 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      rel="noopener"
     />
 
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
     />
     <!-- fav icon -->
     <link
@@ -130,7 +138,18 @@
                 <span class="fas fa-circle"></span> CBS
                 <span class="fas fa-circle"></span> SmartKey
               </p>
-              <a href="#" class="btn">Lihat Detail</a>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="Honda beat sporty cbs"
+                data-motor-price-value="Rp. 18.800.000,-"
+                data-motor-image="assets/img/honda/beat.png"
+                data-motor-details-html="new <span class='fas fa-circle'></span> 2025 <span class='fas fa-circle'></span> Metic <span class='fas fa-circle'></span> CBS <span class='fas fa-circle'></span> SmartKey"
+              >
+                Lihat Detail
+              </a>
             </div>
           </div>
 
@@ -149,7 +168,18 @@
                 <span class="fas fa-circle"></span> CBS
                 <span class="fas fa-circle"></span> SmartKey
               </p>
-              <a href="#" class="btn">Lihat Detail</a>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="Honda beat smart key"
+                data-motor-price-value="Rp. 18.800.000,-"
+                data-motor-image="assets/img/honda/Honda-Beat-Sporty-Deluxe-SmartKey-Matte-Black.png"
+                data-motor-details-html="new <span class='fas fa-circle'></span> 2025 <span class='fas fa-circle'></span> Metic <span class='fas fa-circle'></span> CBS <span class='fas fa-circle'></span> SmartKey"
+              >
+                Lihat Detail
+              </a>
             </div>
           </div>
 
@@ -165,7 +195,18 @@
                 <span class="fas fa-circle"></span> petrol
                 <span class="fas fa-circle"></span> ABS
               </p>
-              <a href="#" class="btn">Lihat detail</a>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="Yamaha All New Aerox 155"
+                data-motor-price-value="-"
+                data-motor-image="assets/img/yamaha/aerox 155.png"
+                data-motor-details-html="new <span class='fas fa-circle'></span> 2025 <span class='fas fa-circle'></span> Metic <span class='fas fa-circle'></span> petrol <span class='fas fa-circle'></span> ABS"
+              >
+                Lihat Detail
+              </a>
             </div>
           </div>
 
@@ -181,7 +222,18 @@
                 <span class="fas fa-circle"></span> petrol
                 <span class="fas fa-circle"></span> 183mph
               </p>
-              <a href="#" class="btn">Lihat detail</a>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="Fazzio Neo hybird"
+                data-motor-price-value="-"
+                data-motor-image="assets/img/yamaha/Fazzio.png"
+                data-motor-details-html="new <span class='fas fa-circle'></span> 2021 <span class='fas fa-circle'></span> automatic <span class='fas fa-circle'></span> petrol <span class='fas fa-circle'></span> 183mph"
+              >
+                Lihat Detail
+              </a>
             </div>
           </div>
 
@@ -197,7 +249,18 @@
                 <span class="fas fa-circle"></span> petrol
                 <span class="fas fa-circle"></span> 183mph
               </p>
-              <a href="#" class="btn">Lihat detail</a>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="Grand Filano neo hybird"
+                data-motor-price-value="-"
+                data-motor-image="assets/img/yamaha/Grand Filano.png"
+                data-motor-details-html="new <span class='fas fa-circle'></span> 2021 <span class='fas fa-circle'></span> automatic <span class='fas fa-circle'></span> petrol <span class='fas fa-circle'></span> 183mph"
+              >
+                Lihat Detail
+              </a>
             </div>
           </div>
         </div>
@@ -212,7 +275,11 @@
 
       <div class="box-container">
         <div class="box">
-          <img src="assets/img/about us.jpeg" alt="Interior Showroom SRB Motors" class="about-us-image">
+          <img
+            src="assets/img/about us.jpeg"
+            alt="Interior Showroom SRB Motors"
+            class="about-us-image"
+          />
           <h3>SRB Motors: Your Ride, Our Passion</h3>
           <p>
             Welcome to SRB Motors! We are more than just a dealership; we are
@@ -234,21 +301,32 @@
     <section class="featured" id="featured">
       <h1 class="heading"><span>Galeri</span> Motors</h1>
 
+      <h2 class="heading">
+        <img
+          src="assets/icon/yamaha-3d-vector.jpg"
+          alt="Yamaha Logo"
+          class="brand-logo"
+        />
+        Yamaha
+      </h2>
       <div class="swiper featured-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide box">
             <img src="assets/img/yamaha/aerox 155.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">Lihat Detail</a>
+              <div class="price">Rp. 28.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Aerox"
+                data-motor-price-value="Rp. 28.000.000,-"
+                data-motor-image="assets/img/yamaha/aerox 155.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -256,15 +334,18 @@
             <img src="assets/img/yamaha/Fazzio.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">Lihat Detail</a>
+              <div class="price">Rp. 23.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Fazzio"
+                data-motor-price-value="Rp. 23.000.000,-"
+                data-motor-image="assets/img/yamaha/Fazzio.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -272,15 +353,18 @@
             <img src="assets/img/yamaha/Grand Filano.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">Lihat detail</a>
+              <div class="price">Rp. 27.500.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Grand Filano"
+                data-motor-price-value="Rp. 27.500.000,-"
+                data-motor-image="assets/img/yamaha/Grand Filano.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -288,15 +372,18 @@
             <img src="assets/img/yamaha/alpha-cyber.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">check out</a>
+              <div class="price">Rp. 21.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Alpha Cyber"
+                data-motor-price-value="Rp. 21.000.000,-"
+                data-motor-image="assets/img/yamaha/alpha-cyber.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -304,37 +391,46 @@
             <img src="assets/img/yamaha/NMax-Turbo-Magma-Black.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">check out</a>
+              <div class="price">Rp. 38.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model NMax Turbo"
+                data-motor-price-value="Rp. 38.000.000,-"
+                data-motor-image="assets/img/yamaha/NMax-Turbo-Magma-Black.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
         </div>
 
         <div class="swiper-pagination"></div>
       </div>
-
+      <h2 class="heading">
+        <img src="assets/icon/honda.svg" alt="Honda Logo" class="brand-logo" />
+        Honda
+      </h2>
       <div class="swiper featured-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide box">
             <img src="assets/img/honda/beat.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">Lihat detail</a>
+              <div class="price">Rp. 19.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Beat"
+                data-motor-price-value="Rp. 19.000.000,-"
+                data-motor-image="assets/img/honda/beat.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -345,15 +441,18 @@
             />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">Lihat detail</a>
+              <div class="price">Rp. 19.800.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Beat SmartKey"
+                data-motor-price-value="Rp. 19.800.000,-"
+                data-motor-image="assets/img/honda/Honda-Beat-Sporty-Deluxe-SmartKey-Matte-Black.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -361,15 +460,18 @@
             <img src="assets/img/honda/pcx 160.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">check out</a>
+              <div class="price">Rp. 33.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model PCX 160"
+                data-motor-price-value="Rp. 33.000.000,-"
+                data-motor-image="assets/img/honda/pcx 160.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -377,15 +479,18 @@
             <img src="assets/img/honda/adv 160.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">check out</a>
+              <div class="price">Rp. 37.000.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model ADV 160"
+                data-motor-price-value="Rp. 37.000.000,-"
+                data-motor-image="assets/img/honda/adv 160.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
 
@@ -393,15 +498,18 @@
             <img src="assets/img/honda/vario 125.png" alt="" />
             <div class="content">
               <h3>new model</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="price">$55,000/-</div>
-              <a href="#" class="btn">check out</a>
+              <div class="price">Rp. 23.500.000,-</div>
+              <a
+                href="javascript:void(0);"
+                class="btn detail-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#motorDetailModal"
+                data-motor-name="New Model Vario 125"
+                data-motor-price-value="Rp. 23.500.000,-"
+                data-motor-image="assets/img/honda/vario 125.png"
+                data-motor-details-html="Model terbaru dengan desain menawan."
+                >Lihat Detail</a
+              >
             </div>
           </div>
         </div>
@@ -413,26 +521,18 @@
     <section class="promotions" id="promotions">
       <h1 class="heading"><span>Penawaran</span> Spesial</h1>
       <p>
-        Jangan lewatkan promo terbaru dari SRB Motors! Dapatkan penawaran terbaik untuk motor impian Anda.
+        Jangan lewatkan promo terbaru dari SRB Motors! Dapatkan penawaran
+        terbaik untuk motor impian Anda.
       </p>
       <div class="box-container">
         <div class="box">
           <i class="fas fa-percent"></i>
           <h3>Cicilan 0%</h3>
-          <p>Nikmati cicilan 0% hingga 12 bulan untuk model motor tertentu. Syarat & ketentuan berlaku.</p>
+          <p>
+            Nikmati cicilan 0% hingga 12 bulan untuk model motor tertentu.
+            Syarat & ketentuan berlaku.
+          </p>
           <a href="#contact" class="btn">Tanya Sekarang</a>
-        </div>
-        <div class="box">
-          <i class="fas fa-tools"></i>
-          <h3>Gratis Servis Pertama</h3>
-          <p>Setiap pembelian motor baru mendapatkan gratis biaya servis pertama sesuai jadwal.</p>
-          <a href="#vehicles" class="btn">Lihat Motor</a>
-        </div>
-        <div class="box">
-          <i class="fas fa-gift"></i>
-          <h3>Paket Aksesoris</h3>
-          <p>Dapatkan diskon khusus untuk paket aksesoris pilihan setiap pembelian motor baru.</p>
-          <a href="#contact" class="btn">Info Lanjut</a>
         </div>
       </div>
     </section>
@@ -579,50 +679,148 @@
       <div class="box-container">
         <div class="box">
           <h3>Our Branches</h3>
-          <a href="#"> <i class="fas fa-map-marker-alt"></i> India </a>
-          <a href="#"> <i class="fas fa-map-marker-alt"></i> Japan </a>
-          <a href="#"> <i class="fas fa-map-marker-alt"></i> France </a>
-          <a href="#"> <i class="fas fa-map-marker-alt"></i> Russia </a>
-          <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Bekasi </a>
         </div>
 
         <div class="box">
           <h3>quick links</h3>
-          <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
-          <a href="#vehicles"> <i class="fas fa-arrow-right"></i> vehicles </a>
+          <a href="#home"> <i class="fas fa-arrow-right"></i> home </a>
+          <a href="#vehicles">
+            <i class="fas fa-arrow-right"></i> motor populer
+          </a>
           <a href="#about-us"> <i class="fas fa-arrow-right"></i> about us </a>
-          <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
-          <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
-          <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+          <a href="#featured">
+            <i class="fas fa-arrow-right"></i> galeri motors</a
+          >
+          <a href="#reviews"> <i class="fas fa-arrow-right"></i> reviews </a>
+          <a href="#contact"> <i class="fas fa-arrow-right"></i> contact </a>
         </div>
 
         <div class="box">
           <h3>contact info</h3>
-          <a href="#"> <i class="fas fa-phone"></i> 7022694800 </a>
-          <a href="#"> <i class="fas fa-phone"></i> 9738443482 </a>
+          <a href="#"> <i class="fas fa-phone"></i> 08978638849 </a>
+          <a href="#"> <i class="fas fa-phone"></i> 08978638973 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> @gmail.com </a>
           <a href="#">
-            <i class="fas fa-envelope"></i> reetkumarbind@gmail.com
-          </a>
-          <a href="#">
-            <i class="fas fa-map-marker-alt"></i> New Delhi 110092
+            <i class="fas fa-map-marker-alt"></i> Jl lori sakti Rt 01 Rw 01 No
+            22 Kaliabang tengah Bekasi utara
           </a>
         </div>
 
         <div class="box">
           <h3>contact info</h3>
-          <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-          <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+          <a href="#"> <i class="fab fa-whatsapp"></i> whatsapp </a>
           <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-          <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-          <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
         </div>
       </div>
 
-      <div class="credit">&#169; Created by Reet | All Rights Reserved</div>
+      <div class="credit">&#169; Created by SRB Team | All Rights Reserved</div>
     </section>
 
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- Modal Detail Motor -->
+    <div
+      class="modal fade"
+      id="motorDetailModal"
+      tabindex="-1"
+      aria-labelledby="motorDetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="motorDetailModalLabel">Detail Motor</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-5 text-center">
+                <img
+                  src="assets/icon/logo trans.png"
+                  id="modalMotorImage"
+                  class="img-fluid mb-3"
+                  alt="Gambar Motor"
+                  style="max-height: 300px; object-fit: contain"
+                />
+              </div>
+              <div class="col-md-7">
+                <h3
+                  id="modalMotorName"
+                  style="
+                    color: var(--dark-blue);
+                    font-size: 2.4rem;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Nama Motor
+                </h3>
+                <p
+                  id="modalMotorPrice"
+                  class="price"
+                  style="
+                    font-size: 2rem;
+                    color: var(--primary);
+                    font-weight: bold;
+                  "
+                >
+                  Harga: <span style="color: var(--dark-blue)"></span>
+                </p>
+                <div id="modalMotorDetailsFull">
+                  <h4
+                    style="
+                      font-size: 1.8rem;
+                      color: var(--dark-blue);
+                      margin-top: 1.5rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    Spesifikasi:
+                  </h4>
+                  <p
+                    id="modalMotorDetails"
+                    style="
+                      font-size: 1.5rem;
+                      color: var(--light-color);
+                      line-height: 1.7;
+                    "
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+            <a
+              href="https://wa.me/628978638849?text=Halo%20SRB%20Motors%2C%20saya%20tertarik%20untuk%20bertanya%20lebih%20lanjut."
+              id="modalOrderButton"
+              class="btn"
+              style="background: var(--primary); color: #fff"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/script.js"></script>
   </body>
 </html>

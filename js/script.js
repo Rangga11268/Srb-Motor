@@ -130,3 +130,42 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var motorDetailModal = document.getElementById('motorDetailModal');
+  if (motorDetailModal) {
+    motorDetailModal.addEventListener('show.bs.modal', function (event) {
+      // Tombol yang memicu modal
+      var button = event.relatedTarget;
+
+      // Ekstrak informasi dari atribut data-*
+      var motorName = button.getAttribute('data-motor-name');
+      var motorPriceValue = button.getAttribute('data-motor-price-value');
+      var motorImage = button.getAttribute('data-motor-image');
+      var motorDetailsHtml = button.getAttribute('data-motor-details-html');
+
+      // Update konten modal
+      var modalTitle = motorDetailModal.querySelector('.modal-title');
+      var modalMotorImageEl = motorDetailModal.querySelector('#modalMotorImage');
+      var modalMotorNameEl = motorDetailModal.querySelector('#modalMotorName');
+      var modalMotorPriceSpan = motorDetailModal.querySelector('#modalMotorPrice span');
+      var modalMotorDetailsP = motorDetailModal.querySelector('#modalMotorDetails');
+      var modalMotorDetailsFullDiv = motorDetailModal.querySelector('#modalMotorDetailsFull');
+
+      if (modalTitle) modalTitle.textContent = motorName || 'Detail Motor';
+      if (modalMotorImageEl) modalMotorImageEl.src = motorImage || 'assets/icon/logo trans.png'; 
+      if (modalMotorNameEl) modalMotorNameEl.textContent = motorName || 'Nama Tidak Tersedia';
+      if (modalMotorPriceSpan) modalMotorPriceSpan.textContent = motorPriceValue || 'N/A';
+      
+      if (modalMotorDetailsP && modalMotorDetailsFullDiv) {
+        if (motorDetailsHtml && motorDetailsHtml.trim() !== "") {
+          modalMotorDetailsP.innerHTML = motorDetailsHtml;
+          modalMotorDetailsFullDiv.style.display = 'block';
+        } else {
+          modalMotorDetailsP.innerHTML = 'Informasi detail tidak tersedia.';
+          modalMotorDetailsFullDiv.style.display = 'block';
+        }
+      }
+    });
+  }
+});
