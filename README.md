@@ -38,7 +38,7 @@ Ini adalah website responsif dan interaktif untuk "SRB Motors", sebuah dealer mo
 ## Contact
 Untuk informasi lebih lanjut, Anda dapat menghubungi SRB Motors:
 - **Telepon/WhatsApp:** 08978638849, 08978638973
-- **Email:** [@gmail.com](mailto:@gmail.com)
+- **Email:** darrelrangga[@gmail.com](mailto:@gmail.com)
 - **Alamat:** Jl lori sakti Rt 01 Rw 01 No 22 Kaliabang tengah Bekasi utara
 - **Instagram:** Melalui tautan yang disediakan di website
 
