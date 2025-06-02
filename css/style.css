@@ -698,6 +698,27 @@ a {
   color: var(--dark-blue);
 }
 
+.modal-content {
+  border-radius: 0.5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+}
+
+.modal-header {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  border-bottom: var(--border);
+}
+
+.modal-header .modal-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top: var(--border);
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -766,25 +787,4 @@ a {
   .heading {
     font-size: 3rem;
   }
-}
-
-.modal-content {
-  border-radius: 0.5rem;
-  border: var(--border);
-  box-shadow: var(--box-shadow);
-}
-
-.modal-header {
-  background-color: var(--light-blue);
-  color: var(--dark-blue);
-  border-bottom: var(--border);
-}
-
-.modal-header .modal-title {
-  font-size: 2.2rem;
-  font-weight: 600;
-}
-
-.modal-footer {
-  border-top: var(--border);
 }
