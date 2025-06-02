@@ -73,6 +73,10 @@ a {
   text-align: center;
 }
 
+.btn.home-parallax {
+  margin-top: 3rem;
+}
+
 .btn.login {
   background: var(--dark-blue);
   color: #fff;
@@ -253,6 +257,7 @@ a {
 
 .home {
   padding-top: 10rem;
+  margin-bottom: 4rem;
   text-align: center;
   overflow-x: hidden;
 }
@@ -776,6 +781,9 @@ a {
     margin: 2rem;
     display: block;
     font-size: 2rem;
+  }
+  .home img {
+    margin-top: 3rem;
   }
 }
 
