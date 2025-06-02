@@ -53,6 +53,8 @@ document.querySelector('.home').onmouseleave = (e) =>{
 
 };
 
+
+// SWIPER JS
 var swiper = new Swiper(".vehicles-slider", {
   grabCursor: true,
   centeredSlides: true,  
@@ -131,6 +133,7 @@ var swiper = new Swiper(".review-slider", {
   },
 });
 
+// MODAL BOX
 document.addEventListener('DOMContentLoaded', function () {
   var motorDetailModal = document.getElementById('motorDetailModal');
   if (motorDetailModal) {
@@ -170,3 +173,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// FORMSPREE

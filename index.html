@@ -675,20 +675,40 @@
           loading="lazy"
         ></iframe>
 
-        <form action="https://formspree.io/f/xnnvqqwg" method="POST" id="contactForm">
+        <form
+          action="https://formspree.io/f/xnnvqqwg"
+          method="POST"
+          id="contactForm"
+        >
           <h3>Hubungi Kami</h3>
- <input type="text" name="name" placeholder="Masukan nama" class="box" required />
- <input type="email" name="email" placeholder="Masukan email" class="box" required />
- <input type="text" name="subject" placeholder="subject" class="box" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Masukan nama"
+            class="box"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Masukan email"
+            class="box"
+            required
+          />
+          <input type="text" name="subject" placeholder="subject" class="box" />
 
           <textarea
             placeholder="Masukan pesan"
+            name="message"
             class="box"
             cols="30"
             rows="10"
           ></textarea>
           <input type="submit" value="Kirim" class="btn" />
- <p id="contactFormStatus" style="margin-top: 1rem; font-size: 1.4rem;"></p>
+          <p
+            id="contactFormStatus"
+            style="margin-top: 1rem; font-size: 1.4rem"
+          ></p>
         </form>
       </div>
     </section>
@@ -716,12 +736,19 @@
 
         <div class="box">
           <h3>contact info</h3>
-          <a href="#"> <i class="fas fa-phone"></i> 08978638849 </a>
-          <a href="#"> <i class="fas fa-phone"></i> 08978638973 </a>
-          <a href="#">
+          <a href="tel:08978638849">
+            <i class="fas fa-phone"></i> 08978638849
+          </a>
+          <a href="tel:08978638973">
+            <i class="fas fa-phone"></i> 08978638973
+          </a>
+          <a href="mailto:darrelrangga@gmail.com">
             <i class="fas fa-envelope"></i> darrelrangga@gmail.com
           </a>
-          <a href="#">
+          <a
+            href="https://maps.google.com/?q=Jl%20lori%20sakti%20Rt%2001%20Rw%2001%20No%2022%20Kaliabang%20tengah%20Bekasi%20utara"
+            target="_blank"
+          >
             <i class="fas fa-map-marker-alt"></i> Jl lori sakti Rt 01 Rw 01 No
             22 Kaliabang tengah Bekasi utara
           </a>
@@ -729,15 +756,17 @@
 
         <div class="box">
           <h3>contact info</h3>
-          <a href="#"> <i class="fab fa-whatsapp"></i> whatsapp </a>
-          <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="https://wa.me/628978638849" target="_blank">
+            <i class="fab fa-whatsapp"></i> whatsapp
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="fab fa-instagram"></i> instagram
+          </a>
         </div>
       </div>
 
       <div class="credit">&#169; Created by SRB Team | All Rights Reserved</div>
     </section>
-
-    <!-- Modal Detail Motor -->
     <div
       class="modal fade"
       id="motorDetailModal"
@@ -821,7 +850,7 @@
               Tutup
             </button>
             <a
-              href="https://wa.me/628978638849?text=Halo%20SRB%20Motors%2C%20saya%20tertarik%20untuk%20bertanya%20lebih%20lanjut."
+              href="https://wa.me/628978638849?text=Halo%20SRB%20Motors%2C%20saya%20tertarik%20untuk%20bertanya%20lebih%20lanjut%20mengenai%20motor%20yang%20ada%20di%20website."
               id="modalOrderButton"
               class="btn"
               style="background: var(--primary); color: #fff"
@@ -850,7 +879,7 @@
         })
           .then((response) => {
             if (response.ok) {
-              status.innerHTML = "Thanks for your submission!";
+              status.innerHTML = "Terima kasih! Pesan Anda telah terkirim.";
               form.reset();
             } else {
               response.json().then((data) => {
@@ -860,13 +889,14 @@
                     .join(", ");
                 } else {
                   status.innerHTML =
-                    "Oops! There was a problem submitting your form";
+                    "Oops! Terjadi masalah saat mengirim formulir Anda.";
                 }
               });
             }
           })
           .catch((error) => {
-            status.innerHTML = "Oops! There was a problem submitting your form";
+            status.innerHTML =
+              "Oops! Terjadi masalah saat mengirim formulir Anda.";
           });
       }
       form.addEventListener("submit", handleSubmit);
