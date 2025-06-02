@@ -780,45 +780,6 @@
         </div>
       </div>
     </div>
-    <!-- formspree -->
-    <script>
-      var form = document.getElementById("contactForm");
-
-      async function handleSubmit(event) {
-        event.preventDefault();
-        var status = document.getElementById("contactFormStatus");
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
-        })
-          .then((response) => {
-            if (response.ok) {
-              status.innerHTML = "Terima kasih! Pesan Anda telah terkirim.";
-              form.reset();
-            } else {
-              response.json().then((data) => {
-                if (Object.hasOwn(data, "errors")) {
-                  status.innerHTML = data["errors"]
-                    .map((error) => error["message"])
-                    .join(", ");
-                } else {
-                  status.innerHTML =
-                    "Oops! Terjadi masalah saat mengirim formulir Anda.";
-                }
-              });
-            }
-          })
-          .catch((error) => {
-            status.innerHTML =
-              "Oops! Terjadi masalah saat mengirim formulir Anda.";
-          });
-      }
-      form.addEventListener("submit", handleSubmit);
-    </script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- Bootstrap JS Bundle (includes Popper) -->
     <script
