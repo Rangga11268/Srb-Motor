@@ -352,10 +352,7 @@ a {
 
 .our-advantages .box-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(28rem, 1fr)
-  ); /* Konsisten dengan .tips-tricks */
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 2rem;
   justify-content: center;
 }
@@ -363,13 +360,10 @@ a {
 .our-advantages .box-container .box {
   background: #fff;
   padding: 2.5rem 2rem;
-  /* width: 30rem; */
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   border: var(--border);
-  /* display: flex; flex-direction: column; 
-  /* min-height: 28rem; */
   transition: transform 0.3s ease, background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
@@ -413,7 +407,6 @@ a {
   color: var(--light-color);
   line-height: 1.8;
   padding: 0 0.5rem;
-  /* flex-grow: 1; */
   transition: color 0.3s ease;
 }
 
@@ -535,7 +528,6 @@ a {
   color: var(--dark-blue);
 }
 
-/* Tips & Trik Section */
 .tips-tricks {
   padding: 2rem 9%;
 }
@@ -728,24 +720,19 @@ a {
     padding: 2rem;
   }
 
-  /* --- Hamburger Menu Activation & Navbar Styling for 991px and below --- */
   #menu-btn {
-    display: block; /* Menampilkan ikon hamburger */
-    color: #fff; /* Pastikan ikon terlihat jelas di atas background header */
+    display: block;
+    color: #fff;
   }
 
-  /* Styling untuk ikon close (X) jika menggunakan class .fa-times saat menu aktif */
   #menu-btn.fa-times {
     transform: rotate(180deg);
   }
 
-  /* Sembunyikan tombol login teks dan tampilkan tombol login ikon */
   #login-btn .btn {
-    /* Target tombol login teks */
     display: none;
   }
   #login-btn .login-icon-btn {
-    /* Target tombol login ikon (misal ikon user) */
     display: inline-block;
     color: #fff; /* Samakan warna dengan link navbar agar konsisten */
   }
@@ -755,41 +742,24 @@ a {
     top: 99%; /* Posisi dropdown menu di bawah header. Bisa juga 100% */
     left: 0;
     right: 0;
-    background: rgba(
-      4,
-      54,
-      128,
-      0.75
-    ); /* Background untuk dropdown menu, sedikit lebih solid */
+    background: rgba(4, 54, 128, 0.75);
     border-top: var(--border);
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 0,
-      0 0
-    ); /* Kondisi awal: menu tersembunyi */
-    z-index: 999; /* Pastikan di atas konten lain tapi di bawah elemen popup jika ada */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 999;
   }
 
   .header .navbar.active {
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      0% 100%
-    ); /* Kondisi aktif: menu tampil */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .header .navbar a {
-    display: block; /* Susun link secara vertikal */
-    margin: 1.5rem 2rem; /* Margin antar link */
-    padding: 1rem; /* Padding untuk area sentuh yang lebih baik */
-    text-align: center; /* Pusatkan teks link */
-    font-size: 2rem; /* Ukuran font yang nyaman dibaca di mobile */
-    color: #fff; /* Warna teks link */
+    display: block;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
   }
-
-  /* --- End of Hamburger Menu Styling --- */
 }
 
 @media (max-width: 768px) {
@@ -802,9 +772,12 @@ a {
   }
 
   .header .navbar a {
-    margin: 2rem;
+    margin: 2rem 0;
     display: block;
     font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
   }
 
   .home {
