@@ -37,7 +37,7 @@
     <header class="header">
       <div id="menu-btn" class="fas fa-bars"></div>
 
-      <a href="index.html" class="logo">
+      <a href="#home" class="logo">
         <img src="assets/icon/logo trans.png" />
         SRB<span>Motors</span>
       </a>
@@ -662,7 +662,7 @@
     </section>
 
     <section class="contact" id="contact">
-      <h1 class="heading"><span>contact</span> us</h1>
+      <h1 class="heading"><span>Kontak</span> Kami</h1>
 
       <div class="row">
         <iframe
@@ -675,18 +675,20 @@
           loading="lazy"
         ></iframe>
 
-        <form action="">
-          <h3>get in touch</h3>
-          <input type="text" placeholder="your name" class="box" />
-          <input type="email" placeholder="your email" class="box" />
-          <input type="tel" placeholder="subject" class="box" />
+        <form action="https://formspree.io/f/xnnvqqwg" method="POST" id="contactForm">
+          <h3>Hubungi Kami</h3>
+ <input type="text" name="name" placeholder="Masukan nama" class="box" required />
+ <input type="email" name="email" placeholder="Masukan email" class="box" required />
+ <input type="text" name="subject" placeholder="subject" class="box" />
+
           <textarea
-            placeholder="your message"
+            placeholder="Masukan pesan"
             class="box"
             cols="30"
             rows="10"
           ></textarea>
-          <input type="submit" value="send message" class="btn" />
+          <input type="submit" value="Kirim" class="btn" />
+ <p id="contactFormStatus" style="margin-top: 1rem; font-size: 1.4rem;"></p>
         </form>
       </div>
     </section>
@@ -716,7 +718,9 @@
           <h3>contact info</h3>
           <a href="#"> <i class="fas fa-phone"></i> 08978638849 </a>
           <a href="#"> <i class="fas fa-phone"></i> 08978638973 </a>
-          <a href="#"> <i class="fas fa-envelope"></i> @gmail.com </a>
+          <a href="#">
+            <i class="fas fa-envelope"></i> darrelrangga@gmail.com
+          </a>
           <a href="#">
             <i class="fas fa-map-marker-alt"></i> Jl lori sakti Rt 01 Rw 01 No
             22 Kaliabang tengah Bekasi utara
@@ -829,7 +833,44 @@
         </div>
       </div>
     </div>
+    <!-- formspree -->
+    <script>
+      var form = document.getElementById("contactForm");
 
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("contactFormStatus");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset();
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML =
+                    "Oops! There was a problem submitting your form";
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- Bootstrap JS Bundle (includes Popper) -->
     <script
