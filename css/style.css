@@ -734,12 +734,12 @@ a {
   }
   #login-btn .login-icon-btn {
     display: inline-block;
-    color: #fff; /* Samakan warna dengan link navbar agar konsisten */
+    color: #fff; 
   }
 
   .header .navbar {
     position: absolute;
-    top: 99%; /* Posisi dropdown menu di bawah header. Bisa juga 100% */
+    top: 99%; 
     left: 0;
     right: 0;
     background: rgba(4, 54, 128, 0.75);
