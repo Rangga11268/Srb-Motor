@@ -273,53 +273,53 @@ a {
   margin: 1rem 0;
 }
 
-.vehicles .vehicles-slider {
+.popular-motors .popular-motors-slider {
   padding-bottom: 5rem;
 }
 
-.vehicles .vehicles-slider .box {
+.popular-motors .popular-motors-slider .box {
   text-align: center;
 }
 
-.vehicles .vehicles-slider .box img {
+.popular-motors .popular-motors-slider .box img {
   width: 100%;
   transform: scale(0.8);
   opacity: 0.5;
 }
 
-.vehicles .vehicles-slider .box .content {
+.popular-motors .popular-motors-slider .box .content {
   padding-top: 1rem;
   transform: scale(0);
 }
 
-.vehicles .vehicles-slider .swiper-slide-active .content {
+.popular-motors .popular-motors-slider .swiper-slide-active .content {
   transform: scale(1);
 }
 
-.vehicles .vehicles-slider .swiper-slide-active img {
+.popular-motors .popular-motors-slider .swiper-slide-active img {
   transform: scale(1);
   opacity: 1;
 }
 
-.vehicles .vehicles-slider .box .content h3 {
+.popular-motors .popular-motors-slider .box .content h3 {
   font-size: 2.5rem;
   color: var(--dark-blue);
 }
 
-.vehicles .vehicles-slider .box .content .price {
+.popular-motors .popular-motors-slider .box .content .price {
   font-size: 2.2rem;
   color: var(--primary);
   padding: 1rem 0;
   font-weight: bolder;
 }
 
-.vehicles .vehicles-slider .box .content .price span {
+.popular-motors .popular-motors-slider .box .content .price span {
   color: var(--light-color);
   font-size: 1.5rem;
   font-weight: normal;
 }
 
-.vehicles .vehicles-slider .box .content p {
+.popular-motors .popular-motors-slider .box .content p {
   font-size: 1.6rem;
   color: var(--light-color);
   padding: 1rem 0;
@@ -327,7 +327,7 @@ a {
   border-top: var(--border);
 }
 
-.vehicles .vehicles-slider .box .content span {
+.popular-motors .popular-motors-slider .box .content span {
   font-size: 1rem;
   color: var(--primary);
   padding: 0 0.5rem;
@@ -462,24 +462,24 @@ a {
   color: var(--light-color);
 }
 
-.featured .featured-slider {
+.motors-gallery .motors-gallery-slider {
   padding: 1rem;
   padding-bottom: 4rem;
 }
 
-.featured h2.heading {
+.motors-gallery h2.heading {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.featured h2.heading .brand-logo {
+.motors-gallery h2.heading .brand-logo {
   height: 40px;
   width: auto;
   margin-right: 10px;
 }
 
-.featured .featured-slider .box {
+.motors-gallery .motors-gallery-slider .box {
   padding: 2rem;
   text-align: center;
   box-shadow: var(--box-shadow);
@@ -487,24 +487,24 @@ a {
   border-radius: 0.5rem;
 }
 
-.featured .featured-slider .box img {
+.motors-gallery .motors-gallery-slider .box img {
   height: 15rem;
 }
 
-.featured .featured-slider .box:hover img {
+.motors-gallery .motors-gallery-slider .box:hover img {
   transform: scale(0.9);
 }
 
-.featured .featured-slider .box .content h3 {
+.motors-gallery .motors-gallery-slider .box .content h3 {
   font-size: 2.2rem;
   color: var(--dark-blue);
 }
 
-.featured .featured-slider .box .content .stars {
+.motors-gallery .motors-gallery-slider .box .content .stars {
   padding: 1rem 0;
 }
 
-.featured .featured-slider .box .content .stars i {
+.motors-gallery .motors-gallery-slider .box .content .stars i {
   font-size: 1.7rem;
   color: var(--primary);
 }
@@ -523,7 +523,7 @@ a {
   flex-grow: 1;
 }
 
-.featured .featured-slider .box .content .price {
+.motors-gallery .motors-gallery-slider .box .content .price {
   font-size: 2.5rem;
   color: var(--dark-blue);
 }

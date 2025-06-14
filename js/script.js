@@ -43,7 +43,7 @@ document.querySelector(".home").onmouseleave = (e) => {
 };
 
 // SWIPER JS
-var swiper = new Swiper(".vehicles-slider", {
+var swiper = new Swiper(".popular-motors-slider", {
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: 20,
@@ -69,7 +69,7 @@ var swiper = new Swiper(".vehicles-slider", {
   },
 });
 
-var swiper = new Swiper(".featured-slider", {
+var swiper = new Swiper(".motors-gallery-slider", {
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: 20,
