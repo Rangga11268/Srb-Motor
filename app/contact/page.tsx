@@ -25,18 +25,22 @@ export default function ContactPage() {
           <div className="space-y-12 font-mono text-lg">
             <div>
               <h3 className="text-zinc-500 text-sm mb-4">KUNJUNGI STUDIO</h3>
-              <p className="font-bold">
-                JL. RAYA PENGGILINGAN NO. 12
+              <a
+                href="https://maps.app.goo.gl/h7ycKy2T6niHfibz7"
+                target="_blank"
+                className="font-bold hover:text-lime-400 transition-colors block"
+              >
+                JL. LORI SAKTI, RT 01 / RW 01, NO. 22
                 <br />
-                CAKUNG, JAKARTA TIMUR
-              </p>
+                KALIABANG TENAH, BEKASI UTARA
+              </a>
             </div>
             <div>
               <h3 className="text-zinc-500 text-sm mb-4">KONTAK LANGSUNG</h3>
               <p className="font-bold text-lime-400 underline decoration-lime-400/30 underline-offset-4">
                 HELLO@SRB-MOTORS.ID
               </p>
-              <p className="font-bold mt-2">+62 812 3456 7890</p>
+              <p className="font-bold mt-2">+62 897 8638 972</p>
             </div>
           </div>
         </div>

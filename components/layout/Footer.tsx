@@ -101,7 +101,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="bg-lime-400 py-2 px-6 flex justify-between items-center font-mono text-black text-xs md:text-sm font-bold uppercase">
         <span>© 2024 SRB MOTORS</span>
-        <span>JAKARTA, INDONESIA</span>
+        <span>BEKASI, INDONESIA</span>
       </div>
     </footer>
   );
