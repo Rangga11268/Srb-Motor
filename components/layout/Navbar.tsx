@@ -8,10 +8,10 @@ import { Menu, X, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
+  { name: "Beranda", href: "/" },
+  { name: "Studio", href: "/about" },
+  { name: "Koleksi", href: "/gallery" },
+  { name: "Kontak", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -47,16 +47,6 @@ export function Navbar() {
               );
             })}
           </nav>
-
-          {/* Admin/Action */}
-          <div className="flex items-center pr-2">
-            <button className="flex items-center gap-3 bg-zinc-900/50 hover:bg-zinc-800 border border-zinc-800 rounded-full pl-1 pr-4 py-1 transition-colors group">
-              <div className="w-8 h-8 rounded-full bg-lime-400 flex items-center justify-center text-black font-bold text-xs group-hover:scale-105 transition-transform">
-                A
-              </div>
-              <span className="text-xs font-bold text-white">Admin</span>
-            </button>
-          </div>
 
           {/* Mobile Toggle */}
           <button

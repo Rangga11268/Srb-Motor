@@ -11,12 +11,12 @@ export function Footer() {
           {/* Section 1: Newsletter */}
           <div>
             <h3 className="font-display font-black text-4xl uppercase mb-8">
-              Stay in the <span className="text-lime-400">Loop</span>
+              Tetap <span className="text-lime-400">Terhubung</span>
             </h3>
             <div className="flex gap-4 border-b border-zinc-800 pb-4">
               <input
                 type="email"
-                placeholder="ENTER YOUR EMAIL"
+                placeholder="MASUKKAN EMAIL ANDA"
                 className="bg-transparent w-full outline-none font-mono text-xl placeholder:text-zinc-700 text-white uppercase"
               />
               <button className="text-lime-400 hover:text-white transition-colors">
@@ -28,11 +28,11 @@ export function Footer() {
           {/* Section 2: Links */}
           <div className="grid grid-cols-2 gap-8 font-mono">
             <div>
-              <h4 className="text-zinc-500 mb-6 text-sm">// SITEMAP</h4>
+              <h4 className="text-zinc-500 mb-6 text-sm">// PETA SITUS</h4>
               <ul className="space-y-4">
                 <li>
                   <Link href="/" className="hover:text-lime-400 uppercase">
-                    Home
+                    Beranda
                   </Link>
                 </li>
                 <li>
@@ -45,7 +45,7 @@ export function Footer() {
                     href="/gallery"
                     className="hover:text-lime-400 uppercase"
                   >
-                    Collection
+                    Koleksi
                   </Link>
                 </li>
                 <li>
@@ -53,13 +53,13 @@ export function Footer() {
                     href="/contact"
                     className="hover:text-lime-400 uppercase"
                   >
-                    Contact
+                    Kontak
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="text-zinc-500 mb-6 text-sm">// SOCIALS</h4>
+              <h4 className="text-zinc-500 mb-6 text-sm">// SOSIAL</h4>
               <ul className="space-y-4">
                 <li>
                   <a

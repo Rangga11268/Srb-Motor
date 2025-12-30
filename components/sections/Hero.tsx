@@ -26,10 +26,10 @@ export function Hero() {
         style={{ y: yText }}
         className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none"
       >
-        <h1 className="font-display font-black text-[35vw] leading-[0.75] text-white tracking-tighter text-center">
-          THE
+        <h1 className="font-display font-black text-[30vw] leading-[0.75] text-white tracking-tighter text-center">
+          MIMPI
           <br />
-          DREAM
+          ANDA
         </h1>
       </motion.div>
 
@@ -68,20 +68,20 @@ export function Hero() {
             href="/gallery"
             className="group bg-lime-400 text-black px-10 py-4 rounded-full font-display font-black text-xl uppercase tracking-tight hover:scale-105 transition-transform flex items-center gap-2"
           >
-            Explore Fleet{" "}
+            Lihat Unit{" "}
             <ArrowUpRight className="group-hover:rotate-45 transition-transform" />
           </Link>
           <Link
             href="/contact"
             className="group bg-transparent border border-white/20 text-white px-10 py-4 rounded-full font-display font-black text-xl uppercase tracking-tight hover:bg-white hover:text-black transition-colors flex items-center gap-2"
           >
-            Book Appointment
+            Buat Janji
           </Link>
         </div>
 
         {/* SOLID NEON MARQUEE */}
         <div className="w-full bg-lime-400 py-3 overflow-hidden border-y-4 border-black">
-          <TextMarquee text="PREMIUM QUALITY ▪ 100% WARRANTY ▪ FAST DELIVERY ▪ SRB MOTORS STUDIO" />
+          <TextMarquee text="KUALITAS PREMIUM ▪ GARANSI 100% ▪ PENGIRIMAN CEPAT ▪ SRB MOTORS STUDIO" />
         </div>
       </div>
 

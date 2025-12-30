@@ -47,17 +47,15 @@ export function PopularMotors() {
         <div className="flex justify-between items-end mb-16">
           <div>
             <h2 className="font-display font-black text-6xl text-white mb-2 uppercase tracking-tighter">
-              Featured <span className="text-lime-400">Drops</span>
+              Koleksi <span className="text-lime-400">Terkini</span>
             </h2>
-            <p className="font-mono text-zinc-500">
-              // CURATED COLLECTION_VOL.01
-            </p>
+            <p className="font-mono text-zinc-500">// PILIHAN TERBAIK_VOL.01</p>
           </div>
           <Link
             href="/gallery"
             className="hidden md:flex items-center gap-2 font-mono font-bold text-lime-400 hover:text-white transition-colors"
           >
-            VIEW ALL INVENTORY <ArrowUpRight size={18} />
+            LIHAT SEMUA UNIT <ArrowUpRight size={18} />
           </Link>
         </div>
 

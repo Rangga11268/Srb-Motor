@@ -13,8 +13,8 @@ export function Manifesto() {
             viewport={{ once: true }}
             className="font-display font-black text-6xl md:text-8xl leading-[0.9] tracking-tighter mb-12 uppercase"
           >
-            We don't just sell bikes. We curate{" "}
-            <span className="text-white stroke-black">dreams</span>.
+            Kami tidak sekadar jual motor. Kami wujudkan{" "}
+            <span className="text-white stroke-black">impian</span>.
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 font-mono text-lg font-bold">
@@ -24,9 +24,9 @@ export function Manifesto() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              SRB MOTORS IS THE DESTINATION FOR THOSE WHO REFUSE TO BLEND IN.
-              OUR COLLECTION IS HAND-PICKED, RIGOROUSLY TESTED, AND READY TO
-              DOMINATE THE STREETS.
+              SRB MOTORS ADALAH TUJUAN BAGI MEREKA YANG MENOLAK BIASA SAJA.
+              KOLEKSI KAMI DIPILIH DENGAN CERMAT, DIUJI KETAT, DAN SIAP
+              MENGUASAI JALANAN.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: 20 }}
@@ -34,11 +34,11 @@ export function Manifesto() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              // NO COMPROMISE.
+              // TANPA KOMPROMI.
               <br />
-              // PURE PERFORMANCE.
+              // PERFORMA MURNI.
               <br />
-              // 100% AUTHENTIC.
+              // 100% OTENTIK.
             </motion.p>
           </div>
         </div>

@@ -18,25 +18,25 @@ export default function AboutPage() {
           className="max-w-6xl"
         >
           <span className="text-lime-400 font-mono tracking-widest uppercase mb-4 block">
-            // The Vision
+            // Visi Kami
           </span>
           <h1 className="font-display font-black text-[10vw] leading-[0.85] uppercase tracking-tighter mb-12">
-            Redefining <br />
-            <span className="text-lime-400">Street</span> Culture
+            Definisi Ulang <br />
+            Kultur <span className="text-lime-400">Jalanan</span>
           </h1>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mt-12">
           <div className="font-mono text-zinc-500 text-lg leading-relaxed">
             <p className="mb-8">
-              ESTABLISHED IN 2024, SRB MOTORS WAS BORN FROM A DESIRE TO DISRUPT
-              THE TRADITIONAL DEALERSHIP MODEL. WE DON'T JUST FLIP BIKES; WE
-              CURATE EXPERIENCES FOR THE MODERN RIDER.
+              DIDIRIKAN PADA 2024, SRB MOTORS LAHIR DARI KEINGINAN UNTUK
+              MENGUBAH MODEL DEALER TRADISIONAL. KAMI TIDAK HANYA JUAL BELI
+              MOTOR; KAMI MENCIPTAKAN PENGALAMAN UNTUK PENGENDARA MODERN.
             </p>
             <p>
-              EVERY UNIT THAT ENTERS OUR STUDIO UNDERGOES A RIGOROUS 150-POINT
-              INSPECTION PROCESS, ENSURING THAT WHEN YOU HIT THE THROTTLE, YOU
-              FEEL NOTHING BUT PURE ADRENALINE.
+              SETIAP UNIT YANG MASUK KE STUDIO KAMI MELEWATI PROSES INSPEKSI
+              150-TITIK YANG KETAT, MEMASTIKAN SAAT ANDA MENARIK GAS, ANDA HANYA
+              MERASAKAN ADRENALIN MURNI.
             </p>
           </div>
           <div className="relative h-[400px] w-full bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group">
@@ -53,9 +53,9 @@ export default function AboutPage() {
       {/* Stats / Manifesto Grid */}
       <section className="grid grid-cols-1 md:grid-cols-3 border-b border-zinc-900">
         {[
-          { label: "UNITS SOLD", value: "850+" },
-          { label: "HAPPY RIDERS", value: "100%" },
-          { label: "YEARS ACTIVE", value: "05" },
+          { label: "UNIT TERJUAL", value: "850+" },
+          { label: "PELANGGAN PUAS", value: "100%" },
+          { label: "TAHUN AKTIF", value: "05" },
         ].map((stat, i) => (
           <div
             key={i}
@@ -81,11 +81,11 @@ export default function AboutPage() {
       <section className="py-32 container mx-auto px-6">
         <div className="flex justify-between items-end mb-16">
           <h2 className="font-display font-black text-6xl uppercase tracking-tighter">
-            The <span className="text-lime-400">Crew</span>
+            Tim <span className="text-lime-400">Kami</span>
           </h2>
           <p className="font-mono text-zinc-500 text-right hidden md:block">
-            // EXPERT MECHANICS <br />
-            // PASSIONATE RIDERS
+            // MEKANIK AHLI <br />
+            // PENGENDARA BERGAIRAH
           </p>
         </div>
 
