@@ -41,7 +41,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable} cursor-none`}
     >
-      <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-lime-400 selection:text-black">
+      <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-lime-400 selection:text-black overflow-x-hidden">
         <SmoothScroll />
         <CustomCursor />
         <NoiseOverlay />
