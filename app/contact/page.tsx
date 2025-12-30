@@ -9,13 +9,13 @@ export default function ContactPage() {
     <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black">
       <Navbar />
 
-      <section className="pt-40 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 pb-32">
+      <section className="pt-32 md:pt-40 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 pb-20 md:pb-32">
         {/* Text Side */}
         <div>
           <span className="text-cyan-400 font-mono tracking-widest uppercase mb-4 block">
             // Hubungi Kami
           </span>
-          <h1 className="font-display font-black text-[15vw] md:text-[8vw] leading-[0.8] uppercase tracking-tighter mb-12">
+          <h1 className="font-display font-black text-6xl md:text-[8vw] leading-[0.9] md:leading-[0.8] uppercase tracking-tighter mb-8 md:mb-12">
             Bicara <br />
             <span className="text-transparent stroke-text hover:text-cyan-400 transition-colors duration-300">
               Bisnis

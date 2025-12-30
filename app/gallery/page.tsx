@@ -20,24 +20,24 @@ export default function GalleryPage() {
     <main className="min-h-screen bg-black text-white selection:bg-lime-400 selection:text-black">
       <Navbar />
 
-      <section className="pt-40 px-6 container mx-auto mb-12">
-        <h1 className="font-display font-black text-[15vw] md:text-[12vw] leading-[0.8] mb-8 uppercase tracking-tighter">
+      <section className="pt-32 md:pt-40 px-6 container mx-auto mb-12">
+        <h1 className="font-display font-black text-5xl sm:text-6xl md:text-[12vw] leading-[0.9] md:leading-[0.8] mb-8 uppercase tracking-tighter">
           Koleksi <br />
           <span className="text-cyan-400">Kami</span>
         </h1>
-        <div className="flex flex-col md:flex-row justify-between items-end border-b border-zinc-900 pb-8 gap-8">
-          <p className="font-mono text-zinc-500 max-w-md">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-zinc-900 pb-8 gap-8">
+          <p className="font-mono text-zinc-500 max-w-md text-sm md:text-base">
             // PILIHAN TERBAIK DARI MOTOR BEKAS BERKUALITAS. <br />
             // DIINSPEKSI. TERVERIFIKASI. SIAP DIGAS.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {["ALL", "HONDA", "YAMAHA"].map((brand) => (
               <button
                 key={brand}
                 onClick={() => setFilter(brand)}
                 className={cn(
-                  "px-6 py-2 rounded-full font-mono font-bold text-sm transition-colors border",
+                  "px-4 md:px-6 py-2 rounded-full font-mono font-bold text-xs md:text-sm transition-colors border",
                   filter === brand
                     ? "bg-cyan-400 text-black border-cyan-400"
                     : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white"
@@ -48,7 +48,7 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          <span className="font-mono text-cyan-400 font-bold hidden md:block">
+          <span className="font-mono text-cyan-400 font-bold block text-sm">
             [{filteredImages.length} UNIT TERSEDIA]
           </span>
         </div>

@@ -19,14 +19,14 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen bg-black overflow-hidden flex flex-col justify-between pt-32"
+      className="relative min-h-screen bg-black overflow-hidden flex flex-col justify-between pt-24 md:pt-32"
     >
       {/* CENTERED MASSIVE TYPOGRAPHY (Layer 0) */}
       <motion.div
         style={{ y: yText }}
         className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none"
       >
-        <h1 className="font-display font-black text-[18vw] md:text-[20vw] lg:text-[22vw] leading-[0.8] text-white tracking-tighter text-center mt-32 md:mt-0">
+        <h1 className="font-display font-black text-[15vw] md:text-[20vw] lg:text-[22vw] leading-[0.8] text-white tracking-tighter text-center mt-20 md:mt-0">
           MIMPI
           <br />
           ANDA

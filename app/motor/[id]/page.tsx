@@ -57,7 +57,7 @@ export default function MotorDetailPage() {
 
         {/* RIGHT: DETAILS (Scrollable) */}
         <div className="w-full lg:w-1/2 lg:ml-[50%] bg-zinc-950 min-h-screen border-l border-zinc-900">
-          <div className="p-8 md:p-16 lg:pt-32">
+          <div className="p-8 md:p-16 pt-24 md:pt-16 lg:pt-32">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function MotorDetailPage() {
               <span className="text-zinc-500 font-mono text-sm block mb-4 uppercase tracking-widest">
                 // {motor.brand} OFFICIAL
               </span>
-              <h1 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] text-white mb-6">
+              <h1 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] text-white mb-4 md:mb-6">
                 {motor.name}
               </h1>
               <p className="font-mono text-cyan-400 text-2xl md:text-4xl font-bold mb-12 border-b border-zinc-900 pb-12">
