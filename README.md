@@ -2,7 +2,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+<<<<<<< HEAD
 First, run the development server:
+=======
+## Link Website Srb Motors
+https://srb-motor.vercel.app/
+
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![Version](https://img.shields.io/badge/version-1.0.0-orange)
+>>>>>>> 5ab04ed60cd1520e3f93555f22d26588f1055e4f
 
 ```bash
 npm run dev
