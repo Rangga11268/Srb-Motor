@@ -22,24 +22,25 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://srb-motor.vercel.app"),
   title: "SRB Motors | Future of Riding",
   description:
-    "Discover your dream ride with SRB Motors. Premium collection of Honda and Yamaha motorcycles.",
+    "Discover your dream ride with SRB Motors. Official retailer of new Honda and Yamaha motorcycles.",
   keywords: [
-    "motor bekas",
+    "motor baru",
     "Honda",
     "Yamaha",
-    "motor second",
+    "motor official",
     "SRB Motors",
     "Bekasi",
-    "motor berkualitas",
+    "dealer resmi",
   ],
   authors: [{ name: "SRB Motors" }],
   openGraph: {
     title: "SRB Motors | Future of Riding",
     description:
-      "Discover your dream ride with SRB Motors. Premium collection of Honda and Yamaha motorcycles.",
-    url: "https://motor.vercel.app",
+      "Discover your dream ride with SRB Motors. Official retailer of new Honda and Yamaha motorcycles.",
+    url: "https://srb-motor.vercel.app",
     siteName: "SRB Motors",
     images: [
       {

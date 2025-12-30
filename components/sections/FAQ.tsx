@@ -6,29 +6,29 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Apakah motor yang dijual sudah melalui inspeksi?",
+    question: "Apakah unit yang dijual 100% baru?",
     answer:
-      "Ya, semua motor yang kami jual telah melalui inspeksi 150 titik yang ketat untuk memastikan kualitas dan performa terbaik.",
+      "Ya, kami hanya menjual unit motor baru (Brand New In Box) langsung dari pabrik resmi Honda dan Yamaha dengan kualitas terjamin.",
   },
   {
-    question: "Apakah ada garansi untuk motor bekas?",
+    question: "Bagaimana dengan garansi motor?",
     answer:
-      "Kami memberikan garansi mesin selama 30 hari untuk memberikan ketenangan pikiran kepada pelanggan kami.",
+      "Setiap unit mendapatkan garansi resmi pabrik (mesin, kelistrikan, & rangka) sesuai dengan ketentuan standar dari Honda atau Yamaha.",
   },
   {
     question: "Bagaimana sistem pembayaran yang tersedia?",
     answer:
-      "Kami menerima pembayaran cash dan kredit. Untuk kredit, kami bekerja sama dengan beberapa leasing terpercaya dengan proses approval yang cepat.",
+      "Kami menerima pembayaran cash dan kredit. Untuk kredit, kami bekerja sama dengan berbagai leasing resmi dengan DP rendah dan proses cepat.",
   },
   {
-    question: "Apakah bisa tukar tambah motor lama?",
+    question: "Apakah harga sudah termasuk pengurusan surat?",
     answer:
-      "Tentu! Kami menerima tukar tambah motor lama Anda dengan harga yang kompetitif. Tim kami akan menilai kondisi motor Anda secara fair.",
+      "Tentu! Harga OTR (On The Road) yang kami tawarkan sudah termasuk pengurusan STNK, Plat Nomor, dan BPKB atas nama pembeli.",
   },
   {
-    question: "Apakah dokumen motor lengkap?",
+    question: "Berapa lama proses STNK dan BPKB?",
     answer:
-      "Semua motor yang kami jual dilengkapi dengan STNK, BPKB, dan faktur. Kami memastikan semua dokumen legal dan dapat diproses untuk balik nama.",
+      "Estimasi STNK selesai dalam 14-21 hari kerja, dan BPKB 2-3 bulan setelah STNK terbit, tergantung kebijakan Samsat setempat.",
   },
   {
     question: "Dimana lokasi showroom SRB Motors?",

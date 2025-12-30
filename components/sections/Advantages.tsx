@@ -8,30 +8,31 @@ const advantages = [
     icon: ShieldCheck,
     title: "Kualitas Terjamin",
     description:
-      "Inspeksi ketat 120 titik untuk memastikan setiap unit dalam kondisi prima sebelum sampai ke tangan Anda.",
+      "Unit 100% Baru (BNIB) yang telah melalui proses Pre-Delivery Inspection (PDI) standar pabrikan resmi.",
     color: "bg-blue-500",
     size: "col-span-1 md:col-span-2",
   },
   {
     icon: Wallet,
-    title: "Harga Kompetitif",
+    title: "Harga Terbaik",
     description:
-      "Penawaran harga terbaik dengan transparansi total. Tidak ada biaya tersembunyi.",
+      "Dapatkan penawaran harga OTR termurah dengan berbagai promo menarik dan diskon spesial setiap bulannya.",
     color: "bg-cyan-500",
     size: "col-span-1",
   },
   {
     icon: Headphones,
     title: "Layanan 24/7",
-    description: "Tim support kami siap membantu Anda kapanpun, dimanapun.",
+    description:
+      "Tim sales & support kami siap membantu konsultasi unit dan simulasi kredit kapanpun.",
     color: "bg-indigo-500",
     size: "col-span-1",
   },
   {
     icon: Percent,
-    title: "Bunga Rendah",
+    title: "DP & Bunga Rendah",
     description:
-      "Kerjasama dengan leasing terpercaya untuk memberikan bunga angsuran yang paling ringan.",
+      "Kerjasama dengan leasing resmi (FIF, Adira, OTO, dll) untuk memberikan skema kredit paling ringan.",
     color: "bg-violet-500",
     size: "col-span-1 md:col-span-2",
   },
@@ -58,8 +59,8 @@ export function Advantages() {
             WHY CHOOSE <span className="text-blue-500">US?</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
-            Kami berkomitmen memberikan pengalaman membeli motor bekas rasa baru
-            dengan standar kualitas tertinggi.
+            Kami berkomitmen memberikan pengalaman membeli motor baru dengan
+            pelayanan terbaik dan proses termudah.
           </p>
         </motion.div>
 

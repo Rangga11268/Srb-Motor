@@ -66,7 +66,7 @@ export default function GalleryPage() {
           {/* Filters Row */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <p className="font-mono text-zinc-500 text-sm md:text-base">
-              // PILIHAN TERBAIK DARI MOTOR BEKAS BERKUALITAS.
+              // KOLEKSI TERBARU DARI DEALER RESMI.
             </p>
 
             {/* Brand Filter */}

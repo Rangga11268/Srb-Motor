@@ -11,7 +11,7 @@ const testimonials = [
     motor: "Honda Vario 160",
     rating: 5,
     review:
-      "Pelayanan sangat memuaskan! Motor yang saya beli kondisinya seperti baru. Tim SRB sangat profesional dan membantu proses pembelian.",
+      "Pengalaman beli motor baru di SRB sangat menyenangkan. Unit diantar cepat, kondisi mulus 100% Brand New In Box. Terima kasih!",
     image: "/assets/icon/logo trans.png",
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     motor: "Yamaha Aerox",
     rating: 5,
     review:
-      "Harga kompetitif dan kualitas terjamin. Sudah 6 bulan pakai, tidak ada masalah sama sekali. Highly recommended!",
+      "Harga OTR terbaik dibanding dealer lain. Proses kredit dibantu sampai goal. Pelayanan ramah dan transparan.",
     image: "/assets/icon/logo trans.png",
   },
   {
@@ -29,7 +29,7 @@ const testimonials = [
     motor: "Honda Beat",
     rating: 5,
     review:
-      "Proses cepat dan transparan. Semua dokumen lengkap dan motor sudah melalui inspeksi 150 titik. Puas banget!",
+      "Motor baru mendarat dengan aman. Garansi resmi aktif, STNK cepat keluar. Sangat puas belanja di SRB Motors.",
     image: "/assets/icon/logo trans.png",
   },
 ];
