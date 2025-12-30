@@ -107,4 +107,30 @@
   .border-grid {
     border: 1px solid hsl(var(--border));
   }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #22d3ee;
+    border-radius: 5px;
+    border: 2px solid #09090b;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #22d3ee #09090b;
+  }
 }
