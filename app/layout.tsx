@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "Discover your dream ride with SRB Motors. Premium collection of Honda and Yamaha motorcycles.",
 };
 
+import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
 
@@ -41,6 +42,7 @@ export default function RootLayout({
       className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
     >
       <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-cyan-400 selection:text-black overflow-x-hidden">
+        <Preloader />
         <SmoothScroll />
         <NoiseOverlay />
         {children}
