@@ -20,7 +20,7 @@ export default function AboutPage() {
           <span className="text-lime-400 font-mono tracking-widest uppercase mb-4 block">
             // Visi Kami
           </span>
-          <h1 className="font-display font-black text-[10vw] leading-[0.85] uppercase tracking-tighter mb-12">
+          <h1 className="font-display font-black text-[15vw] md:text-[10vw] leading-[0.85] uppercase tracking-tighter mb-12">
             Definisi Ulang <br />
             Kultur <span className="text-lime-400">Jalanan</span>
           </h1>

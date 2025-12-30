@@ -20,7 +20,7 @@ export function TextMarquee({
       <motion.div
         className="flex gap-4"
         animate={{ x: "-50%" }}
-        transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+        transition={{ duration: 40, ease: "linear", repeat: Infinity }}
       >
         {[...Array(10)].map((_, i) => (
           <span

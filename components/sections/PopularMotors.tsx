@@ -46,10 +46,12 @@ export function PopularMotors() {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-end mb-16">
           <div>
-            <h2 className="font-display font-black text-6xl text-white mb-2 uppercase tracking-tighter">
+            <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-2 uppercase tracking-tighter">
               Koleksi <span className="text-lime-400">Terkini</span>
             </h2>
-            <p className="font-mono text-zinc-500">// PILIHAN TERBAIK_VOL.01</p>
+            <p className="font-mono text-zinc-500 text-sm md:text-base">
+              // PILIHAN TERBAIK_VOL.01
+            </p>
           </div>
           <Link
             href="/gallery"

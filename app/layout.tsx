@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 };
 
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
 
 export default function RootLayout({
@@ -43,7 +42,6 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-lime-400 selection:text-black overflow-x-hidden">
         <SmoothScroll />
-        <CustomCursor />
         <NoiseOverlay />
         {children}
       </body>

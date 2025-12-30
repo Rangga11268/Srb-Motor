@@ -81,7 +81,7 @@ export default function GalleryPage() {
       <Navbar />
 
       <section className="pt-40 px-6 container mx-auto mb-12">
-        <h1 className="font-display font-black text-[12vw] leading-[0.8] mb-8 uppercase tracking-tighter">
+        <h1 className="font-display font-black text-[15vw] md:text-[12vw] leading-[0.8] mb-8 uppercase tracking-tighter">
           Koleksi <br />
           <span className="text-lime-400">Kami</span>
         </h1>

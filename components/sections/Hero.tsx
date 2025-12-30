@@ -26,7 +26,7 @@ export function Hero() {
         style={{ y: yText }}
         className="absolute inset-0 flex flex-col items-center justify-center z-0 pointer-events-none select-none"
       >
-        <h1 className="font-display font-black text-[30vw] leading-[0.75] text-white tracking-tighter text-center">
+        <h1 className="font-display font-black text-[28vw] leading-[0.75] text-white tracking-tighter text-center mt-20 md:mt-0">
           MIMPI
           <br />
           ANDA
@@ -63,17 +63,18 @@ export function Hero() {
       {/* BOTTOM ACTION BAR / MARQUEE (Layer 2) */}
       <div className="relative z-20 w-full mt-auto">
         {/* Floating Actions above Marquee */}
-        <div className="container mx-auto px-6 mb-12 flex justify-center gap-6">
+        {/* Floating Actions above Marquee */}
+        <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-center gap-4 md:gap-6">
           <Link
             href="/gallery"
-            className="group bg-lime-400 text-black px-10 py-4 rounded-full font-display font-black text-xl uppercase tracking-tight hover:scale-105 transition-transform flex items-center gap-2"
+            className="group bg-lime-400 text-black px-8 py-3 md:px-10 md:py-4 rounded-full font-display font-black text-lg md:text-xl uppercase tracking-tight hover:scale-105 transition-transform flex items-center justify-center gap-2"
           >
             Lihat Unit{" "}
             <ArrowUpRight className="group-hover:rotate-45 transition-transform" />
           </Link>
           <Link
             href="/contact"
-            className="group bg-transparent border border-white/20 text-white px-10 py-4 rounded-full font-display font-black text-xl uppercase tracking-tight hover:bg-white hover:text-black transition-colors flex items-center gap-2"
+            className="group bg-transparent border border-white/20 text-white px-8 py-3 md:px-10 md:py-4 rounded-full font-display font-black text-lg md:text-xl uppercase tracking-tight hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2"
           >
             Buat Janji
           </Link>

@@ -15,7 +15,7 @@ export default function ContactPage() {
           <span className="text-lime-400 font-mono tracking-widest uppercase mb-4 block">
             // Hubungi Kami
           </span>
-          <h1 className="font-display font-black text-[8vw] leading-[0.8] uppercase tracking-tighter mb-12">
+          <h1 className="font-display font-black text-[15vw] md:text-[8vw] leading-[0.8] uppercase tracking-tighter mb-12">
             Bicara <br />
             <span className="text-transparent stroke-text hover:text-lime-400 transition-colors duration-300">
               Bisnis
