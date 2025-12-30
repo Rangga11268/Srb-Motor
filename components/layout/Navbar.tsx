@@ -74,13 +74,13 @@ export function Navbar() {
               <X size={24} />
             </button>
 
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-display font-black text-5xl text-transparent stroke-text hover:text-cyan-400 hover:stroke-cyan-400 transition-colors uppercase"
+                  className="font-display font-black text-4xl text-white hover:text-cyan-400 transition-colors uppercase tracking-tight"
                 >
                   {link.name}
                 </Link>

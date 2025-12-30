@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Section 1: Newsletter */}
           <div>
-            <h3 className="font-display font-black text-4xl uppercase mb-8">
+            <h3 className="font-display font-black text-3xl md:text-4xl uppercase mb-8">
               Tetap <span className="text-cyan-400">Terhubung</span>
             </h3>
             <div className="flex gap-4 border-b border-zinc-800 pb-4">
