@@ -7,7 +7,7 @@ import { ArrowDownRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-lime-400 selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black">
       <Navbar />
 
       {/* Header Section */}
@@ -17,12 +17,12 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-6xl"
         >
-          <span className="text-lime-400 font-mono tracking-widest uppercase mb-4 block">
+          <span className="text-cyan-400 font-mono tracking-widest uppercase mb-4 block">
             // Visi Kami
           </span>
           <h1 className="font-display font-black text-[15vw] md:text-[10vw] leading-[0.85] uppercase tracking-tighter mb-12">
             Definisi Ulang <br />
-            Kultur <span className="text-lime-400">Jalanan</span>
+            Kultur <span className="text-cyan-400">Jalanan</span>
           </h1>
         </motion.div>
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative h-[400px] w-full bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group">
-            <div className="absolute inset-0 bg-lime-400/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-cyan-400/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <img
               src="/assets/img/about us.jpeg"
               alt="SRB Studio"
@@ -62,14 +62,14 @@ export default function AboutPage() {
             className="p-12 border-b md:border-b-0 md:border-r border-zinc-900 flex flex-col justify-between h-[300px] hover:bg-zinc-900/30 transition-colors group"
           >
             <ArrowDownRight
-              className="text-zinc-700 group-hover:text-lime-400 transition-colors"
+              className="text-zinc-700 group-hover:text-cyan-400 transition-colors"
               size={32}
             />
             <div>
               <h3 className="text-7xl font-display font-black text-white mb-2">
                 {stat.value}
               </h3>
-              <p className="font-mono text-lime-400 text-sm tracking-widest">
+              <p className="font-mono text-cyan-400 text-sm tracking-widest">
                 {stat.label}
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
       <section className="py-32 container mx-auto px-6">
         <div className="flex justify-between items-end mb-16">
           <h2 className="font-display font-black text-6xl uppercase tracking-tighter">
-            Tim <span className="text-lime-400">Kami</span>
+            Tim <span className="text-cyan-400">Kami</span>
           </h2>
           <p className="font-mono text-zinc-500 text-right hidden md:block">
             // MEKANIK AHLI <br />

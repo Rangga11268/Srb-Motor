@@ -40,7 +40,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-lime-400 selection:text-black overflow-x-hidden">
+      <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-cyan-400 selection:text-black overflow-x-hidden">
         <SmoothScroll />
         <NoiseOverlay />
         {children}

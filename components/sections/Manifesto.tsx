@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Manifesto() {
   return (
-    <section className="py-32 bg-lime-400 text-black overflow-hidden relative">
+    <section className="py-32 bg-cyan-400 text-black overflow-hidden relative">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl">
           <motion.h2

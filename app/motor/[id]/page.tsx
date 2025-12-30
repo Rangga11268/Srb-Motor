@@ -17,7 +17,7 @@ export default function MotorDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-lime-400 selection:text-black font-sans">
+    <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black font-sans">
       <Navbar />
 
       {/* Back Button */}
@@ -37,7 +37,7 @@ export default function MotorDetailPage() {
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* LEFT: VISUALS (Fixed on Desktop) */}
         <div className="w-full lg:w-1/2 lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-zinc-900/30 flex items-center justify-center p-8 overflow-hidden relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-lime-900/20 to-transparent opacity-50" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 to-transparent opacity-50" />
 
           <motion.img
             initial={{ opacity: 0, scale: 0.9 }}
@@ -69,7 +69,7 @@ export default function MotorDetailPage() {
               <h1 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] text-white mb-6">
                 {motor.name}
               </h1>
-              <p className="font-mono text-lime-400 text-2xl md:text-4xl font-bold mb-12 border-b border-zinc-900 pb-12">
+              <p className="font-mono text-cyan-400 text-2xl md:text-4xl font-bold mb-12 border-b border-zinc-900 pb-12">
                 {motor.price}
               </p>
 
@@ -117,7 +117,7 @@ export default function MotorDetailPage() {
                     motor.name
                   )}`}
                   target="_blank"
-                  className="w-full bg-lime-400 text-black py-5 rounded-full font-display font-black text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-3 group shadow-lg shadow-lime-400/20"
+                  className="w-full bg-cyan-400 text-black py-5 rounded-full font-display font-black text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-3 group shadow-lg shadow-cyan-400/20"
                 >
                   Pesan Unit Ini
                   <ArrowUpRight className="group-hover:rotate-45 transition-transform" />

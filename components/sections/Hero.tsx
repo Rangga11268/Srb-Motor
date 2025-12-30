@@ -67,7 +67,7 @@ export function Hero() {
         <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-center gap-4 md:gap-6">
           <Link
             href="/gallery"
-            className="group bg-lime-400 text-black px-8 py-3 md:px-10 md:py-4 rounded-full font-display font-black text-lg md:text-xl uppercase tracking-tight hover:scale-105 transition-transform flex items-center justify-center gap-2"
+            className="group bg-cyan-400 text-black px-8 py-3 md:px-10 md:py-4 rounded-full font-display font-black text-lg md:text-xl uppercase tracking-tight hover:scale-105 transition-transform flex items-center justify-center gap-2"
           >
             Lihat Unit{" "}
             <ArrowUpRight className="group-hover:rotate-45 transition-transform" />
@@ -81,7 +81,7 @@ export function Hero() {
         </div>
 
         {/* SOLID NEON MARQUEE */}
-        <div className="w-full bg-lime-400 py-3 overflow-hidden border-y-4 border-black">
+        <div className="w-full bg-cyan-400 py-3 overflow-hidden border-y-4 border-black">
           <TextMarquee text="KUALITAS PREMIUM ▪ GARANSI 100% ▪ PENGIRIMAN CEPAT ▪ SRB MOTORS STUDIO" />
         </div>
       </div>
@@ -91,7 +91,7 @@ export function Hero() {
         <Link
           href="https://wa.me/628978638972?text=Halo%20SRB%20Motors,%20saya%20tertarik%20dengan%20unit%20motor%20anda."
           target="_blank"
-          className="w-16 h-16 bg-lime-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform animate-bounce"
+          className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform animate-bounce"
         >
           <MessageCircle size={32} fill="currentColor" />
         </Link>

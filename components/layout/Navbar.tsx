@@ -80,7 +80,7 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-display font-black text-5xl text-transparent stroke-text hover:text-lime-400 hover:stroke-lime-400 transition-colors uppercase"
+                  className="font-display font-black text-5xl text-transparent stroke-text hover:text-cyan-400 hover:stroke-cyan-400 transition-colors uppercase"
                 >
                   {link.name}
                 </Link>

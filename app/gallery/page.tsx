@@ -23,7 +23,7 @@ export default function GalleryPage() {
       <section className="pt-40 px-6 container mx-auto mb-12">
         <h1 className="font-display font-black text-[15vw] md:text-[12vw] leading-[0.8] mb-8 uppercase tracking-tighter">
           Koleksi <br />
-          <span className="text-lime-400">Kami</span>
+          <span className="text-cyan-400">Kami</span>
         </h1>
         <div className="flex flex-col md:flex-row justify-between items-end border-b border-zinc-900 pb-8 gap-8">
           <p className="font-mono text-zinc-500 max-w-md">
@@ -39,8 +39,8 @@ export default function GalleryPage() {
                 className={cn(
                   "px-6 py-2 rounded-full font-mono font-bold text-sm transition-colors border",
                   filter === brand
-                    ? "bg-lime-400 text-black border-lime-400"
-                    : "bg-transparent text-zinc-500 border-zinc-800 hover:border-lime-400 hover:text-white"
+                    ? "bg-cyan-400 text-black border-cyan-400"
+                    : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white"
                 )}
               >
                 {brand}
@@ -48,7 +48,7 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          <span className="font-mono text-lime-400 font-bold hidden md:block">
+          <span className="font-mono text-cyan-400 font-bold hidden md:block">
             [{filteredImages.length} UNIT TERSEDIA]
           </span>
         </div>
@@ -71,11 +71,11 @@ export default function GalleryPage() {
                 className="group"
               >
                 <Link href={`/motor/${img.id}`} className="block">
-                  <div className="relative aspect-square bg-zinc-900 rounded-lg overflow-hidden mb-6 border border-zinc-800 group-hover:border-lime-400 transition-colors duration-500">
+                  <div className="relative aspect-square bg-zinc-900 rounded-lg overflow-hidden mb-6 border border-zinc-800 group-hover:border-cyan-400 transition-colors duration-500">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-zinc-950 opacity-50" />
 
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-lime-400/90 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                    <div className="absolute inset-0 bg-cyan-400/90 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 gap-2">
                       <span className="font-display font-black text-2xl text-black uppercase tracking-tighter">
@@ -93,7 +93,7 @@ export default function GalleryPage() {
 
                   <div className="flex justify-between items-end">
                     <div>
-                      <span className="font-mono text-xs text-lime-400 mb-2 block">
+                      <span className="font-mono text-xs text-cyan-400 mb-2 block">
                         {img.category}
                       </span>
                       <h3 className="font-display font-black text-3xl uppercase leading-none mb-2">

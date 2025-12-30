@@ -20,7 +20,7 @@ export function PopularMotors() {
         <div className="flex justify-between items-end mb-16">
           <div>
             <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-2 uppercase tracking-tighter">
-              Koleksi <span className="text-lime-400">Terkini</span>
+              Koleksi <span className="text-cyan-400">Terkini</span>
             </h2>
             <p className="font-mono text-zinc-500 text-sm md:text-base">
               // PILIHAN TERBAIK_VOL.01
@@ -28,7 +28,7 @@ export function PopularMotors() {
           </div>
           <Link
             href="/gallery"
-            className="hidden md:flex items-center gap-2 font-mono font-bold text-lime-400 hover:text-white transition-colors"
+            className="hidden md:flex items-center gap-2 font-mono font-bold text-cyan-400 hover:text-white transition-colors"
           >
             LIHAT SEMUA UNIT <ArrowUpRight size={18} />
           </Link>
@@ -45,11 +45,11 @@ export function PopularMotors() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group relative bg-black border border-zinc-800 p-6 flex flex-col justify-between hover:border-lime-400 transition-colors duration-300 h-full"
+                className="group relative bg-black border border-zinc-800 p-6 flex flex-col justify-between hover:border-cyan-400 transition-colors duration-300 h-full"
               >
                 {/* Product Tag */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="bg-lime-400 text-black text-xs font-bold px-2 py-1 font-mono uppercase">
+                  <span className="bg-cyan-400 text-black text-xs font-bold px-2 py-1 font-mono uppercase">
                     {motor?.tag || "FEATURED"}
                   </span>
                 </div>
@@ -74,12 +74,12 @@ export function PopularMotors() {
                         {motor!.name}
                       </h3>
                     </div>
-                    <div className="bg-zinc-900 p-2 rounded-full text-white group-hover:bg-lime-400 group-hover:text-black transition-colors">
+                    <div className="bg-zinc-900 p-2 rounded-full text-white group-hover:bg-cyan-400 group-hover:text-black transition-colors">
                       <ArrowUpRight size={20} />
                     </div>
                   </div>
                   <div className="w-full h-[1px] bg-zinc-900 mb-4" />
-                  <p className="font-mono text-lime-400 font-bold text-lg text-right">
+                  <p className="font-mono text-cyan-400 font-bold text-lg text-right">
                     {motor!.price}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export function PopularMotors() {
         <div className="mt-8 md:hidden flex justify-center">
           <Link
             href="/gallery"
-            className="flex items-center gap-2 font-mono font-bold text-lime-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 font-mono font-bold text-cyan-400 hover:text-white transition-colors"
           >
             LIHAT SEMUA UNIT <ArrowUpRight size={18} />
           </Link>

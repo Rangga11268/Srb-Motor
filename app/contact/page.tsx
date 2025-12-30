@@ -6,18 +6,18 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-lime-400 selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black">
       <Navbar />
 
       <section className="pt-40 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 pb-32">
         {/* Text Side */}
         <div>
-          <span className="text-lime-400 font-mono tracking-widest uppercase mb-4 block">
+          <span className="text-cyan-400 font-mono tracking-widest uppercase mb-4 block">
             // Hubungi Kami
           </span>
           <h1 className="font-display font-black text-[15vw] md:text-[8vw] leading-[0.8] uppercase tracking-tighter mb-12">
             Bicara <br />
-            <span className="text-transparent stroke-text hover:text-lime-400 transition-colors duration-300">
+            <span className="text-transparent stroke-text hover:text-cyan-400 transition-colors duration-300">
               Bisnis
             </span>
           </h1>
@@ -28,7 +28,7 @@ export default function ContactPage() {
               <a
                 href="https://maps.app.goo.gl/h7ycKy2T6niHfibz7"
                 target="_blank"
-                className="font-bold hover:text-lime-400 transition-colors block"
+                className="font-bold hover:text-cyan-400 transition-colors block"
               >
                 JL. LORI SAKTI, RT 01 / RW 01, NO. 22
                 <br />
@@ -37,7 +37,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="text-zinc-500 text-sm mb-4">KONTAK LANGSUNG</h3>
-              <p className="font-bold text-lime-400 underline decoration-lime-400/30 underline-offset-4">
+              <p className="font-bold text-cyan-400 underline decoration-cyan-400/30 underline-offset-4">
                 HELLO@SRB-MOTORS.ID
               </p>
               <p className="font-bold mt-2">+62 897 8638 972</p>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-lime-400 outline-none transition-colors"
+                  className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-cyan-400 outline-none transition-colors"
                   placeholder="BUDI"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-lime-400 outline-none transition-colors"
+                  className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-cyan-400 outline-none transition-colors"
                   placeholder="SANTOSO"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
               </label>
               <input
                 type="email"
-                className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-lime-400 outline-none transition-colors"
+                className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-cyan-400 outline-none transition-colors"
                 placeholder="BUDI@CONTOH.COM"
               />
             </div>
@@ -88,12 +88,12 @@ export default function ContactPage() {
               </label>
               <textarea
                 rows={4}
-                className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-lime-400 outline-none transition-colors resize-none"
+                className="w-full bg-transparent border-b border-zinc-700 py-2 text-xl font-bold focus:border-cyan-400 outline-none transition-colors resize-none"
                 placeholder="SAYA TERTARIK DENGAN..."
               />
             </div>
 
-            <button className="w-full bg-lime-400 text-black py-4 font-display font-black text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 group">
+            <button className="w-full bg-cyan-400 text-black py-4 font-display font-black text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 group">
               Kirim Pesan{" "}
               <ArrowUpRight className="group-hover:rotate-45 transition-transform" />
             </button>

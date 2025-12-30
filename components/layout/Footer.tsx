@@ -11,7 +11,7 @@ export function Footer() {
           {/* Section 1: Newsletter */}
           <div>
             <h3 className="font-display font-black text-4xl uppercase mb-8">
-              Tetap <span className="text-lime-400">Terhubung</span>
+              Tetap <span className="text-cyan-400">Terhubung</span>
             </h3>
             <div className="flex gap-4 border-b border-zinc-800 pb-4">
               <input
@@ -19,7 +19,7 @@ export function Footer() {
                 placeholder="MASUKKAN EMAIL ANDA"
                 className="bg-transparent w-full outline-none font-mono text-xl placeholder:text-zinc-700 text-white uppercase"
               />
-              <button className="text-lime-400 hover:text-white transition-colors">
+              <button className="text-cyan-400 hover:text-white transition-colors">
                 <ArrowUpRight size={32} />
               </button>
             </div>
@@ -31,19 +31,19 @@ export function Footer() {
               <h4 className="text-zinc-500 mb-6 text-sm">// PETA SITUS</h4>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/" className="hover:text-lime-400 uppercase">
+                  <Link href="/" className="hover:text-cyan-400 uppercase">
                     Beranda
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-lime-400 uppercase">
+                  <Link href="/about" className="hover:text-cyan-400 uppercase">
                     Studio
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/gallery"
-                    className="hover:text-lime-400 uppercase"
+                    className="hover:text-cyan-400 uppercase"
                   >
                     Koleksi
                   </Link>
@@ -51,7 +51,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="hover:text-lime-400 uppercase"
+                    className="hover:text-cyan-400 uppercase"
                   >
                     Kontak
                   </Link>
@@ -64,7 +64,7 @@ export function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-lime-400 uppercase flex items-center gap-2"
+                    className="hover:text-cyan-400 uppercase flex items-center gap-2"
                   >
                     Instagram <ArrowUpRight size={14} />
                   </a>
@@ -72,7 +72,7 @@ export function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-lime-400 uppercase flex items-center gap-2"
+                    className="hover:text-cyan-400 uppercase flex items-center gap-2"
                   >
                     Twitter <ArrowUpRight size={14} />
                   </a>
@@ -80,7 +80,7 @@ export function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-lime-400 uppercase flex items-center gap-2"
+                    className="hover:text-cyan-400 uppercase flex items-center gap-2"
                   >
                     Facebook <ArrowUpRight size={14} />
                   </a>
@@ -93,13 +93,13 @@ export function Footer() {
 
       {/* MASSIVE BOTTOM LOGO */}
       <div className="border-t border-zinc-900 w-full overflow-hidden py-4 md:py-8">
-        <h1 className="text-[18vw] md:text-[18vw] lg:text-[20vw] font-display font-black leading-[0.8] text-center tracking-tighter text-white hover:text-lime-400 transition-colors duration-500 cursor-default select-none">
+        <h1 className="text-[18vw] md:text-[18vw] lg:text-[20vw] font-display font-black leading-[0.8] text-center tracking-tighter text-white hover:text-cyan-400 transition-colors duration-500 cursor-default select-none">
           SRB.MTRS
         </h1>
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-lime-400 py-2 px-6 flex justify-between items-center font-mono text-black text-xs md:text-sm font-bold uppercase">
+      <div className="bg-cyan-400 py-2 px-6 flex justify-between items-center font-mono text-black text-xs md:text-sm font-bold uppercase">
         <span>© 2024 SRB MOTORS</span>
         <span>BEKASI, INDONESIA</span>
       </div>
