@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FAQ } from "@/components/sections/FAQ";
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
 
@@ -98,6 +99,8 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </main>
