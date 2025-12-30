@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable} cursor-none`}
+      className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
     >
       <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-lime-400 selection:text-black overflow-x-hidden">
         <SmoothScroll />
