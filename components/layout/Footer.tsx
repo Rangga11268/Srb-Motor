@@ -93,7 +93,7 @@ export function Footer() {
 
       {/* MASSIVE BOTTOM LOGO */}
       <div className="border-t border-zinc-900 w-full overflow-hidden py-4 md:py-8">
-        <h1 className="text-[12vw] md:text-[18vw] lg:text-[20vw] font-display font-black leading-[0.8] text-center tracking-tighter text-white hover:text-cyan-400 transition-colors duration-500 cursor-default select-none">
+        <h1 className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-display font-black leading-[0.8] text-center tracking-tighter text-white hover:text-cyan-400 transition-colors duration-500 cursor-default select-none">
           SRB.MTRS
         </h1>
       </div>
