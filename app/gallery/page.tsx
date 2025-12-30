@@ -5,74 +5,14 @@ import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-
-const galleryImages = [
-  {
-    src: "/assets/img/honda/vario 160.png",
-    title: "VARIO 160",
-    category: "MATIC SPORT",
-    brand: "HONDA",
-  },
-  {
-    src: "/assets/img/yamaha/aerox 155.png",
-    title: "AEROX 155",
-    category: "MAXI SCOOTER",
-    brand: "YAMAHA",
-  },
-  {
-    src: "/assets/img/honda/pcx 160.png",
-    title: "PCX 160",
-    category: "PREMIUM",
-    brand: "HONDA",
-  },
-  {
-    src: "/assets/img/yamaha/NMax Turbo.png",
-    title: "NMAX TURBO",
-    category: "PERFORMANCE",
-    brand: "YAMAHA",
-  },
-  {
-    src: "/assets/img/honda/adv 160.png",
-    title: "ADV 160",
-    category: "ADVENTURE",
-    brand: "HONDA",
-  },
-  {
-    src: "/assets/img/yamaha/xmax.png",
-    title: "XMAX 250",
-    category: "ULTIMATE",
-    brand: "YAMAHA",
-  },
-  {
-    src: "/assets/img/honda/scoopy.png",
-    title: "SCOOPY",
-    category: "RETRO",
-    brand: "HONDA",
-  },
-  {
-    src: "/assets/img/yamaha/Fazzio.png",
-    title: "FAZZIO",
-    category: "HYBRID",
-    brand: "YAMAHA",
-  },
-  {
-    src: "/assets/img/honda/stylo.png",
-    title: "STYLO 160",
-    category: "FASHION",
-    brand: "HONDA",
-  },
-  {
-    src: "/assets/img/yamaha/Grand Filano.png",
-    title: "FILANO",
-    category: "CLASSIC",
-    brand: "YAMAHA",
-  },
-];
+import { motors } from "@/lib/motor-data";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("ALL");
 
-  const filteredImages = galleryImages.filter((img) =>
+  const filteredImages = motors.filter((img) =>
     filter === "ALL" ? true : img.brand === filter
   );
 
@@ -123,45 +63,51 @@ export default function GalleryPage() {
             {filteredImages.map((img) => (
               <motion.div
                 layout
-                key={img.title}
+                key={img.id}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 className="group"
               >
-                <div className="relative aspect-square bg-zinc-900 rounded-lg overflow-hidden mb-6 border border-zinc-800 group-hover:border-lime-400 transition-colors duration-500">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-zinc-950 opacity-50" />
+                <Link href={`/motor/${img.id}`} className="block">
+                  <div className="relative aspect-square bg-zinc-900 rounded-lg overflow-hidden mb-6 border border-zinc-800 group-hover:border-lime-400 transition-colors duration-500">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-zinc-950 opacity-50" />
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-lime-400/90 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-lime-400/90 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                    <span className="font-display font-black text-4xl text-black uppercase tracking-tighter">
-                      Lihat
-                    </span>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 gap-2">
+                      <span className="font-display font-black text-2xl text-black uppercase tracking-tighter">
+                        Lihat Detail
+                      </span>
+                      <ArrowUpRight className="text-black" />
+                    </div>
+
+                    <img
+                      src={img.image}
+                      alt={img.name}
+                      className="relative z-0 w-[80%] h-auto object-contain mx-auto my-auto top-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700 contrast-125"
+                    />
                   </div>
 
-                  <img
-                    src={img.src}
-                    alt={img.title}
-                    className="relative z-0 w-[80%] h-auto object-contain mx-auto my-auto top-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700 contrast-125"
-                  />
-                </div>
-
-                <div className="flex justify-between items-end">
-                  <div>
-                    <span className="font-mono text-xs text-lime-400 mb-2 block">
-                      {img.category}
+                  <div className="flex justify-between items-end">
+                    <div>
+                      <span className="font-mono text-xs text-lime-400 mb-2 block">
+                        {img.category}
+                      </span>
+                      <h3 className="font-display font-black text-3xl uppercase leading-none mb-2">
+                        {img.name}
+                      </h3>
+                      <p className="font-mono text-white/50 text-xl font-bold">
+                        {img.price}
+                      </p>
+                    </div>
+                    <span className="bg-zinc-900 text-zinc-400 px-3 py-1 rounded text-xs font-mono font-bold">
+                      {img.brand}
                     </span>
-                    <h3 className="font-display font-black text-4xl uppercase leading-none">
-                      {img.title}
-                    </h3>
                   </div>
-                  <span className="bg-zinc-900 text-zinc-400 px-3 py-1 rounded text-xs font-mono font-bold">
-                    {img.brand}
-                  </span>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>
