@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     "Discover your dream ride with SRB Motors. Premium collection of Honda and Yamaha motorcycles.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
