@@ -117,7 +117,7 @@ export default function MotorDetailPage() {
                     motor.name
                   )}`}
                   target="_blank"
-                  className="w-full bg-cyan-400 text-black py-5 rounded-full font-display font-black text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-3 group shadow-lg shadow-cyan-400/20"
+                  className="w-full bg-cyan-400 text-black py-4 md:py-5 rounded-full font-display font-black text-lg md:text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 md:gap-3 group shadow-lg shadow-cyan-400/20"
                 >
                   Pesan Unit Ini
                   <ArrowUpRight className="group-hover:rotate-45 transition-transform" />
