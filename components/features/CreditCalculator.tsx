@@ -106,10 +106,10 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
         <div className="bg-black/50 p-5 md:p-6 rounded-2xl border border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 md:gap-4">
             <div>
-              <span className="block font-mono text-zinc-500 text-xs md:text-sm mb-2 uppercase tracking-wider">
-                Estimasi Angsuran per bulan:
+              <span className="block font-mono text-zinc-500 text-[10px] md:text-sm mb-1 uppercase tracking-wider">
+                Estimasi Angsuran / bulan:
               </span>
-              <span className="font-display font-black text-4xl md:text-5xl text-cyan-400 leading-none">
+              <span className="font-display font-black text-3xl md:text-5xl text-cyan-400 leading-none block">
                 {formatCurrency(installment)}
               </span>
             </div>
