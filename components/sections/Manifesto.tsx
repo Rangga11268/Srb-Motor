@@ -11,7 +11,7 @@ export function Manifesto() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display font-black text-5xl md:text-8xl leading-[0.9] tracking-tighter mb-12 uppercase"
+            className="font-display font-black text-3xl sm:text-4xl md:text-8xl leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 md:mb-12 uppercase"
           >
             Kami tidak sekadar jual motor. Kami wujudkan{" "}
             <span className="text-white stroke-black">impian</span>.

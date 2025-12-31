@@ -45,7 +45,7 @@ export function Testimonials() {
           <span className="text-cyan-400 font-mono tracking-widest uppercase text-sm block mb-4">
             // Testimoni Pelanggan
           </span>
-          <h2 className="font-display font-black text-5xl md:text-7xl uppercase">
+          <h2 className="font-display font-black text-4xl sm:text-5xl md:text-7xl uppercase">
             Kata <span className="text-cyan-400">Mereka</span>
           </h2>
         </div>
