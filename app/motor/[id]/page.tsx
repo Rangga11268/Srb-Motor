@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import { motion } from "framer-motion";
+import { CreditCalculator } from "@/components/features/CreditCalculator";
 
 export default function MotorDetailPage() {
   const { id } = useParams();
@@ -107,6 +108,14 @@ export default function MotorDetailPage() {
                       </span>
                     </div>
                   ))}
+                </div>
+
+                {/* Credit Calculator */}
+                <div className="mb-16">
+                  <CreditCalculator
+                    price={motor.price}
+                    motorName={motor.name}
+                  />
                 </div>
               </div>
 

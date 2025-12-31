@@ -73,7 +73,10 @@ import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
 import { BackToTop } from "@/components/ui/BackToTop";
+
 import { Analytics } from "@vercel/analytics/react";
+import { CompareProvider } from "@/components/providers/CompareProvider";
+import { CompareFloat } from "@/components/features/CompareFloat";
 
 export default function RootLayout({
   children,
@@ -86,12 +89,15 @@ export default function RootLayout({
       className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
     >
       <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-cyan-400 selection:text-black overflow-x-hidden">
-        <Preloader />
-        <SmoothScroll />
-        <NoiseOverlay />
-        <BackToTop />
-        {children}
-        <Analytics />
+        <CompareProvider>
+          <Preloader />
+          <SmoothScroll />
+          <NoiseOverlay />
+          <BackToTop />
+          <CompareFloat />
+          {children}
+          <Analytics />
+        </CompareProvider>
       </body>
     </html>
   );

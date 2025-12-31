@@ -7,12 +7,14 @@ import { useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { motors } from "@/lib/motor-data";
 import Link from "next/link";
-import { ArrowUpRight, Search } from "lucide-react";
+import { ArrowUpRight, Search, Check } from "lucide-react";
+import { useCompare } from "@/components/providers/CompareProvider";
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [priceFilter, setPriceFilter] = useState("ALL");
+  const { addToCompare, removeFromCompare, isInCompare } = useCompare();
 
   const filteredImages = useMemo(() => {
     return motors.filter((motor) => {
@@ -136,6 +138,38 @@ export default function GalleryPage() {
                 <Link href={`/motor/${img.id}`} className="block">
                   <div className="relative aspect-square bg-zinc-900 rounded-lg overflow-hidden mb-6 border border-zinc-800 group-hover:border-cyan-400 transition-colors duration-500">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-zinc-950 opacity-50" />
+
+                    {/* Compare Checkbox */}
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        if (isInCompare(img.id)) {
+                          removeFromCompare(img.id);
+                        } else {
+                          addToCompare(img);
+                        }
+                      }}
+                      className={cn(
+                        "absolute top-4 right-4 z-30 p-2 rounded-full transition-all border",
+                        isInCompare(img.id)
+                          ? "bg-cyan-400 border-cyan-400 text-black"
+                          : "bg-black/50 border-zinc-700 text-zinc-500 hover:text-white hover:border-white"
+                      )}
+                      title="Bandingkan"
+                    >
+                      <Check
+                        size={16}
+                        className={cn(
+                          isInCompare(img.id) ? "opacity-100" : "opacity-0"
+                        )}
+                      />
+                      {!isInCompare(img.id) && (
+                        <span className="text-[10px] font-mono uppercase font-bold px-1">
+                          Vs
+                        </span>
+                      )}
+                    </button>
 
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-cyan-400/90 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
