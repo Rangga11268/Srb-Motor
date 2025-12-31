@@ -38,7 +38,7 @@ export default function ContactPage() {
               <p className="font-bold text-cyan-400 underline decoration-cyan-400/30 underline-offset-4">
                 HELLO@SRB-MOTORS.ID
               </p>
-              <p className="font-bold mt-2">+62 897 8638 972</p>
+              <p className="font-bold mt-2">+62 897 8638 849</p>
             </div>
           </div>
         </div>

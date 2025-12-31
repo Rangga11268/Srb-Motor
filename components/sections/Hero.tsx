@@ -89,7 +89,7 @@ export function Hero() {
       {/* Floating Chat Bubble (Reference Match) */}
       <div className="fixed bottom-8 right-8 z-50">
         <Link
-          href="https://wa.me/628978638972?text=Halo%20SRB%20Motors,%20saya%20tertarik%20dengan%20unit%20motor%20anda."
+          href="https://wa.me/628978638849?text=Halo%20SRB%20Motors,%20saya%20tertarik%20dengan%20unit%20motor%20anda."
           target="_blank"
           className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform animate-bounce"
         >

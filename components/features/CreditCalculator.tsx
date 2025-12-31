@@ -44,7 +44,7 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
     )})\nTenor: ${tenor} Bulan\nAngsuran: ${formatCurrency(
       installment
     )}\n\nMohon info persyaratannya.`;
-    return `https://wa.me/628978638972?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/628978638849?text=${encodeURIComponent(message)}`;
   };
 
   return (

@@ -122,7 +122,7 @@ export default function MotorDetailPage() {
               {/* CTA */}
               <div className="sticky bottom-6 z-30">
                 <Link
-                  href={`https://wa.me/628978638972?text=Saya%20tertarik%20dengan%20${encodeURIComponent(
+                  href={`https://wa.me/628978638849?text=Saya%20tertarik%20dengan%20${encodeURIComponent(
                     motor.name
                   )}`}
                   target="_blank"
