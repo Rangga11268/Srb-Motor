@@ -143,17 +143,20 @@ export default function ComparePage() {
                 {/* Empty Slots for Desktop Balance (Hidden on Mobile) */}
                 {Array.from({ length: 3 - selectedMotors.length }).map(
                   (_, i) => (
-                    <div
+                    <Link
+                      href="/gallery"
                       key={`empty-${i}`}
-                      className="hidden md:flex flex-col items-center justify-center border-r border-zinc-900 last:border-r-0 opacity-20"
+                      className="hidden md:flex flex-col items-center justify-center border-r border-zinc-900 last:border-r-0 opacity-40 hover:opacity-100 transition-opacity group cursor-pointer"
                     >
-                      <div className="w-20 h-20 rounded-full border-2 border-dashed border-zinc-500 flex items-center justify-center mb-4">
-                        <span className="text-4xl text-zinc-500">+</span>
+                      <div className="w-20 h-20 rounded-full border-2 border-dashed border-zinc-500 group-hover:border-cyan-400 flex items-center justify-center mb-4 transition-colors">
+                        <span className="text-4xl text-zinc-500 group-hover:text-cyan-400 transition-colors">
+                          +
+                        </span>
                       </div>
-                      <span className="font-mono text-sm text-zinc-500 uppercase">
-                        Kosong
+                      <span className="font-mono text-sm text-zinc-500 group-hover:text-cyan-400 uppercase transition-colors">
+                        Tambah Unit
                       </span>
-                    </div>
+                    </Link>
                   )
                 )}
               </div>

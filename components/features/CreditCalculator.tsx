@@ -109,7 +109,7 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
               <span className="block font-mono text-zinc-500 text-[10px] md:text-sm mb-1 uppercase tracking-wider">
                 Estimasi Angsuran / bulan:
               </span>
-              <span className="font-display font-black text-3xl md:text-5xl text-cyan-400 leading-none block">
+              <span className="font-display font-black text-xl md:text-4xl text-cyan-400 leading-none block">
                 {formatCurrency(installment)}
               </span>
             </div>
