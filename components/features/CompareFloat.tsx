@@ -4,11 +4,14 @@ import { useCompare } from "@/components/providers/CompareProvider";
 import { ArrowLeftRight, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function CompareFloat() {
   const { selectedMotors, removeFromCompare } = useCompare();
+  const pathname = usePathname();
 
-  if (selectedMotors.length === 0) return null;
+  // Hide on compare page
+  if (selectedMotors.length === 0 || pathname === "/compare") return null;
 
   return (
     <AnimatePresence>
