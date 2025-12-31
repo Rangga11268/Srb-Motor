@@ -99,9 +99,21 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-cyan-400 py-2 px-6 flex justify-between items-center font-mono text-black text-xs md:text-sm font-bold uppercase">
-        <span>© 2024 SRB MOTORS</span>
-        <span>BEKASI, INDONESIA</span>
+      <div className="bg-cyan-400 py-3 px-6 flex flex-col md:flex-row justify-between items-center font-mono text-black text-[10px] md:text-sm font-bold uppercase gap-2 md:gap-0">
+        <span>© 2024 SRB MOTORS • BEKASI, INDONESIA</span>
+        <a
+          href="https://darell-rangga.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 hover:bg-black hover:text-cyan-400 px-3 py-1 rounded-full transition-all group border border-black hover:border-cyan-400"
+        >
+          <span className="opacity-70 group-hover:opacity-100">
+            DIBUAT OLEH:
+          </span>
+          <span className="underline decoration-black/30 group-hover:decoration-cyan-400 underline-offset-2">
+            DARELL RANGGA
+          </span>
+        </a>
       </div>
     </footer>
   );
