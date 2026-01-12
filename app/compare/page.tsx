@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ArrowLeft, X, Check, AlertCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function ComparePage() {
@@ -112,10 +113,12 @@ export default function ComparePage() {
                     <div className="h-full flex flex-col items-center text-center pt-6 md:pt-8 content-end">
                       <div className="relative w-16 h-16 md:w-48 md:h-40 mb-2 md:mb-8 group-hover:scale-110 transition-transform duration-500">
                         <div className="absolute inset-0 bg-cyan-400/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <img
+                        <Image
                           src={motor.image}
                           alt={motor.name}
-                          className="relative w-full h-full object-contain drop-shadow-2xl"
+                          fill
+                          sizes="(max-width: 768px) 64px, 192px"
+                          className="object-contain drop-shadow-2xl"
                         />
                       </div>
                       <div className="mt-auto w-full px-1">

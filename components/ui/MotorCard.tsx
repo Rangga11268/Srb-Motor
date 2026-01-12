@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCompare } from "@/components/providers/CompareProvider";
@@ -74,11 +75,16 @@ export function MotorCard({ motor, index = 0 }: MotorCardProps) {
             {/* Background Glow */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-            <motion.img
-              src={motor.image}
-              alt={motor.name}
-              className="relative w-full h-full object-contain drop-shadow-2xl z-10 group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 ease-out"
-            />
+            <motion.div className="relative w-full h-full z-10 group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 ease-out">
+              <Image
+                src={motor.image}
+                alt={motor.name}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                className="object-contain drop-shadow-2xl"
+                priority={index < 4}
+              />
+            </motion.div>
           </div>
 
           {/* Content Area */}

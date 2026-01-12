@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { motors } from "@/lib/motor-data";
 import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { CreditCalculator } from "@/components/features/CreditCalculator";
@@ -40,17 +41,24 @@ export default function MotorDetailPage() {
         <div className="w-full lg:w-1/2 lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-zinc-900/30 flex items-center justify-center p-8 overflow-hidden relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 to-transparent opacity-50" />
 
-          <motion.img
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            src={motor.image}
-            alt={motor.name}
-            className="w-full max-w-xl h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 pt-20 lg:pt-0"
-          />
+            className="relative w-full max-w-xl h-[50vh] lg:h-[60vh] z-10 pt-20 lg:pt-0"
+          >
+            <Image
+              src={motor.image}
+              alt={motor.name}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              priority
+            />
+          </motion.div>
 
           <div className="absolute bottom-8 left-8 z-20">
-            <span className="bg-lime-400 text-black px-4 py-2 font-mono font-bold text-sm uppercase rounded tracking-widest">
+            <span className="bg-cyan-400 text-black px-4 py-2 font-mono font-bold text-sm uppercase rounded tracking-widest">
               {motor.category}
             </span>
           </div>
@@ -91,7 +99,7 @@ export default function MotorDetailPage() {
               {/* Technical Specifications */}
               <div className="mb-16">
                 <h3 className="text-white font-display font-black text-2xl uppercase mb-8 flex items-center gap-3">
-                  <Check className="text-lime-400" size={24} /> Spesifikasi
+                  <Check className="text-cyan-400" size={24} /> Spesifikasi
                   Lengkap
                 </h3>
                 <div className="space-y-0">
