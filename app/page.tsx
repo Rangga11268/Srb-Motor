@@ -7,7 +7,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-amber-500/30">
+    <main className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-cyan-400 selection:text-black">
       <Navbar />
       <Hero />
       <PopularMotors />

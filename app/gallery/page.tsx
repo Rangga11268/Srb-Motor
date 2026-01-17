@@ -42,7 +42,7 @@ export default function GalleryPage() {
   }, [filter, searchQuery, priceFilter]);
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-lime-400 selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black">
       <Navbar />
 
       <section className="pt-32 md:pt-40 px-6 container mx-auto mb-12">
@@ -82,7 +82,7 @@ export default function GalleryPage() {
                     "px-4 md:px-6 py-2 rounded-full font-mono font-bold text-xs md:text-sm transition-colors border",
                     filter === brand
                       ? "bg-cyan-400 text-black border-cyan-400"
-                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white"
+                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white",
                   )}
                 >
                   {brand}
@@ -105,7 +105,7 @@ export default function GalleryPage() {
                     "px-4 py-2 rounded-full font-mono font-bold text-xs transition-colors border",
                     priceFilter === price.value
                       ? "bg-cyan-400 text-black border-cyan-400"
-                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white"
+                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white",
                   )}
                 >
                   {price.label}
