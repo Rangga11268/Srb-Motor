@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "SRB Motors | Future of Riding",
   description:
     "Discover your dream ride with SRB Motors. Official retailer of new Honda and Yamaha motorcycles.",
+  verification: {
+    google: "30iEf5hjGaLKqQGcttLpuchfHjbhhCYqTqooNYFKTJY",
+  },
   keywords: [
     "motor baru",
     "Honda",
