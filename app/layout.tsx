@@ -23,26 +23,28 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://srb-motor.vercel.app"),
-  title: "SRB Motors | Future of Riding",
+  title: "SRB Motors Bekasi | Dealer Motor Baru Honda & Yamaha Premium",
   description:
-    "Discover your dream ride with SRB Motors. Official retailer of new Honda and Yamaha motorcycles.",
+    "Dealer motor baru Honda & Yamaha premium terbaik di Bekasi. Unit 100% resmi, proses transparan, dan pelayanan eksklusif. Temukan motor impian Anda di SRB Motors.",
   verification: {
     google: "30iEf5hjGaLKqQGcttLpuchfHjbhhCYqTqooNYFKTJY",
   },
   keywords: [
-    "motor baru",
+    "motor baru bekasi",
+    "jual motor baru bekasi",
+    "dealer honda bekasi",
+    "dealer yamaha bekasi",
     "Honda",
     "Yamaha",
-    "motor official",
-    "SRB Motors",
-    "Bekasi",
-    "dealer resmi",
+    "SRB Motors Bekasi",
+    "beli motor baru bekasi",
+    "showroom motor premium",
   ],
   authors: [{ name: "SRB Motors" }],
   openGraph: {
-    title: "SRB Motors | Future of Riding",
+    title: "SRB Motors Bekasi | Dealer Motor Baru Honda & Yamaha Premium",
     description:
-      "Discover your dream ride with SRB Motors. Official retailer of new Honda and Yamaha motorcycles.",
+      "Dealer motor baru Honda & Yamaha premium terbaik di Bekasi. Unit 100% resmi, proses transparan, dan pelayanan eksklusif.",
     url: "https://srb-motor.vercel.app",
     siteName: "SRB Motors",
     images: [
@@ -58,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SRB Motors | Future of Riding",
+    title: "SRB Motors Bekasi | Dealer Motor Baru Honda & Yamaha Premium",
     description:
-      "Discover your dream ride with SRB Motors. Premium collection of Honda and Yamaha motorcycles.",
+      "Dealer motor baru Honda & Yamaha premium terbaik di Bekasi. Unit 100% resmi, proses transparan, dan pelayanan eksklusif.",
     images: ["/assets/icon/logo trans.webp"],
   },
 };
