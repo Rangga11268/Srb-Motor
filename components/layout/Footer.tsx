@@ -109,7 +109,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-white py-3 px-6 flex flex-col md:flex-row justify-between items-center font-mono text-black text-[10px] md:text-sm font-bold uppercase gap-2 md:gap-0">
-        <span>© 2024 SRB MOTORS • BEKASI, INDONESIA</span>
+        <span>© {new Date().getFullYear()} SRB MOTORS • BEKASI, INDONESIA</span>
         <a
           href="https://darell-rangga.vercel.app/"
           target="_blank"

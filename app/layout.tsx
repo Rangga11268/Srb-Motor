@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "SRB Motors",
     images: [
       {
-        url: "/assets/icon/logo trans.png",
+        url: "/assets/icon/logo trans.webp",
         width: 1200,
         height: 630,
         alt: "SRB Motors Logo",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "SRB Motors | Future of Riding",
     description:
       "Discover your dream ride with SRB Motors. Premium collection of Honda and Yamaha motorcycles.",
-    images: ["/assets/icon/logo trans.png"],
+    images: ["/assets/icon/logo trans.webp"],
   },
 };
 

@@ -28,13 +28,13 @@ export default function AboutPage() {
 
         {/* Feature Grid */}
         <div className="grid grid-cols-1 mb-24 max-w-5xl mx-auto">
-          <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-zinc-900">
-            {/* Generic geometric pattern for studio */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-800 to-zinc-900 border border-zinc-800 rounded-2xl flex items-center justify-center">
-              <span className="font-display font-medium text-4xl text-zinc-700 uppercase tracking-widest">
-                SRB Studio
-              </span>
-            </div>
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-zinc-900 group">
+            <div className="absolute inset-0 z-10 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+            <img
+              src="/assets/img/about us.webp"
+              alt="SRB Studio"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            />
           </div>
         </div>
 

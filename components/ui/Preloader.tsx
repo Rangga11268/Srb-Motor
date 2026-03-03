@@ -31,7 +31,7 @@ export function Preloader() {
             className="flex flex-col items-center"
           >
             <img
-              src="/assets/icon/logo trans.png"
+              src="/assets/icon/logo trans.webp"
               alt="SRB Logo"
               className="w-24 md:w-32 h-auto object-contain mb-6 opacity-90"
             />

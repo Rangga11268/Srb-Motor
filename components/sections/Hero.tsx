@@ -55,7 +55,7 @@ export function Hero() {
             className="relative w-[80%] md:w-[60%] h-[300px] md:h-[400px] z-20"
           >
             <Image
-              src="/assets/img/honda/HondaVariong.png"
+              src="/assets/img/honda/HondaVariong.webp"
               alt="Hero Motor 1"
               fill
               sizes="(max-width: 768px) 80vw, 60vw"
@@ -67,7 +67,7 @@ export function Hero() {
           {/* Secondary Bikes Flanking (Clean versions) */}
           <div className="absolute left-0 bottom-0 w-[35%] md:w-[25%] h-[150px] md:h-[200px] opacity-40 z-10 -rotate-6 translate-y-10">
             <Image
-              src="/assets/img/yamaha/aerox 155.png"
+              src="/assets/img/yamaha/aerox 155.webp"
               alt="Hero Motor 2"
               fill
               sizes="(max-width: 768px) 35vw, 25vw"
@@ -76,7 +76,7 @@ export function Hero() {
           </div>
           <div className="absolute right-0 bottom-0 w-[35%] md:w-[25%] h-[150px] md:h-[200px] opacity-40 z-10 rotate-6 translate-y-10">
             <Image
-              src="/assets/img/honda/beat.png"
+              src="/assets/img/honda/beat.webp"
               alt="Hero Motor 3"
               fill
               sizes="(max-width: 768px) 35vw, 25vw"

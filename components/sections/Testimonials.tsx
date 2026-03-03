@@ -12,7 +12,7 @@ const testimonials = [
     rating: 5,
     review:
       "Pengalaman beli motor baru di SRB sangat menyenangkan. Unit diantar cepat, kondisi mulus 100% Brand New In Box. Terima kasih!",
-    image: "/assets/icon/logo trans.png",
+    image: "/assets/icon/logo trans.webp",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const testimonials = [
     rating: 5,
     review:
       "Harga OTR terbaik dibanding dealer lain. Proses kredit dibantu sampai goal. Pelayanan ramah dan transparan.",
-    image: "/assets/icon/logo trans.png",
+    image: "/assets/icon/logo trans.webp",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const testimonials = [
     rating: 5,
     review:
       "Motor baru mendarat dengan aman. Garansi resmi aktif, STNK cepat keluar. Sangat puas belanja di SRB Motors.",
-    image: "/assets/icon/logo trans.png",
+    image: "/assets/icon/logo trans.webp",
   },
 ];
 
