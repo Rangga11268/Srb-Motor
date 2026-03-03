@@ -74,7 +74,6 @@ export const viewport = {
 
 import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
-import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
 import { BackToTop } from "@/components/ui/BackToTop";
 
 import { Analytics } from "@vercel/analytics/react";
@@ -91,11 +90,10 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="font-sans antialiased bg-zinc-950 text-zinc-100 selection:bg-cyan-400 selection:text-black overflow-x-hidden">
+      <body className="font-sans antialiased bg-black text-white selection:bg-white/20 selection:text-white overflow-x-hidden">
         <CompareProvider>
           <Preloader />
           <SmoothScroll />
-          <NoiseOverlay />
           <BackToTop />
           <CompareFloat />
           {children}

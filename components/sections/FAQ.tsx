@@ -45,10 +45,10 @@ export function FAQ() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-cyan-400 font-mono tracking-widest uppercase text-sm block mb-4">
+          <span className="text-zinc-500 font-mono tracking-widest uppercase text-sm block mb-4">
             // Pertanyaan Umum
           </span>
-          <h2 className="font-display font-black text-5xl md:text-7xl uppercase">
+          <h2 className="font-display font-medium text-5xl md:text-7xl uppercase tracking-tight">
             FAQ
           </h2>
         </div>
@@ -58,23 +58,20 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-zinc-800 rounded-lg overflow-hidden hover:border-cyan-400/50 transition-colors"
+              className="border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-500 transition-colors"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-6 text-left bg-zinc-900/50 hover:bg-zinc-900 transition-colors"
               >
-                <span className="font-display font-bold text-lg md:text-xl text-white pr-4">
+                <span className="font-display font-medium text-lg md:text-xl text-white pr-4">
                   {faq.question}
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ChevronDown
-                    className="text-cyan-400 flex-shrink-0"
-                    size={24}
-                  />
+                  <ChevronDown className="text-white flex-shrink-0" size={24} />
                 </motion.div>
               </button>
 
@@ -87,7 +84,7 @@ export function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="p-6 pt-0 font-mono text-zinc-400 leading-relaxed">
+                    <div className="p-6 pt-0 font-mono text-zinc-400 leading-relaxed bg-zinc-900/50">
                       {faq.answer}
                     </div>
                   </motion.div>

@@ -58,38 +58,37 @@
 }
 
 :root {
-  /* Zinc 950 Base - Keeping the deep dark base */
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
+  /* Clean Dark Mode Base */
+  --background: 0 0% 3%; /* Sangat gelap, mendekati hitam murni */
+  --foreground: 0 0% 98%; /* Putih bersih */
 
-  --card: 240 10% 3.9%;
+  --card: 0 0% 5%;
   --card-foreground: 0 0% 98%;
 
-  --popover: 240 10% 3.9%;
+  --popover: 0 0% 5%;
   --popover-foreground: 0 0% 98%;
 
-  /* ACID GREEN - The new Hype Color */
-  --primary: 84 100% 59%; /* #aaff00 */
-  --primary-foreground: 240 10% 3.9%;
+  /* Minimalist Monochrom Accent */
+  --primary: 0 0% 98%; /* Putih sebagai primary */
+  --primary-foreground: 0 0% 3%; /* Teks gelap di atas putih */
 
-  /* Signal Orange - Secondary Accent */
-  --secondary: 24 93% 57%; /* #ff4d00 */
+  --secondary: 0 0% 12%;
   --secondary-foreground: 0 0% 98%;
 
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 60%;
 
-  --accent: 240 3.7% 15.9%;
+  --accent: 0 0% 12%;
   --accent-foreground: 0 0% 98%;
 
-  --destructive: 0 62.8% 30.6%;
+  --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 240 3.7% 20%; /* Slightly lighter border for visible grids */
-  --input: 240 3.7% 15.9%;
-  --ring: 84 100% 59%;
+  --border: 0 0% 12%; /* Garis yang sangat halus */
+  --input: 0 0% 12%;
+  --ring: 0 0% 98%;
 
-  --radius: 0rem; /* Industrial = Sharp Edges */
+  --radius: 0.5rem; /* Sudut sedikit melengkung, lebih modern dan ramah */
 }
 
 @layer base {
@@ -110,38 +109,37 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .stroke-text {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
-  }
+
   .border-grid {
     border: 1px solid hsl(var(--border));
   }
 
-  /* Custom Scrollbar */
+  /* Elegan Scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #09090b;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #22d3ee;
-    border-radius: 5px;
-    border: 2px solid #09090b;
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #06b6d4;
+    background: hsl(var(--muted-foreground) / 0.5);
   }
 
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #22d3ee #09090b;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
   }
 
   /* Hide scrollbar for horizontal scroll containers */
@@ -152,18 +150,4 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
-
-/* Shimmer Animation */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 3s infinite;
 }

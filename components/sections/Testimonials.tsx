@@ -38,15 +38,15 @@ export function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-20 md:py-32 bg-zinc-950 border-y border-zinc-900">
+    <section className="py-20 md:py-32 bg-black border-y border-zinc-900">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-cyan-400 font-mono tracking-widest uppercase text-sm block mb-4">
+          <span className="text-zinc-500 font-mono tracking-widest uppercase text-sm block mb-4">
             // Testimoni Pelanggan
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl md:text-7xl uppercase">
-            Kata <span className="text-cyan-400">Mereka</span>
+          <h2 className="font-display font-medium text-4xl sm:text-5xl md:text-7xl uppercase">
+            Kata <span className="text-zinc-500">Mereka</span>
           </h2>
         </div>
 
@@ -61,19 +61,12 @@ export function Testimonials() {
             className="bg-black border border-zinc-800 p-8 md:p-12 rounded-2xl relative"
           >
             {/* Quote Icon */}
-            <Quote
-              className="absolute top-8 right-8 text-cyan-400/20"
-              size={64}
-            />
+            <Quote className="absolute top-8 right-8 text-white/5" size={64} />
 
             {/* Stars */}
             <div className="flex gap-1 mb-6">
               {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="fill-cyan-400 text-cyan-400"
-                  size={20}
-                />
+                <Star key={i} className="fill-white text-white" size={20} />
               ))}
             </div>
 
@@ -84,13 +77,13 @@ export function Testimonials() {
 
             {/* Author */}
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center">
-                <span className="font-display font-bold text-cyan-400 text-xl">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                <span className="font-display font-bold text-black text-xl">
                   {testimonials[activeIndex].name.charAt(0)}
                 </span>
               </div>
               <div>
-                <h4 className="font-display font-bold text-white text-lg">
+                <h4 className="font-display font-medium text-white text-lg">
                   {testimonials[activeIndex].name}
                 </h4>
                 <p className="font-mono text-sm text-zinc-500">
@@ -108,7 +101,7 @@ export function Testimonials() {
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === activeIndex
-                    ? "bg-cyan-400 w-8"
+                    ? "bg-white w-8"
                     : "bg-zinc-700 hover:bg-zinc-600"
                 }`}
               />

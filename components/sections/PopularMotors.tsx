@@ -16,12 +16,12 @@ export function PopularMotors() {
   ].filter(Boolean);
 
   return (
-    <section className="py-24 bg-zinc-950 border-t border-zinc-900">
+    <section className="py-24 bg-black border-t border-zinc-900">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-end mb-16">
           <div>
-            <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-2 uppercase tracking-tighter">
-              Koleksi <span className="text-cyan-400">Terkini</span>
+            <h2 className="font-display font-medium text-4xl md:text-6xl text-white mb-2 uppercase tracking-tight">
+              Koleksi <span className="text-zinc-500">Terkini</span>
             </h2>
             <p className="font-mono text-zinc-500 text-sm md:text-base">
               // PILIHAN TERBAIK_VOL.01
@@ -29,7 +29,7 @@ export function PopularMotors() {
           </div>
           <Link
             href="/gallery"
-            className="hidden md:flex items-center gap-2 font-mono font-bold text-cyan-400 hover:text-white transition-colors"
+            className="hidden md:flex items-center gap-2 font-mono font-bold text-zinc-400 hover:text-white transition-colors"
           >
             LIHAT SEMUA UNIT <ArrowUpRight size={18} />
           </Link>
@@ -47,7 +47,7 @@ export function PopularMotors() {
         <div className="mt-8 md:hidden flex justify-center">
           <Link
             href="/gallery"
-            className="flex items-center gap-2 font-mono font-bold text-cyan-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 font-mono font-bold text-zinc-400 hover:text-white transition-colors"
           >
             LIHAT SEMUA UNIT <ArrowUpRight size={18} />
           </Link>

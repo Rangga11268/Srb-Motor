@@ -19,7 +19,7 @@ export default function NotFound() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <h1 className="font-display font-black text-[20vw] md:text-[15vw] leading-none text-transparent stroke-text">
+            <h1 className="font-display font-medium text-[20vw] md:text-[15vw] leading-none text-transparent stroke-text">
               404
             </h1>
           </motion.div>
@@ -30,8 +30,8 @@ export default function NotFound() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="font-display font-black text-4xl md:text-6xl uppercase mb-4">
-              Halaman <span className="text-cyan-400">Tidak Ditemukan</span>
+            <h2 className="font-display font-medium text-4xl md:text-6xl uppercase mb-4">
+              Halaman <span className="text-zinc-500">Tidak Ditemukan</span>
             </h2>
             <p className="font-mono text-zinc-500 text-lg mb-12">
               // Sepertinya Anda tersesat. Mari kembali ke jalur yang benar.
@@ -47,7 +47,7 @@ export default function NotFound() {
           >
             <Link
               href="/"
-              className="group flex items-center justify-center gap-2 px-8 py-4 bg-cyan-400 text-black font-bold uppercase tracking-wide hover:bg-cyan-300 transition-colors"
+              className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-zinc-200 transition-colors rounded-full"
             >
               <Home size={20} />
               Kembali ke Beranda
@@ -55,20 +55,10 @@ export default function NotFound() {
 
             <Link
               href="/gallery"
-              className="group flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-wide hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+              className="group flex items-center justify-center gap-2 px-8 py-4 border border-zinc-800 text-white font-bold uppercase tracking-wide hover:border-white hover:text-white transition-colors rounded-full"
             >
               Lihat Koleksi Motor
             </Link>
-          </motion.div>
-
-          {/* Decorative Element */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-16"
-          >
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
           </motion.div>
         </div>
       </div>

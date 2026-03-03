@@ -40,9 +40,9 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
 
   const getWhatsAppLink = () => {
     const message = `Halo SRB Motors, saya ingin simulasi kredit untuk:\n\nUnit: ${motorName}\nHarga: ${price}\nDP: ${dpPercentage}% (${formatCurrency(
-      numericPrice * (dpPercentage / 100)
+      numericPrice * (dpPercentage / 100),
     )})\nTenor: ${tenor} Bulan\nAngsuran: ${formatCurrency(
-      installment
+      installment,
     )}\n\nMohon info persyaratannya.`;
     return `https://wa.me/628978638849?text=${encodeURIComponent(message)}`;
   };
@@ -50,18 +50,18 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
   return (
     <div className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-5 md:p-8 backdrop-blur-sm max-w-4xl mx-auto">
       <div className="flex items-center gap-3 mb-8">
-        <div className="bg-cyan-400 p-2 rounded-lg text-black">
+        <div className="bg-white p-2 rounded-lg text-black">
           <Calculator size={24} />
         </div>
-        <h3 className="font-display font-black text-xl md:text-2xl uppercase">
-          Simulasi <span className="text-cyan-400">Kredit</span>
+        <h3 className="font-display font-medium tracking-tight text-xl md:text-2xl uppercase">
+          Simulasi <span className="text-zinc-500">Kredit</span>
         </h3>
       </div>
 
       <div className="space-y-6 md:space-y-8">
         {/* DP Slider */}
         <div>
-          <div className="flex justify-between mb-4 font-mono font-bold text-sm md:text-base">
+          <div className="flex justify-between mb-4 font-mono font-medium text-sm md:text-base">
             <span className="text-zinc-400">Uang Muka (DP)</span>
             <span className="text-white">{dpPercentage}%</span>
           </div>
@@ -72,16 +72,16 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
             step="5"
             value={dpPercentage}
             onChange={(e) => setDpPercentage(parseInt(e.target.value))}
-            className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+            className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-white"
           />
-          <div className="mt-2 text-right font-mono text-cyan-400 text-sm md:text-base">
+          <div className="mt-2 text-right font-mono text-zinc-300 text-sm md:text-base">
             {formatCurrency(numericPrice * (dpPercentage / 100))}
           </div>
         </div>
 
         {/* Tenor Selection */}
         <div>
-          <div className="flex justify-between mb-4 font-mono font-bold text-sm md:text-base">
+          <div className="flex justify-between mb-4 font-mono font-medium text-sm md:text-base">
             <span className="text-zinc-400">Tenor (Bulan)</span>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
@@ -90,10 +90,10 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
                 key={t}
                 onClick={() => setTenor(t)}
                 className={cn(
-                  "py-2 rounded-lg font-mono font-bold text-xs md:text-sm border transition-all",
+                  "py-2 rounded-lg font-mono font-medium text-xs md:text-sm border transition-all",
                   tenor === t
-                    ? "bg-cyan-400 text-black border-cyan-400"
-                    : "bg-transparent text-zinc-500 border-zinc-700 hover:border-cyan-400/50"
+                    ? "bg-white text-black border-white"
+                    : "bg-zinc-900/50 text-zinc-500 border-zinc-800 hover:border-zinc-500 hover:text-white",
                 )}
               >
                 {t}x
@@ -103,13 +103,13 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
         </div>
 
         {/* Result */}
-        <div className="bg-black/50 p-5 md:p-6 rounded-2xl border border-zinc-800">
+        <div className="bg-black p-5 md:p-6 rounded-2xl border border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 md:gap-4">
             <div>
               <span className="block font-mono text-zinc-500 text-[10px] md:text-sm mb-1 uppercase tracking-wider">
                 Estimasi Angsuran / bulan:
               </span>
-              <span className="font-display font-black text-xl md:text-4xl text-cyan-400 leading-none block">
+              <span className="font-display font-medium tracking-tight text-2xl md:text-4xl text-white leading-none block">
                 {formatCurrency(installment)}
               </span>
             </div>
@@ -117,7 +117,7 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-400 text-black px-6 py-4 rounded-xl font-bold font-mono text-sm uppercase flex items-center justify-center gap-2 transition-colors w-full md:w-auto shadow-lg shadow-green-500/20"
+              className="bg-white hover:bg-zinc-200 text-black px-6 py-4 rounded-xl font-medium font-mono text-sm uppercase flex items-center justify-center gap-2 transition-colors w-full md:w-auto"
             >
               <Send size={18} />
               Ajukan Sekarang

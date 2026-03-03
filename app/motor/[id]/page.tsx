@@ -19,7 +19,7 @@ export default function MotorDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black font-sans">
+    <main className="min-h-screen bg-black text-white font-sans">
       <Navbar />
 
       {/* Back Button */}
@@ -39,7 +39,7 @@ export default function MotorDetailPage() {
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* LEFT: VISUALS (Fixed on Desktop) */}
         <div className="w-full lg:w-1/2 lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-zinc-900/30 flex items-center justify-center p-8 overflow-hidden relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 to-transparent opacity-50" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 to-transparent opacity-50" />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -58,7 +58,7 @@ export default function MotorDetailPage() {
           </motion.div>
 
           <div className="absolute bottom-8 left-8 z-20">
-            <span className="bg-cyan-400 text-black px-4 py-2 font-mono font-bold text-sm uppercase rounded tracking-widest">
+            <span className="bg-white text-black px-4 py-2 font-mono font-bold text-sm uppercase rounded tracking-widest">
               {motor.category}
             </span>
           </div>
@@ -75,10 +75,10 @@ export default function MotorDetailPage() {
               <span className="text-zinc-500 font-mono text-sm block mb-4 uppercase tracking-widest">
                 // {motor.brand} OFFICIAL
               </span>
-              <h1 className="font-display font-black text-4xl md:text-7xl uppercase leading-[0.9] text-white mb-4 md:mb-6">
+              <h1 className="font-display font-medium text-4xl md:text-7xl uppercase leading-[0.9] text-white mb-4 md:mb-6 tracking-tight">
                 {motor.name}
               </h1>
-              <p className="font-mono text-cyan-400 text-3xl md:text-4xl font-bold mb-12 border-b border-zinc-900 pb-12">
+              <p className="font-mono text-zinc-300 text-3xl md:text-4xl font-bold mb-12 border-b border-zinc-900 pb-12">
                 {motor.price}
               </p>
 
@@ -98,8 +98,8 @@ export default function MotorDetailPage() {
 
               {/* Technical Specifications */}
               <div className="mb-16">
-                <h3 className="text-white font-display font-black text-2xl uppercase mb-8 flex items-center gap-3">
-                  <Check className="text-cyan-400" size={24} /> Spesifikasi
+                <h3 className="text-white font-display font-medium text-2xl uppercase mb-8 flex items-center gap-3 tracking-tight">
+                  <Check className="text-zinc-500" size={24} /> Spesifikasi
                   Lengkap
                 </h3>
                 <div className="space-y-0">
@@ -128,13 +128,13 @@ export default function MotorDetailPage() {
               </div>
 
               {/* CTA */}
-              <div className="sticky bottom-6 z-30">
+              <div className="sticky bottom-6 z-30 flex gap-4">
                 <Link
                   href={`https://wa.me/628978638849?text=Saya%20tertarik%20dengan%20${encodeURIComponent(
-                    motor.name
+                    motor.name,
                   )}`}
                   target="_blank"
-                  className="w-full bg-cyan-400 text-black py-4 md:py-5 rounded-full font-display font-black text-lg md:text-xl uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 md:gap-3 group shadow-lg shadow-cyan-400/20"
+                  className="flex-1 bg-white text-black py-4 md:py-5 rounded-full font-display font-medium text-lg md:text-xl uppercase tracking-widest hover:bg-zinc-300 transition-colors flex items-center justify-center gap-2 md:gap-3 group shadow-2xl"
                 >
                   Pesan Unit Ini
                   <ArrowUpRight className="group-hover:rotate-45 transition-transform" />

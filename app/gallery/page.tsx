@@ -42,13 +42,13 @@ export default function GalleryPage() {
   }, [filter, searchQuery, priceFilter]);
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-cyan-400 selection:text-black">
+    <main className="min-h-screen bg-black text-white">
       <Navbar />
 
       <section className="pt-32 md:pt-40 px-6 container mx-auto mb-12">
-        <h1 className="font-display font-black text-5xl sm:text-6xl md:text-[12vw] leading-[0.9] md:leading-[0.8] mb-8 uppercase tracking-tighter">
+        <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-[12vw] leading-[0.9] md:leading-[0.8] mb-8 uppercase tracking-tight">
           Koleksi <br />
-          <span className="text-cyan-400">Kami</span>
+          <span className="text-zinc-600">Kami</span>
         </h1>
         <div className="flex flex-col gap-6 border-b border-zinc-900 pb-8">
           {/* Search Bar */}
@@ -62,7 +62,7 @@ export default function GalleryPage() {
               placeholder="CARI MOTOR..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-zinc-900 border border-zinc-800 rounded-full pl-12 pr-6 py-3 font-mono text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors"
+              className="w-full bg-zinc-900 border border-zinc-800 rounded-full pl-12 pr-6 py-3 font-mono text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-white transition-colors"
             />
           </div>
 
@@ -81,8 +81,8 @@ export default function GalleryPage() {
                   className={cn(
                     "px-4 md:px-6 py-2 rounded-full font-mono font-bold text-xs md:text-sm transition-colors border",
                     filter === brand
-                      ? "bg-cyan-400 text-black border-cyan-400"
-                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white",
+                      ? "bg-white text-black border-white"
+                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-white hover:text-white",
                   )}
                 >
                   {brand}
@@ -104,8 +104,8 @@ export default function GalleryPage() {
                   className={cn(
                     "px-4 py-2 rounded-full font-mono font-bold text-xs transition-colors border",
                     priceFilter === price.value
-                      ? "bg-cyan-400 text-black border-cyan-400"
-                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-cyan-400 hover:text-white",
+                      ? "bg-white text-black border-white"
+                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-white hover:text-white",
                   )}
                 >
                   {price.label}
@@ -113,7 +113,7 @@ export default function GalleryPage() {
               ))}
             </div>
 
-            <span className="font-mono text-cyan-400 font-bold text-sm">
+            <span className="font-mono text-white font-bold text-sm">
               [{filteredImages.length} UNIT]
             </span>
           </div>
