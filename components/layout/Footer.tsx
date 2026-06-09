@@ -1,128 +1,236 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/ui/Logo";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+  ChevronRight,
+  ShieldCheck,
+} from "lucide-react";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const links = {
+    produk: [
+      { label: "Katalog Motor", href: "/gallery" },
+      { label: "Booking Servis", href: "/services" },
+      { label: "Hubungi Kami", href: "/contact" },
+    ],
+    bantuan: [
+      { label: "Tentang Kami", href: "/about" },
+      { label: "Syarat & Ketentuan", href: "/contact" },
+      { label: "Kebijakan Privasi", href: "/contact" },
+    ],
+  };
+
+  const settings = {
+    site_description:
+      "Dealer motor terpercaya dengan proses kredit mudah, transparan, dan bergaransi resmi.",
+    contact_address: "Jl. Raya Utama No. 123, Bekasi Timur",
+    contact_phone: "+62 897 8638 849",
+    contact_email: "halo@srbmotor.id",
+    social_instagram: "https://instagram.com",
+    social_facebook: "https://facebook.com",
+    social_youtube: "https://youtube.com",
+  };
+
   return (
-    <footer className="bg-black text-white pt-24 border-t border-zinc-900">
-      <div className="container mx-auto px-6 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Section 1: Newsletter */}
-          <div>
-            <h3 className="font-display font-medium text-3xl md:text-4xl uppercase mb-8">
-              Tetap <span className="text-zinc-500">Terhubung</span>
-            </h3>
-            <div className="flex gap-4 border-b border-zinc-800 pb-4">
-              <input
-                type="email"
-                placeholder="MASUKKAN EMAIL ANDA"
-                className="bg-transparent w-full outline-none font-mono text-xl placeholder:text-zinc-700 text-white uppercase"
-              />
-              <button className="text-zinc-400 hover:text-white transition-colors">
-                <ArrowUpRight size={32} />
-              </button>
+    <footer className="bg-[#111111] text-white border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+          {/* Brand + Contact */}
+          <div className="md:col-span-4 space-y-8">
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/"
+                  className="inline-block transition-transform hover:opacity-80"
+                >
+                  <Logo className="h-8" dark={true} />
+                </Link>
+                <div className="h-6 w-px bg-gray-700"></div>
+                <img
+                  src="/assets/img/logoSSM.webp"
+                  alt="SSM Logo"
+                  className="h-6 w-auto object-contain brightness-0 invert"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1c69d4] leading-none">
+                  Official Authorized Dealer
+                </p>
+                <p className="text-xs font-bold text-[#bbbbbb] uppercase tracking-widest">
+                  Sinar Surya Matahari (SSM)
+                </p>
+              </div>
+            </div>
+            <p className="text-sm font-light text-[#bbbbbb] leading-relaxed max-w-xs">
+              {settings.site_description}
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <MapPin className="w-4 h-4 text-[#1c69d4] mt-0.5 shrink-0" />
+                <span className="text-sm font-light text-[#bbbbbb]">
+                  {settings.contact_address}
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <Phone className="w-4 h-4 text-[#1c69d4] shrink-0" />
+                <a
+                  href={`https://wa.me/${settings.contact_phone.replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-light text-[#bbbbbb] hover:text-white transition-colors"
+                >
+                  {settings.contact_phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-4">
+                <Mail className="w-4 h-4 text-[#1c69d4] shrink-0" />
+                <a
+                  href={`mailto:${settings.contact_email}`}
+                  className="text-sm font-light text-[#bbbbbb] hover:text-white transition-colors"
+                >
+                  {settings.contact_email}
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Section 2: Links */}
-          <div className="grid grid-cols-2 gap-8 font-mono">
-            <div>
-              <h4 className="text-zinc-500 mb-6 text-sm">// PETA SITUS</h4>
+          {/* Quick Links */}
+          <div className="md:col-span-4 grid grid-cols-2 gap-8">
+            <div className="space-y-8">
+              <h4 className="text-[#757575] text-[10px] font-bold uppercase tracking-[0.2em]">
+                Produk & Layanan
+              </h4>
               <ul className="space-y-4">
-                <li>
-                  <Link
-                    href="/"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase block"
-                  >
-                    Beranda
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase block"
-                  >
-                    Studio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/gallery"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase block"
-                  >
-                    Koleksi
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase block"
-                  >
-                    Kontak
-                  </Link>
-                </li>
+                {links.produk.map((link, i) => (
+                  <li key={i}>
+                    <Link
+                      href={link.href}
+                      className="text-xs font-bold uppercase tracking-widest text-[#bbbbbb] hover:text-white flex items-center gap-2 transition-colors group"
+                    >
+                      <ChevronRight className="w-3 h-3 text-[#1c69d4]" />
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div>
-              <h4 className="text-zinc-500 mb-6 text-sm">// SOSIAL</h4>
+            <div className="space-y-8">
+              <h4 className="text-[#757575] text-[10px] font-bold uppercase tracking-[0.2em]">
+                Bantuan Khusus
+              </h4>
               <ul className="space-y-4">
-                <li>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase flex items-center gap-2"
-                  >
-                    Instagram <ArrowUpRight size={14} />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase flex items-center gap-2"
-                  >
-                    Twitter <ArrowUpRight size={14} />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    className="hover:text-white text-zinc-400 transition-colors uppercase flex items-center gap-2"
-                  >
-                    Facebook <ArrowUpRight size={14} />
-                  </a>
-                </li>
+                {links.bantuan.map((link, i) => (
+                  <li key={i}>
+                    <Link
+                      href={link.href}
+                      className="text-xs font-bold uppercase tracking-widest text-[#bbbbbb] hover:text-white flex items-center gap-2 transition-colors group"
+                    >
+                      <ChevronRight className="w-3 h-3 text-[#1c69d4]" />
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
+          </div>
+
+          {/* Leasing Partners */}
+          <div className="md:col-span-4 space-y-8">
+            <h4 className="text-[#757575] text-[10px] font-bold uppercase tracking-[0.2em]">
+              Mitra Pembiayaan
+            </h4>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+              {[
+                { name: "ADIRA", logo: "/assets/img/adira.webp" },
+                { name: "FIF", logo: "/assets/img/fif.webp" },
+                { name: "OTO", logo: "/assets/img/oto.webp" },
+                { name: "MUF", logo: "/assets/img/muf.webp" },
+                { name: "BAF", logo: "/assets/img/baf.webp" },
+              ].map((provider, i) => (
+                <div
+                  key={i}
+                  title={provider.name}
+                  className="bg-white border border-gray-800 p-4 flex items-center justify-center h-20 transition-colors rounded-none hover:bg-[#f9f9f9]"
+                >
+                  <img
+                    src={provider.logo}
+                    alt={provider.name}
+                    className="max-h-8 max-w-full object-contain transition-all duration-300"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = "none";
+                      const sibling = target.nextSibling as HTMLSpanElement;
+                      if (sibling) sibling.style.display = "block";
+                    }}
+                  />
+                  <span
+                    className="text-[10px] font-bold text-[#262626] uppercase tracking-widest"
+                    style={{ display: "none" }}
+                  >
+                    {provider.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="text-[10px] uppercase font-bold tracking-widest text-[#757575] leading-relaxed">
+              Proses difasilitasi oleh lembaga pembiayaan resmi.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* MASSIVE BOTTOM LOGO */}
-      <div className="border-t border-zinc-900 w-full overflow-hidden py-4 md:py-8">
-        <h1 className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-display font-medium leading-[0.8] text-center tracking-tighter text-zinc-900 hover:text-white transition-colors duration-500 cursor-default select-none">
-          SRB.MTRS
-        </h1>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="bg-white py-3 px-6 flex flex-col md:flex-row justify-between items-center font-mono text-black text-[10px] md:text-sm font-bold uppercase gap-2 md:gap-0">
-        <span>© {new Date().getFullYear()} SRB MOTORS • BEKASI, INDONESIA</span>
-        <a
-          href="https://darell-rangga.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 hover:bg-black hover:text-white px-3 py-1 rounded-full transition-all group border border-black"
-        >
-          <span className="opacity-70 group-hover:opacity-100">
-            DIBUAT OLEH:
-          </span>
-          <span className="underline decoration-black/30 group-hover:decoration-white underline-offset-2">
-            DARELL RANGGA
-          </span>
-        </a>
+      {/* Bottom bar */}
+      <div className="border-t border-gray-800 py-6 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-4">
+            <p className="text-[10px] text-[#757575] font-bold uppercase tracking-[0.2em]">
+              &copy; {currentYear} SRB MOTOR
+            </p>
+            <div className="h-3 w-px bg-gray-800"></div>
+            <div className="flex items-center gap-3">
+              <span className="text-[10px] text-[#757575] uppercase tracking-widest">
+                A Part of
+              </span>
+              <img
+                src="/assets/img/logoSSM.webp"
+                alt="SSM"
+                className="h-3 w-auto brightness-0 invert opacity-50"
+              />
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <span className="text-[10px] font-bold text-[#757575] uppercase tracking-widest flex items-center gap-2 border border-gray-800 px-3 py-1">
+              <ShieldCheck className="w-3 h-3 text-[#1c69d4]" />
+              Terverifikasi
+            </span>
+            <div className="flex items-center gap-2">
+              {[
+                { Icon: Instagram, href: settings.social_instagram },
+                { Icon: Facebook, href: settings.social_facebook },
+                { Icon: Youtube, href: settings.social_youtube },
+              ].map(({ Icon, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 border border-gray-800 text-[#757575] bg-transparent flex items-center justify-center hover:bg-[#111111] hover:text-white transition-colors rounded-none"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

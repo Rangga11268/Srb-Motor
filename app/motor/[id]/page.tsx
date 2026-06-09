@@ -19,27 +19,27 @@ export default function MotorDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white font-sans">
+    <main className="min-h-screen bg-white text-[#262626] font-sans">
       <Navbar />
 
       {/* Back Button */}
       <div className="fixed top-24 left-6 z-40 md:top-32 md:left-10">
         <Link
           href="/gallery"
-          className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors uppercase font-mono text-sm font-bold group"
+          className="flex items-center gap-2 text-gray-400 hover:text-black transition-colors uppercase font-sans text-xs font-bold group border border-gray-200 bg-white/80 backdrop-blur-md px-4 py-2"
         >
           <ArrowLeft
-            size={16}
+            size={14}
             className="group-hover:-translate-x-1 transition-transform"
           />
-          Kembali ke Galeri
+          Kembali ke Katalog
         </Link>
       </div>
 
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* LEFT: VISUALS (Fixed on Desktop) */}
-        <div className="w-full lg:w-1/2 lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-zinc-900/30 flex items-center justify-center p-8 overflow-hidden relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 to-transparent opacity-50" />
+        <div className="w-full lg:w-1/2 lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative border-r border-gray-200">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.02)_0%,_transparent_70%)]" />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -52,34 +52,34 @@ export default function MotorDetailPage() {
               alt={motor.name}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              className="object-contain drop-shadow-2xl"
               priority
             />
           </motion.div>
 
           <div className="absolute bottom-8 left-8 z-20">
-            <span className="bg-white text-black px-4 py-2 font-mono font-bold text-sm uppercase rounded tracking-widest">
+            <span className="bg-[#1c69d4] text-white px-4 py-2 font-sans font-bold text-xs uppercase rounded-none tracking-widest">
               {motor.category}
             </span>
           </div>
         </div>
 
         {/* RIGHT: DETAILS (Scrollable) */}
-        <div className="w-full lg:w-1/2 lg:ml-[50%] bg-zinc-950 min-h-screen border-l border-zinc-900">
+        <div className="w-full lg:w-1/2 lg:ml-[50%] bg-white min-h-screen">
           <div className="p-6 md:p-16 pt-10 md:pt-16 lg:pt-32">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="text-zinc-500 font-mono text-sm block mb-4 uppercase tracking-widest">
-                // {motor.brand} OFFICIAL
+              <span className="text-gray-400 font-sans font-bold text-xs block mb-4 uppercase tracking-widest">
+                {`// ${motor.brand} OFFICIAL`}
               </span>
-              <h1 className="font-display font-medium text-4xl md:text-7xl uppercase leading-[0.9] text-white mb-4 md:mb-6 tracking-tight">
+              <h1 className="text-4xl md:text-6xl font-light uppercase leading-[0.95] text-black mb-4 md:mb-6 tracking-tight">
                 {motor.name}
               </h1>
-              <p className="font-mono text-zinc-300 text-3xl md:text-4xl font-bold mb-12 border-b border-zinc-900 pb-12">
-                {motor.price}
+              <p className="font-sans text-[#1c69d4] text-2xl md:text-3xl font-light mb-12 border-b border-gray-200 pb-12">
+                IDR {parseInt(motor.price.replace(/[^0-9]/g, "")).toLocaleString("id-ID")}
               </p>
 
               {/* Highlights */}
@@ -87,9 +87,9 @@ export default function MotorDetailPage() {
                 {motor.description.split("•").map((item, i) => (
                   <div
                     key={i}
-                    className="bg-zinc-900/50 p-4 border border-zinc-800 rounded-lg text-center flex items-center justify-center"
+                    className="bg-gray-50 p-4 border border-gray-200 rounded-none text-center flex items-center justify-center"
                   >
-                    <span className="font-mono font-bold text-xs uppercase text-zinc-300">
+                    <span className="font-sans font-bold text-[10px] uppercase text-gray-600 tracking-wider">
                       {item.trim()}
                     </span>
                   </div>
@@ -98,20 +98,19 @@ export default function MotorDetailPage() {
 
               {/* Technical Specifications */}
               <div className="mb-16">
-                <h3 className="text-white font-display font-medium text-2xl uppercase mb-8 flex items-center gap-3 tracking-tight">
-                  <Check className="text-zinc-500" size={24} /> Spesifikasi
-                  Lengkap
+                <h3 className="text-black font-sans font-bold text-xl uppercase mb-8 flex items-center gap-3 tracking-tight border-b border-black pb-4">
+                  <Check className="text-[#1c69d4]" size={20} /> Spesifikasi Lengkap
                 </h3>
-                <div className="space-y-0">
+                <div className="space-y-0 mb-16">
                   {motor.specifications.map((spec, index) => (
                     <div
                       key={index}
-                      className="flex flex-col md:flex-row md:justify-between md:items-center py-4 border-b border-zinc-900 group hover:bg-zinc-900/30 transition-colors px-2"
+                      className="flex flex-col md:flex-row md:justify-between md:items-center py-4 border-b border-gray-100 group hover:bg-gray-50/50 transition-colors px-2"
                     >
-                      <span className="text-zinc-500 font-mono text-xs uppercase mb-1 md:mb-0 w-1/3">
+                      <span className="text-gray-500 font-sans text-xs uppercase mb-1 md:mb-0 w-1/3 font-bold tracking-wider">
                         {spec.label}
                       </span>
-                      <span className="text-white font-bold text-sm md:text-lg w-2/3 md:text-right">
+                      <span className="text-black font-bold text-sm md:text-base w-2/3 md:text-right">
                         {spec.value}
                       </span>
                     </div>
@@ -128,16 +127,16 @@ export default function MotorDetailPage() {
               </div>
 
               {/* CTA */}
-              <div className="sticky bottom-6 z-30 flex gap-4">
+              <div className="sticky bottom-6 z-30 flex gap-4 bg-white/80 backdrop-blur-md p-4 border border-gray-150">
                 <Link
                   href={`https://wa.me/628978638849?text=Saya%20tertarik%20dengan%20${encodeURIComponent(
                     motor.name,
                   )}`}
                   target="_blank"
-                  className="flex-1 bg-white text-black py-4 md:py-5 rounded-full font-display font-medium text-lg md:text-xl uppercase tracking-widest hover:bg-zinc-300 transition-colors flex items-center justify-center gap-2 md:gap-3 group shadow-2xl"
+                  className="flex-1 bg-[#1c69d4] hover:bg-[#0653b6] text-white py-5 rounded-none font-sans font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-3 group shadow-2xl cursor-pointer"
                 >
-                  Pesan Unit Ini
-                  <ArrowUpRight className="group-hover:rotate-45 transition-transform" />
+                  Pesan Unit Ini (WhatsApp)
+                  <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" size={16} />
                 </Link>
               </div>
             </motion.div>

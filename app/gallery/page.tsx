@@ -1,21 +1,26 @@
 "use client";
 
+import React, { useState, useEffect, useMemo, Suspense } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { motors } from "@/lib/motor-data";
-import Link from "next/link";
-import { ArrowUpRight, Search } from "lucide-react";
-import { useCompare } from "@/components/providers/CompareProvider";
+import { Search } from "lucide-react";
 import { MotorCard } from "@/components/ui/MotorCard";
+import { useSearchParams } from "next/navigation";
 
-export default function GalleryPage() {
+function GalleryContent() {
+  const searchParams = useSearchParams();
   const [filter, setFilter] = useState("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [priceFilter, setPriceFilter] = useState("ALL");
-  const { addToCompare, removeFromCompare, isInCompare } = useCompare();
+
+  // Sync state with URL search param
+  useEffect(() => {
+    const urlQuery = searchParams.get("search") || "";
+    setSearchQuery(urlQuery);
+  }, [searchParams]);
 
   const filteredImages = useMemo(() => {
     return motors.filter((motor) => {
@@ -31,10 +36,10 @@ export default function GalleryPage() {
       let priceMatch = true;
       if (priceFilter !== "ALL") {
         const price = parseInt(motor.price.replace(/[^0-9]/g, ""));
-        if (priceFilter === "LOW") priceMatch = price < 10000000;
+        if (priceFilter === "LOW") priceMatch = price < 20000000;
         else if (priceFilter === "MID")
-          priceMatch = price >= 10000000 && price < 20000000;
-        else if (priceFilter === "HIGH") priceMatch = price >= 20000000;
+          priceMatch = price >= 20000000 && price < 30000000;
+        else if (priceFilter === "HIGH") priceMatch = price >= 30000000;
       }
 
       return brandMatch && searchMatch && priceMatch;
@@ -42,19 +47,18 @@ export default function GalleryPage() {
   }, [filter, searchQuery, priceFilter]);
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-white text-[#262626]">
       <Navbar />
 
       <section className="pt-32 md:pt-40 px-6 container mx-auto mb-12">
-        <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-[12vw] leading-[0.9] md:leading-[0.8] mb-8 uppercase tracking-tight">
-          Koleksi <br />
-          <span className="text-zinc-600">Kami</span>
+        <h1 className="text-4xl md:text-6xl font-light uppercase tracking-tight mb-8 text-[#262626]">
+          Koleksi <span className="font-bold">Kami</span>
         </h1>
-        <div className="flex flex-col gap-6 border-b border-zinc-900 pb-8">
+        <div className="flex flex-col gap-6 border-b border-gray-200 pb-8">
           {/* Search Bar */}
           <div className="relative">
             <Search
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
               size={20}
             />
             <input
@@ -62,13 +66,13 @@ export default function GalleryPage() {
               placeholder="CARI MOTOR..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-zinc-900 border border-zinc-800 rounded-full pl-12 pr-6 py-3 font-mono text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-white transition-colors"
+              className="w-full bg-white border border-gray-300 rounded-none pl-12 pr-6 py-3 font-sans text-sm text-[#262626] placeholder:text-gray-400 focus:outline-none focus:border-[#1c69d4] transition-colors uppercase tracking-widest outline-none"
             />
           </div>
 
           {/* Filters Row */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <p className="font-mono text-zinc-500 text-sm md:text-base">
+            <p className="font-sans text-gray-400 text-xs font-bold uppercase tracking-widest">
               // KOLEKSI TERBARU DARI DEALER RESMI.
             </p>
 
@@ -79,10 +83,10 @@ export default function GalleryPage() {
                   key={brand}
                   onClick={() => setFilter(brand)}
                   className={cn(
-                    "px-4 md:px-6 py-2 rounded-full font-mono font-bold text-xs md:text-sm transition-colors border",
+                    "px-4 md:px-6 py-2 rounded-none font-sans font-bold text-xs md:text-sm uppercase tracking-widest transition-colors border cursor-pointer",
                     filter === brand
-                      ? "bg-white text-black border-white"
-                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-white hover:text-white",
+                      ? "bg-[#1c69d4] text-white border-[#1c69d4]"
+                      : "bg-transparent text-gray-500 border-gray-200 hover:border-[#1c69d4] hover:text-[#1c69d4]"
                   )}
                 >
                   {brand}
@@ -94,18 +98,18 @@ export default function GalleryPage() {
             <div className="flex flex-wrap gap-3">
               {[
                 { label: "SEMUA", value: "ALL" },
-                { label: "< 10JT", value: "LOW" },
-                { label: "10-20JT", value: "MID" },
-                { label: "> 20JT", value: "HIGH" },
+                { label: "< 20JT", value: "LOW" },
+                { label: "20-30JT", value: "MID" },
+                { label: "> 30JT", value: "HIGH" },
               ].map((price) => (
                 <button
                   key={price.value}
                   onClick={() => setPriceFilter(price.value)}
                   className={cn(
-                    "px-4 py-2 rounded-full font-mono font-bold text-xs transition-colors border",
+                    "px-4 py-2 rounded-none font-sans font-bold text-[10px] md:text-xs uppercase tracking-widest transition-colors border cursor-pointer",
                     priceFilter === price.value
-                      ? "bg-white text-black border-white"
-                      : "bg-transparent text-zinc-500 border-zinc-800 hover:border-white hover:text-white",
+                      ? "bg-[#1c69d4] text-white border-[#1c69d4]"
+                      : "bg-transparent text-gray-500 border-gray-200 hover:border-[#1c69d4] hover:text-[#1c69d4]"
                   )}
                 >
                   {price.label}
@@ -113,7 +117,7 @@ export default function GalleryPage() {
               ))}
             </div>
 
-            <span className="font-mono text-white font-bold text-sm">
+            <span className="font-sans text-gray-500 font-bold text-xs uppercase tracking-widest">
               [{filteredImages.length} UNIT]
             </span>
           </div>
@@ -128,7 +132,7 @@ export default function GalleryPage() {
           <AnimatePresence>
             {filteredImages.map((img, i) => (
               <div key={img.id} className="h-full">
-                <MotorCard motor={img} index={i} />
+                <MotorCard motor={img} />
               </div>
             ))}
           </AnimatePresence>
@@ -137,5 +141,19 @@ export default function GalleryPage() {
 
       <Footer />
     </main>
+  );
+}
+
+export default function GalleryPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="w-10 h-10 border-4 border-[#1c69d4] border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      }
+    >
+      <GalleryContent />
+    </Suspense>
   );
 }

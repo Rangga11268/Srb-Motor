@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Home, ArrowLeft } from "lucide-react";
+import { Home } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 
 export default function NotFound() {
@@ -34,7 +34,7 @@ export default function NotFound() {
               Halaman <span className="text-zinc-500">Tidak Ditemukan</span>
             </h2>
             <p className="font-mono text-zinc-500 text-lg mb-12">
-              // Sepertinya Anda tersesat. Mari kembali ke jalur yang benar.
+              {"// Sepertinya Anda tersesat. Mari kembali ke jalur yang benar."}
             </p>
           </motion.div>
 

@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { Syne, Manrope, Space_Grotesk } from "next/font/google";
+import { Inter, Syne, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 const syne = Syne({
   subsets: ["latin"],
@@ -77,10 +82,9 @@ export const viewport = {
 import { Preloader } from "@/components/ui/Preloader";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { FloatingWA } from "@/components/ui/FloatingWA";
 
 import { Analytics } from "@vercel/analytics/react";
-import { CompareProvider } from "@/components/providers/CompareProvider";
-import { CompareFloat } from "@/components/features/CompareFloat";
 
 export default function RootLayout({
   children,
@@ -90,17 +94,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
+      className={`${inter.variable} ${syne.variable} ${manrope.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="font-sans antialiased bg-black text-white selection:bg-white/20 selection:text-white overflow-x-hidden">
-        <CompareProvider>
-          <Preloader />
-          <SmoothScroll />
-          <BackToTop />
-          <CompareFloat />
-          {children}
-          <Analytics />
-        </CompareProvider>
+      <body className="font-sans antialiased bg-white text-[#262626] selection:bg-[#1c69d4] selection:text-white overflow-x-hidden">
+        <Preloader />
+        <SmoothScroll />
+        <BackToTop />
+        <FloatingWA />
+        {children}
+        <Analytics />
       </body>
     </html>
   );
