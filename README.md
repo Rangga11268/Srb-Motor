@@ -28,7 +28,7 @@ Proyek ini adalah versi **Frontend-Only / Static Website** dari SRB Motor. Berik
 | **Manajemen Data** | Data Motor lokal statis (`lib/motor-data.ts`) | Dinamis menggunakan Database MySQL (CRUD via Admin Panel) |
 | **Transaksi Pembelian** | Pengajuan Cash/Kredit diarahkan langsung ke **WhatsApp** | Pemrosesan terintegrasi di sistem dengan unggah dokumen |
 | **Pembayaran Booking Fee** | Diarahkan ke WhatsApp sales | Otomatis terintegrasi payment gateway (Midtrans) |
-| **Pemesanan Servis** | Formulir Booking mengirimkan tiket pendaftaran langsung ke WhatsApp | Booking terjadwal dan disimpan di database |
+| **Pemesanan Servis** | Dihapus (Diarahkan langsung via WhatsApp Customer Service) | Booking terjadwal dan disimpan di database |
 | **Autentikasi & Akun** | Tanpa Login (seluruh fitur publik instan tanpa akun) | Login, Register, Manajemen Profil, & Riwayat Transaksi |
 | **Dashboard Admin** | Tidak ada | CRUD Motor, approval kredit, ekspor laporan PDF/Excel, dll. |
 
