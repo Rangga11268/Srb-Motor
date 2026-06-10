@@ -64,7 +64,7 @@ export default function ContactPage() {
         },
         {
           q: "Bagaimana prosedur klaim servis gratis?",
-          a: "Pelanggan dapat melakukan booking servis langsung melalui panel pendaftaran janji temu servis di halaman Servis, atau hubungi CS WhatsApp resmi kami untuk respon instan.",
+          a: "Pelanggan dapat melakukan booking servis langsung dengan menghubungi CS WhatsApp resmi kami untuk respon instan.",
         },
       ],
     },

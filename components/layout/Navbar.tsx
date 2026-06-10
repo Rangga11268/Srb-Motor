@@ -61,11 +61,6 @@ export function Navbar() {
       active: pathname === "/gallery",
     },
     {
-      label: "Servis",
-      href: "/services",
-      active: pathname === "/services",
-    },
-    {
       label: "Tentang Kami",
       href: "/about",
       active: pathname === "/about",

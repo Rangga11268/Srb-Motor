@@ -19,7 +19,6 @@ export function Footer() {
   const links = {
     produk: [
       { label: "Katalog Motor", href: "/gallery" },
-      { label: "Booking Servis", href: "/services" },
       { label: "Hubungi Kami", href: "/contact" },
     ],
     bantuan: [
