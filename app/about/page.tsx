@@ -35,29 +35,87 @@ export default function AboutPage() {
 
   const branches = [
     {
-      code: "bekasi-timur",
-      name: "SRB Motor - Bekasi Timur (Pusat)",
+      code: "mekarsari",
+      name: "Yamaha Sinar Surya Matahari - Mekarsari (Pusat)",
       is_main_branch: true,
-      address: "Jl. Raya Utama No. 123, Bekasi Timur",
-      phone: "+62 897-8638-849",
-      whatsapp: "628978638849",
-      maps_url: "https://maps.google.com",
+      address: "Jl. Mekar Sari No.39, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112",
+      phone: "02189094308",
+      whatsapp: "",
+      maps_url: "https://maps.app.goo.gl/49JT2gMetP4nPsiw5",
       can_service: true,
       operational_hours: {
-        monday: "08:00 - 17:00 WIB",
+        time: "08:00 - 17:00 WIB",
+        days: "SETIAP HARI",
       },
     },
     {
-      code: "bekasi-barat",
-      name: "SRB Motor - Bekasi Barat (Kranji)",
+      code: "jatimekar",
+      name: "Yamaha Sinar Surya Matahari Jatimekar – Premium R-Shop",
       is_main_branch: false,
-      address: "Jl. Jenderal Sudirman No. 45, Kranji, Bekasi Barat",
-      phone: "+62 897-8638-849",
-      whatsapp: "628978638849",
-      maps_url: "https://maps.google.com",
+      address: "Jl. Raya Jatimekar No.72A, RT.004/RW.012, Jatimekar, Kec. Jatiasih, Kota Bks, Jawa Barat 17422",
+      phone: "(021)8485060 / (021)84972828",
+      whatsapp: "6281286856166",
+      maps_url: "https://maps.app.goo.gl/EG1vYtfchbEMKUG88",
       can_service: true,
       operational_hours: {
-        monday: "08:00 - 17:00 WIB",
+        time: "08:00 - 17:00 WIB",
+        days: "SETIAP HARI",
+      },
+    },
+    {
+      code: "kaliabang",
+      name: "SRB Motors - Kaliabang (Cabang Network)",
+      is_main_branch: false,
+      address: "Jl. Lori Sakti No.22, RT.001/RW.001, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17125",
+      phone: "08978638849",
+      whatsapp: "628978638849",
+      maps_url: "https://maps.app.goo.gl/XY85E7th3cARM2719",
+      can_service: false,
+      operational_hours: {
+        time: "08:00 - 17:00 WIB",
+        days: "SENIN - SABTU",
+      },
+    },
+    {
+      code: "pondok-ungu",
+      name: "SSM Motor - Pondok Ungu (Cabang Network)",
+      is_main_branch: false,
+      address: "Jl. Raya Pd. Ungu Permai Blok II 10 No.86, RT.003/RW.016, Kaliabang Tengah, Kec. Bekasi Utara, Kabupaten Bekasi, Jawa Barat 17125",
+      phone: "08978638849",
+      whatsapp: "628978638849",
+      maps_url: "https://maps.app.goo.gl/rQjY7M3pqxPovESBA",
+      can_service: false,
+      operational_hours: {
+        time: "08:00 - 17:00 WIB",
+        days: "SENIN - SABTU",
+      },
+    },
+    {
+      code: "alinda",
+      name: "SSM Yamaha Alinda (Cabang Network)",
+      is_main_branch: false,
+      address: "R254+GCV, Jl. Alinda, RT.03/RW.13, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bks, Jawa Barat",
+      phone: "08971756468",
+      whatsapp: "628971756468",
+      maps_url: "https://maps.app.goo.gl/3o9sWM73i8RzLbaR6",
+      can_service: false,
+      operational_hours: {
+        time: "08:00 - 17:00 WIB",
+        days: "SENIN - SABTU",
+      },
+    },
+    {
+      code: "jatibening",
+      name: "Dealer Resmi Yamaha SSM Motor Jatibening (Cabang Network)",
+      is_main_branch: false,
+      address: "Dealer Resmi Yamaha SSM Motor, Jatibening, Kec. Pd. Gede, Kota Bks, Jawa Barat",
+      phone: "0895383002103",
+      whatsapp: "62895383002103",
+      maps_url: "https://maps.app.goo.gl/5yjNcZwW7US5nV816",
+      can_service: false,
+      operational_hours: {
+        time: "08:00 - 17:00 WIB",
+        days: "SENIN - SABTU",
       },
     },
   ];
@@ -256,9 +314,9 @@ export default function AboutPage() {
                               className="text-gray-400 shrink-0 mt-0.5"
                             />
                             <div className="text-[10px] font-medium text-gray-600">
-                              <span>{branch.operational_hours.monday}</span>
+                              <span>{branch.operational_hours.time}</span>
                               <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest mt-1">
-                                SENIN - SABTU
+                                {branch.operational_hours.days}
                               </p>
                             </div>
                           </div>
