@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motors } from "@/lib/motor-data";
@@ -17,6 +18,33 @@ export default function MotorDetailPage() {
   if (!motor) {
     return notFound();
   }
+
+  // Parse variants and colors from specifications array
+  const variants = motor.specifications
+    .find((s) => s.label === "Tipe / Varian")
+    ?.value.split(",")
+    .map((s) => s.trim())
+    .filter(Boolean) || [];
+
+  const colors = motor.specifications
+    .find((s) => s.label === "Pilihan Warna")
+    ?.value.split(",")
+    .map((s) => s.trim())
+    .filter(Boolean) || [];
+
+  const [selectedVariant, setSelectedVariant] = useState(variants[0] || "");
+  const [selectedColor, setSelectedColor] = useState(colors[0] || "");
+
+  const colorImage = (motor.colorImages && selectedColor && motor.colorImages[selectedColor]) || motor.image;
+
+  // Reset selections when model changes
+  useEffect(() => {
+    if (variants.length > 0) setSelectedVariant(variants[0]);
+    else setSelectedVariant("");
+    
+    if (colors.length > 0) setSelectedColor(colors[0]);
+    else setSelectedColor("");
+  }, [id]);
 
   return (
     <main className="min-h-screen bg-white text-[#262626] font-sans">
@@ -42,13 +70,14 @@ export default function MotorDetailPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.02)_0%,_transparent_70%)]" />
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            key={colorImage}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             className="relative w-full max-w-xl h-[50vh] lg:h-[60vh] z-10 pt-20 lg:pt-0"
           >
             <Image
-              src={motor.image}
+              src={colorImage}
               alt={motor.name}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -96,32 +125,100 @@ export default function MotorDetailPage() {
                 ))}
               </div>
 
+              {/* Interactive Variant Selector */}
+              {variants.length > 0 && (
+                <div className="mb-10 border-t border-gray-100 pt-8">
+                  <span className="text-[10px] font-sans font-bold text-gray-400 uppercase tracking-widest block mb-4">
+                    // Pilih Tipe / Varian
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {variants.map((variant) => (
+                      <button
+                        key={variant}
+                        onClick={() => setSelectedVariant(variant)}
+                        className={`px-5 py-3 border text-xs font-bold uppercase tracking-wider rounded-none transition-all duration-200 cursor-pointer ${
+                          selectedVariant === variant
+                            ? "bg-[#1c69d4] text-white border-[#1c69d4] font-black"
+                            : "bg-white text-gray-600 border-gray-200 hover:border-black"
+                        }`}
+                      >
+                        {variant}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Interactive Color Selector */}
+              {colors.length > 0 && (
+                <div className="mb-12 border-t border-gray-100 pt-8">
+                  <span className="text-[10px] font-sans font-bold text-gray-400 uppercase tracking-widest block mb-4">
+                    // Pilih Pilihan Warna
+                  </span>
+                  <div className="flex flex-wrap gap-2.5">
+                    {colors.map((color) => {
+                      let dotColor = "bg-gray-400";
+                      const cl = color.toLowerCase();
+                      if (cl.includes("black") || cl.includes("hitam")) dotColor = "bg-black border border-gray-700";
+                      else if (cl.includes("white") || cl.includes("putih")) dotColor = "bg-white border border-gray-300";
+                      else if (cl.includes("blue") || cl.includes("biru")) dotColor = "bg-blue-600";
+                      else if (cl.includes("red") || cl.includes("merah")) dotColor = "bg-red-600";
+                      else if (cl.includes("grey") || cl.includes("gray") || cl.includes("abu")) dotColor = "bg-gray-500";
+                      else if (cl.includes("silver")) dotColor = "bg-slate-300";
+                      else if (cl.includes("green") || cl.includes("ijo")) dotColor = "bg-emerald-600";
+                      else if (cl.includes("brown") || cl.includes("coklat")) dotColor = "bg-amber-800";
+                      else if (cl.includes("cyan")) dotColor = "bg-cyan-400";
+                      else if (cl.includes("orange")) dotColor = "bg-orange-500";
+                      else if (cl.includes("yellow") || cl.includes("kuning")) dotColor = "bg-yellow-400";
+                      else if (cl.includes("pink")) dotColor = "bg-pink-400";
+
+                      return (
+                        <button
+                          key={color}
+                          onClick={() => setSelectedColor(color)}
+                          className={`px-4 py-3 border text-xs font-bold uppercase tracking-wider rounded-none transition-all duration-200 flex items-center gap-3 cursor-pointer ${
+                            selectedColor === color
+                              ? "bg-[#1c69d4] text-white border-[#1c69d4] font-black"
+                              : "bg-white text-gray-600 border-gray-200 hover:border-black"
+                          }`}
+                        >
+                          <span className={`w-3.5 h-3.5 rounded-full ${dotColor} inline-block`} />
+                          {color}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {/* Technical Specifications */}
               <div className="mb-16">
                 <h3 className="text-black font-sans font-bold text-xl uppercase mb-8 flex items-center gap-3 tracking-tight border-b border-black pb-4">
                   <Check className="text-[#1c69d4]" size={20} /> Spesifikasi Lengkap
                 </h3>
                 <div className="space-y-0 mb-16">
-                  {motor.specifications.map((spec, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col md:flex-row md:justify-between md:items-center py-4 border-b border-gray-100 group hover:bg-gray-50/50 transition-colors px-2"
-                    >
-                      <span className="text-gray-500 font-sans text-xs uppercase mb-1 md:mb-0 w-1/3 font-bold tracking-wider">
-                        {spec.label}
-                      </span>
-                      <span className="text-black font-bold text-sm md:text-base w-2/3 md:text-right">
-                        {spec.value}
-                      </span>
-                    </div>
-                  ))}
+                  {motor.specifications
+                    .filter((spec) => spec.label !== "Tipe / Varian" && spec.label !== "Pilihan Warna")
+                    .map((spec, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col md:flex-row md:justify-between md:items-center py-4 border-b border-gray-100 group hover:bg-gray-50/50 transition-colors px-2"
+                      >
+                        <span className="text-gray-500 font-sans text-xs uppercase mb-1 md:mb-0 w-1/3 font-bold tracking-wider">
+                          {spec.label}
+                        </span>
+                        <span className="text-black font-bold text-sm md:text-base w-2/3 md:text-right">
+                          {spec.value}
+                        </span>
+                      </div>
+                    ))}
                 </div>
 
                 {/* Credit Calculator */}
                 <div className="mb-16">
                   <CreditCalculator
                     price={motor.price}
-                    motorName={motor.name}
+                    motorName={`${motor.name}${selectedVariant ? ` (${selectedVariant})` : ''}`}
                   />
                 </div>
               </div>
@@ -129,8 +226,8 @@ export default function MotorDetailPage() {
               {/* CTA */}
               <div className="sticky bottom-6 z-30 flex gap-4 bg-white/80 backdrop-blur-md p-4 border border-gray-150">
                 <Link
-                  href={`https://wa.me/628978638849?text=Saya%20tertarik%20dengan%20${encodeURIComponent(
-                    motor.name,
+                  href={`https://wa.me/628978638849?text=${encodeURIComponent(
+                    `Saya tertarik dengan unit ${motor.name}${selectedVariant ? ` - Tipe: ${selectedVariant}` : ''}${selectedColor ? ` - Warna: ${selectedColor}` : ''}`
                   )}`}
                   target="_blank"
                   className="flex-1 bg-[#1c69d4] hover:bg-[#0653b6] text-white py-5 rounded-none font-sans font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-3 group shadow-2xl cursor-pointer"
