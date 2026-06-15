@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
 import {
   Search,
   MessageSquare,
@@ -23,12 +24,60 @@ import {
   Calendar,
   Truck,
   ChevronRight,
+  Copy,
+  Check,
 } from "lucide-react";
 
 export default function ContactPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [openFaq, setOpenFaq] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState("faq");
+  const [guideType, setGuideType] = useState<"credit" | "cash">("credit");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyForm = () => {
+    const formText = `FORMULIR PENGAJUAN KREDIT - SRB MOTOR
+----------------------------------
+Nama pemohon : 
+Nama Pangilan :  
+Nama STNK  : 
+
+Alamat tempat yg tinggal sekarang :
+Status rumah: 
+
+Hp.telp 1 :  
+HP telp 2 :  
+Hp telp pasangan: 
+
+MedsoS:
+Email: 
+
+Status pernikahan :
+Nama ibu kandung : 
+
+DATA KERJA/USAHA
+Nama perusahaan & Wirsawasta: 
+Alamat:
+Penghasilan/bulan : 
+Tlp kntr : 
+
+Data kerja pasangan:
+Nama perusahaaan :
+Alamat:  
+Bagian:
+Berapa lama: 
+
+EMERGENCY CALL
+No Hp.Saudara tidak serumah : 
+Nama saudara : 
+Hubungan : 
+Alamat : 
+Tlp:`;
+
+    navigator.clipboard.writeText(formText);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const tabs = [
     { id: "faq", label: "FAQ & BANTUAN", icon: <HelpCircle className="w-4 h-4" /> },
@@ -43,15 +92,15 @@ export default function ContactPage() {
       items: [
         {
           q: "Bagaimana standar proses verifikasi kredit di SRB Motor?",
-          a: "Proses verifikasi dilakukan melalui mitra leasing terdaftar kami. Setelah Anda mengisi pengajuan, tim analis akan menghubungi maksimal 1x24 jam untuk melakukan penjadwalan survei. Data yang dibutuhkan minimal berupa E-KTP, KK, dan Bukti Penghasilan.",
+          a: "Proses verifikasi dilakukan melalui mitra leasing resmi kami secara manual. Setelah Anda menyalin dan mengisi Formulir Pengajuan Kredit di tab 'PANDUAN PEMESANAN' serta mengirimkannya bersama dokumen persyaratan (KTP, KK, bukti kerja, dan bukti kepemilikan rumah) via WhatsApp, kami akan mem-pooling data ke leasing untuk penjadwalan survei fisik oleh surveyor resmi.",
         },
         {
-          q: "Apakah DP (Down Payment) bisa dikembalikan jika pengajuan ditolak?",
-          a: "Ya. Kami menerapkan kebijakan transparansi mutlak. Jika pengajuan kredit ditolak secara sistem oleh mitra pembiayaan kami, maka 100% uang muka yang telah masuk akan dikembalikan (refund) tanpa potongan operasional apapun dalam estimasi 2-3 hari kerja.",
+          q: "Apakah saya harus membayar DP sebelum pengajuan kredit disetujui?",
+          a: "Tidak. Kami tidak meminta transfer uang muka (DP) di awal. Pembayaran DP baru dilakukan setelah pengajuan kredit Anda disetujui oleh leasing, Purchase Order (PO) rilis, dan unit motor dikirimkan serta tiba di rumah Anda. Transaksi 100% aman tanpa risiko finansial.",
         },
         {
           q: "Berapa lama proses dari pembelian cash hingga motor dikirim?",
-          a: "Untuk pembelian tunai (cash) pada unit 'Ready Stock', proses administrasi dan PDI (Pre-Delivery Inspection) memakan waktu 4-6 jam. Unit dapat dikirimkan ke domisili Anda di hari yang sama (same-day delivery) asalkan pembayaran diselesaikan sebelum pukul 13.00.",
+          a: "Untuk pembelian tunai (cash) pada unit 'Ready Stock', unit dapat dikirim langsung ke rumah Anda di hari yang sama (same-day delivery) setelah Anda mengirimkan foto KTP & KK via WhatsApp untuk kebutuhan registrasi STNK. Pembayaran bisa ditransfer ke rekening dealer atau bayar tunai (COD) saat motor tiba.",
         },
       ],
     },
@@ -199,169 +248,316 @@ export default function ContactPage() {
     </div>
   );
 
-  const renderGuideTab = () => (
-    <div className="space-y-24">
-      {/* Header Introduction */}
-      <div className="max-w-2xl space-y-4">
-        <h2 className="text-3xl font-black uppercase tracking-tighter text-black leading-tight">
-          LANGKAH MUDAH MEMILIKI KENDARAAN <span className="text-[#1c69d4]">IMPIAN</span>
-        </h2>
-        <p className="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] leading-loose max-w-lg">
-          Prosedur kepemilikan unit di SRB Motor dirancang untuk efisiensi maksimal, transparansi, dan keamanan data sepenuhnya.
-        </p>
-      </div>
+  const renderGuideTab = () => {
+    const creditTimeline = [
+      {
+        step: "01",
+        title: "KONSULTASI & PILIH UNIT",
+        icon: <Bike className="w-8 h-8" />,
+        desc: "Pilih unit motor dan tentukan perhitungan uang muka & tenor.",
+        customer: [
+          "Datang ke dealer atau hubungi kami langsung via WhatsApp",
+          "Tentukan unit motor baru yang ingin dipesan",
+          "Diskusikan nominal Uang Muka (DP) dan Tenor (Durasi) kredit",
+        ],
+        srb: "Representatif sales kami akan memberikan skema perhitungan kredit simulasi terbaik secara langsung.",
+      },
+      {
+        step: "02",
+        title: "KIRIM DOKUMEN VIA WHATSAPP",
+        icon: <FileCheck className="w-8 h-8" />,
+        desc: "Kirim data pribadi & formulir pengajuan lengkap melalui WhatsApp.",
+        customer: [
+          "Salin & isi lengkap Formulir Pengajuan Kredit di kolom sebelah kanan",
+          "Kirim E-KTP Suami-Istri (atau KTP Pemohon & Penjamin bagi yang belum menikah)",
+          "Kirim foto Kartu Keluarga (KK)",
+          "Kirim bukti kerja/usaha (Slip Gaji/Nametag/Kartu Karyawan/Bukti Usaha)",
+          "Kirim bukti rumah (Rekening Listrik/PBB/Akte Jual Beli)",
+        ],
+        srb: "Kami memverifikasi kelengkapan dokumen awal secara manual untuk meminimalkan penolakan berkas.",
+        require: ["Formulir Pengajuan", "E-KTP", "Kartu Keluarga", "Bukti Kerja", "Bukti Rumah"],
+      },
+      {
+        step: "03",
+        title: "POOLING DATA & SURVEI LEASING",
+        icon: <Calendar className="w-8 h-8" />,
+        desc: "Dealer memproses pooling data ke leasing untuk dilakukan survei fisik.",
+        customer: [
+          "Tunggu dealer meneruskan data pengajuan Anda ke leasing/surveyor",
+          "Terima kunjungan survei fisik dari surveyor resmi leasing ke rumah Anda",
+          "Lakukan wawancara singkat & tanda tangan berkas pengajuan",
+        ],
+        srb: "Data Anda dikirim langsung ke leasing tepercaya. Setelah lolos verifikasi awal, survei fisik segera dijadwalkan.",
+      },
+      {
+        step: "04",
+        title: "PERSETUJUAN & PENGIRIMAN UNIT",
+        icon: <Truck className="w-8 h-8" />,
+        desc: "Persetujuan rilis, pengantaran unit, dan pembayaran DP saat tiba.",
+        customer: [
+          "Tunggu hasil keputusan kelayakan kredit (Approval) dari leasing",
+          "Setelah disetujui, Purchase Order (PO) rilis keesokan harinya",
+          "Terima pengiriman unit motor langsung ke domisili Anda",
+          "Bayar Uang Muka (DP) secara transfer atau tunai saat motor tiba di rumah",
+        ],
+        srb: "Unit motor melewati Pre-Delivery Inspection (PDI) menyeluruh sebelum dikirim bersama kuitansi & surat jalan.",
+      },
+    ];
 
-      {/* Vertical Timeline Container */}
-      <div className="relative space-y-32">
-        {/* Connecting Line (Vertical) */}
-        <div className="absolute left-[39px] top-10 bottom-10 w-px bg-gray-100 lg:block hidden"></div>
+    const cashTimeline = [
+      {
+        step: "01",
+        title: "PESAN UNIT & KONFIRMASI STOK",
+        icon: <Bike className="w-8 h-8" />,
+        desc: "Pemesanan langsung unit motor impian tanpa proses survei.",
+        customer: [
+          "Pilih tipe dan warna motor yang Anda inginkan",
+          "Hubungi kami via WhatsApp untuk konfirmasi ketersediaan stok unit",
+          "Sepakati harga OTR cash bersih/tunai",
+        ],
+        srb: "Gudang langsung memblokir nomor rangka/mesin unit yang Anda pesan agar aman dari pemesanan lain.",
+      },
+      {
+        step: "02",
+        title: "KIRIM DOKUMEN ADMINISTRASI STNK",
+        icon: <FileCheck className="w-8 h-8" />,
+        desc: "Kirim data identitas untuk pembuatan STNK & BPKB resmi.",
+        customer: [
+          "Kirimkan foto E-KTP calon pemilik motor (untuk nama STNK)",
+          "Kirimkan foto Kartu Keluarga (KK) via chat WhatsApp",
+        ],
+        srb: "Berkas langsung didaftarkan ke bagian administrasi Samsat untuk proses pencetakan STNK baru.",
+        require: ["E-KTP STNK", "Kartu Keluarga"],
+      },
+      {
+        step: "03",
+        title: "PENGIRIMAN MOTOR & PEMBAYARAN COD",
+        icon: <Truck className="w-8 h-8" />,
+        desc: "Pengiriman motor ke rumah dengan metode pembayaran COD / Transfer.",
+        customer: [
+          "Konfirmasi jadwal pengiriman unit motor",
+          "Cek kecocokan fisik nomor rangka & mesin saat motor tiba di lokasi",
+          "Bayar lunas via transfer rekening dealer atau bayar tunai (COD) ke supir kami",
+        ],
+        srb: "Pengiriman dilakukan oleh tim internal kami. Supir dibekali surat jalan resmi dan tanda terima pembayaran sah.",
+      },
+    ];
 
-        {[
-          {
-            step: "01",
-            title: "EKSPLORASI & PEMILIHAN",
-            icon: <Bike className="w-8 h-8" />,
-            desc: "Telusuri katalog premium kami yang selalu diperbarui setiap hari.",
-            customer: [
-              "Cek detail spesifikasi & galeri foto unit",
-              "Lakukan simulasi kredit di halaman produk",
-              "Pilih opsi pembayaran (Cash/Kredit)",
-            ],
-            srb: "Tim kami melakukan pengecekan kualitas fisik menyeluruh sebelum unit masuk ke katalog.",
-          },
-          {
-            step: "02",
-            title: "VERIFIKASI & ADMINISTRASI",
-            icon: <FileCheck className="w-8 h-8" />,
-            desc: "Lengkapi data identitas Anda melalui sistem enkripsi kami.",
-            customer: [
-              "Siapkan E-KTP & Kartu Keluarga (KK)",
-              "Isi formulir pemesanan secara digital",
-              "Tunggu konfirmasi tim via WhatsApp/Email",
-            ],
-            srb: "Data Anda dienkripsi secara aman dan hanya dapat diakses oleh tim verifikator resmi.",
-            require: ["E-KTP", "Kartu Keluarga", "Bukti Penghasilan"],
-          },
-          {
-            step: "03",
-            title: "SURVEI & APPROVAL",
-            icon: <Calendar className="w-8 h-8" />,
-            desc: "Proses verifikasi akhir oleh mitra pembiayaan kami (Leasing).",
-            customer: [
-              "Terima kunjungan survei (jika diperlukan)",
-              "Pahami rincian kontrak dan asuransi",
-              "Terima notifikasi approval dalam 1x24 jam",
-            ],
-            srb: "Kami menjalin komunikasi intensif dengan mitra leasing untuk memastikan approval cepat.",
-          },
-          {
-            step: "04",
-            title: "PENGIRIMAN & SERAH TERIMA",
-            icon: <Truck className="w-8 h-8" />,
-            desc: "Unit siap dikirimkan langsung ke domisili Anda.",
-            customer: [
-              "Konfirmasi jadwal pengiriman unit",
-              "Lakukan serah terima & cek fisik unit",
-              "Penandatanganan tanda terima pengiriman",
-            ],
-            srb: "PDI Akhir (Pre-Delivery Inspection) dilakukan sekali lagi sebelum unit diberangkatkan.",
-          },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 group last:pb-0"
-          >
-            {/* Step Marker */}
-            <div className="lg:col-span-1 flex flex-col items-center">
-              <div className="w-20 h-20 bg-white border-2 border-gray-100 flex items-center justify-center text-black font-black text-2xl group-hover:border-[#1c69d4] group-hover:bg-[#1c69d4] group-hover:text-white transition-all duration-500 z-10">
-                {item.step}
-              </div>
-            </div>
+    const activeTimeline = guideType === "credit" ? creditTimeline : cashTimeline;
 
-            {/* Content Card */}
-            <div className="lg:col-span-11 space-y-10">
-              <div className="flex flex-col md:flex-row md:items-center gap-6">
-                <div className="p-5 bg-gray-50 text-[#1c69d4] group-hover:bg-blue-50 transition-colors">
-                  {item.icon}
-                </div>
-                <div>
-                  <h3 className="text-2xl font-black text-black uppercase tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-gray-50/50 p-8 md:p-12 border border-gray-150 group-hover:border-blue-100 transition-colors">
-                {/* Checklist Customer */}
-                <div className="space-y-6">
-                  <p className="text-[10px] font-black text-[#1c69d4] uppercase tracking-[0.2em] flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#1c69d4] rounded-full"></span>{" "}
-                    TINDAKAN PELANGGAN
-                  </p>
-                  <ul className="space-y-4">
-                    {item.customer.map((li, liIdx) => (
-                      <li
-                        key={liIdx}
-                        className="flex gap-4 text-xs font-bold text-gray-600 uppercase tracking-widest leading-relaxed"
-                      >
-                        <div className="w-1 h-4 bg-gray-200 mt-0.5"></div>
-                        {li}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Checklist SRB */}
-                <div className="space-y-6">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>{" "}
-                    PROSES INTERNAL SRB
-                  </p>
-                  <p className="text-[11px] font-medium text-gray-500 italic leading-loose uppercase tracking-wider">
-                    &quot;{item.srb}&quot;
-                  </p>
-                  {item.require && (
-                    <div className="pt-6 flex flex-wrap gap-2">
-                      {item.require.map((req, rIdx) => (
-                        <span
-                          key={rIdx}
-                          className="px-3 py-1.5 bg-white border border-gray-200 text-[9px] font-black uppercase tracking-widest text-[#1c69d4]"
-                        >
-                          {req}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Final Call to Action */}
-      <div className="bg-black p-12 text-center space-y-10 group overflow-hidden relative">
-        <div className="absolute inset-0 bg-[#1c69d4] opacity-0 group-hover:opacity-10 transition-opacity blur-3xl pointer-events-none"></div>
-        <div className="space-y-3 relative z-10">
-          <h3 className="text-3xl font-black text-white uppercase tracking-tighter">
-            SIAP UNTUK MEMULAI?
-          </h3>
-          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">
-            UNIT TERBAIK KAMI SEDANG MENUNGGU ANDA
+    return (
+      <div className="space-y-16">
+        {/* Header Introduction */}
+        <div className="max-w-2xl space-y-4">
+          <h2 className="text-3xl font-black uppercase tracking-tighter text-black leading-tight">
+            ALUR PEMESANAN UNIT <span className="text-[#1c69d4]">MANUAL</span>
+          </h2>
+          <p className="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] leading-loose max-w-lg">
+            Prosedur kepemilikan unit di SRB Motor dirancang secara kekeluargaan, fleksibel, aman, dan tanpa birokrasi berbelit.
           </p>
         </div>
-        <Link
-          href="/gallery"
-          className="inline-flex items-center gap-6 bg-[#1c69d4] text-white px-12 py-5 font-black uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition-all relative z-10 cursor-pointer"
-        >
-          LIHAT KATALOG TERBARU <ArrowRight className="w-4 h-4 ml-2" />
-        </Link>
+
+        {/* Tab Toggle */}
+        <div className="flex border-b border-gray-200">
+          <button
+            onClick={() => setGuideType("credit")}
+            className={cn(
+              "py-4 px-6 font-sans font-bold text-xs uppercase tracking-widest border-b-2 transition-all cursor-pointer",
+              guideType === "credit"
+                ? "border-[#1c69d4] text-[#1c69d4] font-black"
+                : "border-transparent text-gray-400 hover:text-black"
+            )}
+          >
+            Pembelian Kredit
+          </button>
+          <button
+            onClick={() => setGuideType("cash")}
+            className={cn(
+              "py-4 px-6 font-sans font-bold text-xs uppercase tracking-widest border-b-2 transition-all cursor-pointer",
+              guideType === "cash"
+                ? "border-[#1c69d4] text-[#1c69d4] font-black"
+                : "border-transparent text-gray-400 hover:text-black"
+            )}
+          >
+            Pembelian Tunai (Cash)
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          {/* Timeline */}
+          <div className="lg:col-span-7 space-y-20 relative">
+            <div className="absolute left-[39px] top-10 bottom-10 w-px bg-gray-100 lg:block hidden"></div>
+
+            {activeTimeline.map((item, i) => (
+              <div
+                key={i}
+                className="relative grid grid-cols-1 lg:grid-cols-12 gap-6 group last:pb-0"
+              >
+                {/* Step Marker */}
+                <div className="lg:col-span-2 flex flex-col items-center">
+                  <div className="w-20 h-20 bg-white border-2 border-gray-100 flex items-center justify-center text-black font-black text-2xl group-hover:border-[#1c69d4] group-hover:bg-[#1c69d4] group-hover:text-white transition-all duration-500 z-10">
+                    {item.step}
+                  </div>
+                </div>
+
+                {/* Content Card */}
+                <div className="lg:col-span-10 space-y-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div className="p-4 bg-gray-50 text-[#1c69d4] group-hover:bg-blue-50 transition-colors inline-block w-fit">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-black uppercase tracking-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mt-1">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 bg-gray-50/50 p-6 border border-gray-150 group-hover:border-blue-100 transition-colors">
+                    {/* Checklist Customer */}
+                    <div className="space-y-4">
+                      <p className="text-[9px] font-black text-[#1c69d4] uppercase tracking-[0.2em] flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-[#1c69d4] rounded-full"></span>{" "}
+                        TINDAKAN PELANGGAN
+                      </p>
+                      <ul className="space-y-3">
+                        {item.customer.map((li, liIdx) => (
+                          <li
+                            key={liIdx}
+                            className="flex gap-3 text-[11px] font-bold text-gray-600 uppercase tracking-widest leading-relaxed"
+                          >
+                            <div className="w-1 h-3.5 bg-gray-200 mt-0.5 shrink-0"></div>
+                            <span>{li}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Checklist SRB */}
+                    <div className="space-y-4 pt-4 border-t border-gray-150">
+                      <p className="text-[9px] font-black text-gray-400 uppercase tracking-[0.2em] flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>{" "}
+                        PROSES INTERNAL SRB
+                      </p>
+                      <p className="text-[10px] font-medium text-gray-500 italic leading-loose uppercase tracking-wider">
+                        &quot;{item.srb}&quot;
+                      </p>
+                      {item.require && (
+                        <div className="pt-2 flex flex-wrap gap-2">
+                          {item.require.map((req, rIdx) => (
+                            <span
+                              key={rIdx}
+                              className="px-2.5 py-1 bg-white border border-gray-200 text-[8px] font-black uppercase tracking-widest text-[#1c69d4]"
+                            >
+                              {req}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28">
+            {guideType === "credit" ? (
+              <div className="bg-white border-2 border-black p-6 md:p-8 rounded-none shadow-[12px_12px_0px_0px_rgba(28,105,212,0.1)] space-y-6">
+                <div className="flex justify-between items-center border-b border-black pb-4">
+                  <h4 className="font-sans font-black text-sm uppercase tracking-wider text-black">
+                    FORM PENGAJUAN KREDIT
+                  </h4>
+                  <button
+                    onClick={handleCopyForm}
+                    className="flex items-center gap-2 bg-gray-100 hover:bg-[#1c69d4] hover:text-white text-gray-600 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest transition-all cursor-pointer rounded-none"
+                  >
+                    {copied ? <Check size={12} /> : <Copy size={12} />}
+                    {copied ? "Tersalin" : "Salin Form"}
+                  </button>
+                </div>
+                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider leading-relaxed">
+                  *Salin formulir di bawah ini, isi data Anda, lalu kirimkan langsung via WhatsApp ke admin kami untuk memulai verifikasi cepat.
+                </p>
+                <div className="bg-gray-50 p-4 border border-gray-200 max-h-[400px] overflow-y-auto rounded-none font-mono text-[10px] text-gray-700 whitespace-pre leading-relaxed select-all">
+{`Nama pemohon : 
+Nama Pangilan :  
+Nama STNK  : 
+
+Alamat tempat yg tinggal sekarang :
+Status rumah: 
+
+Hp.telp 1 :  
+HP telp 2 :  
+Hp telp pasangan: 
+
+MedsoS:
+Email: 
+
+Status pernikahan :
+Nama ibu kandung : 
+
+DATA KERJA/USAHA
+Nama perusahaan & Wirsawasta: 
+Alamat:
+Penghasilan/bulan : 
+Tlp kntr : 
+
+Data kerja pasangan:
+Nama perusahaaan :
+Alamat:  
+Bagian:
+Berapa lama: 
+
+EMERGENCY CALL
+No Hp.Saudara tidak serumah : 
+Nama saudara : 
+Hubungan : 
+Alamat : 
+Tlp:`}
+                </div>
+              </div>
+            ) : (
+              <div className="bg-white border-2 border-black p-6 md:p-8 rounded-none shadow-[12px_12px_0px_0px_rgba(28,105,212,0.1)] space-y-6">
+                <h4 className="font-sans font-black text-sm uppercase tracking-wider text-black border-b border-black pb-4">
+                  KEUNTUNGAN CASH / TUNAI
+                </h4>
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: "TANPA PROSES SURVEI",
+                      desc: "Pembelian tunai bebas dari kunjungan surveyor leasing. Proses instan langsung diproses setelah deal.",
+                    },
+                    {
+                      title: "DOKUMEN DILINDUNGI",
+                      desc: "Hanya butuh foto KTP untuk cetak nama STNK & foto KK untuk pelaporan Samsat. Tidak perlu slip gaji atau bukti rumah.",
+                    },
+                    {
+                      title: "PEMBAYARAN COD (BAYAR DI TEMPAT)",
+                      desc: "Untuk keamanan maksimal, Anda bisa membayar tunai atau transfer ke rekening resmi dealer saat supir mengantarkan motor sampai ke rumah Anda.",
+                    },
+                  ].map((adv, aIdx) => (
+                    <div key={aIdx} className="space-y-2">
+                      <span className="text-[10px] font-black text-[#1c69d4] uppercase tracking-wider block">
+                        {`// ${adv.title}`}
+                      </span>
+                      <p className="text-xs text-gray-500 font-medium leading-relaxed uppercase tracking-wider">
+                        {adv.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   interface LegalSection {
     h: string;

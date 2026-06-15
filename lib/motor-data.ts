@@ -13,6 +13,7 @@ export interface MotorSpec {
 
 export const motors: MotorSpec[] = [
   // YAMAHA COLLECTION
+  // YAMAHA COLLECTION
   {
     "id": "yamaha-tmax",
     "name": "Yamaha TMAX",
@@ -1454,7 +1455,7 @@ export const motors: MotorSpec[] = [
     "price": "Rp. 21.189.000,-",
     "image": "/assets/img/honda/Honda-Beat-Sporty-Deluxe-SmartKey-Matte-Black.webp",
     "category": "CITY",
-    "description": "109.5cc • Otomatis • PGM-FI",
+    "description": "109.5cc \u2022 Otomatis \u2022 PGM-FI",
     "specifications": [
         {
             "label": "Tipe Mesin",
@@ -1504,11 +1505,11 @@ export const motors: MotorSpec[] = [
     "price": "Rp. 20.432.000,-",
     "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/IMG_84422.jpg.jpeg",
     "category": "CITY",
-    "description": "110cc • Otomatis • PGM-FI",
+    "description": "110cc \u2022 Otomatis \u2022 PGM-FI",
     "specifications": [
         {
             "label": "Tipe Mesin",
-            "value": "4 – Langkah, SOHC, eSP"
+            "value": "4 \u2013 Langkah, SOHC, eSP"
         },
         {
             "label": "Kapasitas Mesin",
@@ -1516,7 +1517,7 @@ export const motors: MotorSpec[] = [
         },
         {
             "label": "Sistem Bahan Bakar",
-            "value": "PGM – FI ( Programmed Fuel Injection )"
+            "value": "PGM \u2013 FI ( Programmed Fuel Injection )"
         },
         {
             "label": "Transmisi",
@@ -1551,7 +1552,7 @@ export const motors: MotorSpec[] = [
     "price": "Rp. 25.332.000,-",
     "image": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Street-Black-Coral.jpg.jpeg",
     "category": "SPORT",
-    "description": "125cc • Otomatis • PGM-FI",
+    "description": "125cc \u2022 Otomatis \u2022 PGM-FI",
     "specifications": [
         {
             "label": "Tipe Mesin",
@@ -1599,7 +1600,7 @@ export const motors: MotorSpec[] = [
     "price": "Rp. 34.989.000,-",
     "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/PCX-ABS-Phenomenal-Green-1.jpg",
     "category": "PREMIUM",
-    "description": "160cc • Otomatis • PGM-FI",
+    "description": "160cc \u2022 Otomatis \u2022 PGM-FI",
     "specifications": [
         {
             "label": "Tipe Mesin",
@@ -1640,5 +1641,881 @@ export const motors: MotorSpec[] = [
         "Royal Matte Blue": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/PCX-CBS-Exceptional-Matte-Silver.jpg",
         "Wonderful White": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/PCX-CBS-Exceptional-Matte-White.jpg"
     }
+},
+  {
+    "id": "honda-revo-110",
+    "name": "Honda Revo",
+    "brand": "HONDA",
+    "price": "Rp. 18.267.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Honda-Revo-X-Attractive-Red.jpg",
+    "category": "MOPED",
+    "description": "109,17cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah SOHC, silinder tunggal"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "109,17 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "4 kecepatan/bertautan tetap"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "6,56 kW (8,91 PS) / 7.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "8,76 Nm (0,86 kgf.m) / 6.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Revo FIT, Revo X"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-adv-160",
+    "name": "Honda ADV 160",
+    "brand": "HONDA",
+    "price": "Rp. 37.772.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2022/07/Honda-ADV-160-ABS-RoadSync-SUV-Brown-1.jpg",
+    "category": "ADVENTURE",
+    "description": "160cc \u2022 Otomatis \u2022 PGM \u2013 FI ( Programmed Fuel Injection )",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, 4-Katup, eSP+"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "160 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM \u2013 FI ( Programmed Fuel Injection )"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11,8 kW ( 16 PS ) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "14,7 Nm ( 1,5 kgf.m ) / 6.500 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "ADV 160 CBS, ADV 160 ABS, ADV 160 ABS RoadSync ACC"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-cb150-verza",
+    "name": "Honda CB150 Verza",
+    "brand": "HONDA",
+    "price": "Rp. 24.542.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Honda-CB150-Verza-CW-Bold-Red-2.jpg",
+    "category": "SPORT",
+    "description": "150cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 langkah, SOHC, Satu Silinder"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "150 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6-Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "9,59kW (13,04 PS) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "12,73 Nm (1,30 kgf.m) / 6.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CB 150 Verza SW, CB 150 Verza CW"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-cb150r-streetfire",
+    "name": "Honda CB150R StreetFire",
+    "brand": "HONDA",
+    "price": "Rp. 35.062.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/onda-New-CB150R-StreeFire-Special-Edition-Fury-Matte-Red.jpg",
+    "category": "SPORT",
+    "description": "149.16cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah, DOHC, 4 Katup"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "149.16 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6 Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "12,4 kW (16.9 PS) / 9.000 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13.8 Nm (1.41 kgf.m) / 7.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "New CB150R StreetFire, New CB150R StreetFire Special Edition"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-cb150x",
+    "name": "Honda CB150X",
+    "brand": "HONDA",
+    "price": "Rp. 35.402.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-CB150X-STD-Mandala-Red.jpg",
+    "category": "ADVENTURE",
+    "description": "149,16cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 langkah, DOHC 4 Katup"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "149,16 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6-Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11,5kW (15,6 PS) / 9.000 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13,8 Nm (1,41 kgf.m) / 7.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CB 150 X STD, CB 150 X SE"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-cbr-150r",
+    "name": "Honda CBR 150R",
+    "brand": "HONDA",
+    "price": "Rp. 39.452.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Honda-CBR-150R-STD-Racing-Red.jpg",
+    "category": "SPORT",
+    "description": "149.16cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah,DOHC, 4 Katup"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "149.16 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Programmed Fuel Injection (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6 kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "12.6kW (17.1 PS / 9.000 rpm)"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "14.4 Nm (1.47 kgf.m / 7.000 rpm)"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CBR 150R STD Victory Matte Black, CBR 150R STD Racing Red, CBR 150R STD Tricolor, CBR 150R ABS Victory Matte Black, CBR 150R ABS Tricolor"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ],
+    "colorImages": {
+        "Standard Color": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Honda-CBR-150R-STD-Tricolor.jpg"
+    }
+},
+  {
+    "id": "honda-cbr-250r",
+    "name": "Honda CBR 250RR",
+    "brand": "HONDA",
+    "price": "Rp. 74.967.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-CBR250RR.jpg",
+    "category": "SPORT",
+    "description": "150cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "-"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "150 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6-Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CBR 250RR\u00a0STD Black Freedom, CBR 250RR\u00a0STD Anchor Mat Gunpowder Black Metallic, CBR 250RR ABS SP Mystique Blue, CBR 250RR ABS SP QS Racing Red, CBR 250RR ABS SP QS Tricolor, CBR 250RR ABS SP QS Red Black"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ],
+    "colorImages": {
+        "Standard Color": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Honda-New-CBR-250RR-SP-QS-Tricolor.jpg"
+    }
+},
+  {
+    "id": "honda-crf150l",
+    "name": "Honda CRF150L",
+    "brand": "HONDA",
+    "price": "Rp. 38.997.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-CRF150L.jpg",
+    "category": "OFF-ROAD",
+    "description": "149.15 cm3 \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, SOHC, Satu Silinder"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "149.15 cm3"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "5-Speed"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "9,51 kW(12,91 PS)/8.000 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "12,43 Nm(1,27 kgf.m)/6.500 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CRF150L"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-crf250-rally",
+    "name": "Honda CRF250 Rally",
+    "brand": "HONDA",
+    "price": "Rp. 93.527.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-CRF-250-Rally-Extreme-Red-1.jpg",
+    "category": "OFF-ROAD",
+    "description": "250cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "-"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "250 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6-Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CRF250 Rally"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-forza-250",
+    "name": "Honda Forza",
+    "brand": "HONDA",
+    "price": "Rp. 94.816.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2021/12/FORZA.png",
+    "category": "PREMIUM",
+    "description": "110cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "Pendinginan Cairan, 4 Langkah, single cylinder"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "110 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Fuel Injection (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "17,3 kW / 7500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "24 Nm / 6250 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Forza"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Mat Gunpowder Black Metallic, Pearl Horizon White, Sword Silver Metallic"
+        }
+    ],
+    "colorImages": {
+        "Mat Gunpowder Black Metallic": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/honda-forza-mat-gunpowder-black-metallic.jpg",
+        "Pearl Horizon White": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/honda-forza-pearl-horizon-white.jpg",
+        "Sword Silver Metallic": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/honda-forza-sword-silver-metallic.jpg"
+    }
+},
+  {
+    "id": "honda-scoopy",
+    "name": "Honda Scoopy",
+    "brand": "HONDA",
+    "price": "Rp. 23.754.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Untitled-1.jpg.jpeg.jpg",
+    "category": "CITY",
+    "description": "109,5cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, SOHC dengan Pendingin Udara, eSP"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "109,5 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "6,6 kW (9 PS / 7.500 rpm)"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "9,2 Nm (0,94 kgf.m) / 6.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Scoopy Energetic, Scoopy Fashion, Scoopy Prestige / Stylish"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-sonic-150r",
+    "name": "Honda Sonic 150R",
+    "brand": "HONDA",
+    "price": "Rp. 29.147.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-Sonic-150R-1.jpg",
+    "category": "SPORT",
+    "description": "149.16cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah, DOHC, 4 Katup"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "149.16 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6 Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11.8 kW (16.0 PS) / 9.000 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13.5 Nm (1.38 kgf.m) / 6.500 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Sonic 150R Activo Red & Energetic Red, Sonic 150R Matte Black & Racing Red"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-stylo-160",
+    "name": "Honda Stylo 160",
+    "brand": "HONDA",
+    "price": "Rp. 29.732.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2024/02/Stylo-160-ABS-Special-Burgundy.jpg",
+    "category": "PREMIUM",
+    "description": "156,9cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, 4-Valve, eSP+"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "156,9cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11,3 kW (15,4 PS) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13,8 Nm (1,5 kgf,m) / 7.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "New Stylo 160 CBS, New Stylo 160 ABS, New Stylo 160 ABS SE"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-super-cub-c125",
+    "name": "Honda Super Cub",
+    "brand": "HONDA",
+    "price": "Rp. 80.423.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/Honda-Super-Cub-125-Matte-Axis-Gray-Metallic.jpg",
+    "category": "PREMIUM",
+    "description": "110cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "Pendinginan Udara, SOHC 4 langkah"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "110 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Fuel Injection (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "6,76 kW / 7.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "9,79 Nm / 5.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Super Cub 125 (MP AP), Super Cub 125 (GR)"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Pearl Shining Black, Pearl Niltava Blue, Pearl Nebula Red"
+        }
+    ],
+    "colorImages": {
+        "Pearl Shining Black": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/Honda-Super-Cub-125-Pearl-Cadet-Gray.jpg",
+        "Pearl Niltava Blue": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/Honda-Super-Cub-125-Pearl-Cadet-Gray.jpg",
+        "Pearl Nebula Red": "https://www.hondacengkareng.com/wp-content/uploads/2019/10/Honda-Super-Cub-125-Pearl-Nebula-Red.jpg"
+    }
+},
+  {
+    "id": "honda-supra-gtr-150",
+    "name": "Honda Supra GTR 150",
+    "brand": "HONDA",
+    "price": "Rp. 27.572.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-Supra-GTR-150-Sporty-Spartan-Red-1.jpg",
+    "category": "SPORT",
+    "description": "149,16cc \u2022 Manual \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah, DOHC \u2013 4 Katup"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "149,16 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Manual, 6-Kecepatan"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "12,0 kW (16,3 PS) / 9.000 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "14,2 Nm (1,45 kgf.m) / 6.500 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Supra GTR 150, Supra GTR 150 Exclusive Monotone"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-supra-x-125",
+    "name": "Honda Supra X",
+    "brand": "HONDA",
+    "price": "Rp. 21.682.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Honda-Supra-X-125-FI-CW-Energetic-Red-2.jpg",
+    "category": "MOPED",
+    "description": "124,89cc \u2022 Manual \u2022 Karburator",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah SOHC, Silinder tunggal"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "124,89 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Karburator"
+        },
+        {
+            "label": "Transmisi",
+            "value": "4 kecepatan, rotary"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "7.40 kW (10.1 PS) / 8.000 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "9.30 Nm (0.95 kgf.m) / 4.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "Supra X 125 FI SW, Supra X 125 FI CW ACC"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-vario-160",
+    "name": "Honda Vario 160",
+    "brand": "HONDA",
+    "price": "Rp. 28.614.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2022/02/New-Honda-Vario-160-ABS-Grande-Matte-White.jpg",
+    "category": "SPORT",
+    "description": "160cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, 4-Valve, eSP+"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "160 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11,3 kW (15,4 PS) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13,8 Nm (1,4 kgf,m) / 7.000 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "New Vario 160 CBS, New Vario 160 CBS SP, New Vario 160 ABS ACC"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-em1-e",
+    "name": "Honda EM1 e",
+    "brand": "HONDA",
+    "price": "Rp. 40.000.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2023/08/Honda-EM1-Innovative-White.jpg",
+    "category": "CITY",
+    "description": "110cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "-"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "110 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "90 Nm/25 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "EM1 e: (Unit+Battery), EM1 e: PLUS (Unit+Battery)"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-cuv-e",
+    "name": "Honda CUV e:",
+    "brand": "HONDA",
+    "price": "Rp. 54.450.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-CUV-e-RoadSync-Duo-Quantum-Matte-White.jpg",
+    "category": "CITY",
+    "description": "110cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "-"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "110 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "22 Nm / 2.300 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "CUV e:, CUV e: Roadsync Duo"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
+},
+  {
+    "id": "honda-icon-e",
+    "name": "Honda ICON e:",
+    "brand": "HONDA",
+    "price": "Rp. 28.000.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/ICON.jpg",
+    "category": "CITY",
+    "description": "110cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "-"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "110 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "-"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "85 Nm / 110 rpm"
+        },
+        {
+            "label": "Tipe / Varian",
+            "value": "ICON e:"
+        },
+        {
+            "label": "Pilihan Warna",
+            "value": "Standard Color"
+        }
+    ]
 }
 ];
