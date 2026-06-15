@@ -47,12 +47,16 @@ export default function Home() {
     },
   ];
 
-  // Pick 4 popular units to display
+  // Pick popular units to display
   const popularMotors = [
-    motors.find((m) => m.id === "yamaha-aerox-alpha"),
-    motors.find((m) => m.id === "yamaha-nmax-turbo"),
+    motors.find((m) => m.id === "yamaha-nmax"),
     motors.find((m) => m.id === "honda-pcx-160"),
-    motors.find((m) => m.id === "yamaha-fazzio-neo"),
+    motors.find((m) => m.id === "yamaha-aerox-155"),
+    motors.find((m) => m.id === "honda-vario-160"),
+    motors.find((m) => m.id === "yamaha-grand-filano"),
+    motors.find((m) => m.id === "honda-adv-160"),
+    motors.find((m) => m.id === "yamaha-fazzio"),
+    motors.find((m) => m.id === "honda-beat-sporty"),
   ].filter(Boolean) as typeof motors;
 
   const handleSearchSubmit = () => {
@@ -263,7 +267,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-              {popularMotors.slice(0, 4).map((motor) => (
+              {popularMotors.slice(0, 8).map((motor) => (
                 <div key={motor.id}>
                   <MotorCard motor={motor} />
                 </div>
