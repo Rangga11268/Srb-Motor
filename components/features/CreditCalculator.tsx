@@ -100,7 +100,7 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
 
         {/* Result */}
         <div className="bg-gray-50 p-6 rounded-none border border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 md:gap-4">
+          <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row justify-between md:items-end lg:items-stretch xl:items-end gap-6 md:gap-4 lg:gap-6 xl:gap-4">
             <div>
               <span className="block font-sans text-gray-500 text-[10px] md:text-xs mb-2 uppercase tracking-widest font-bold">
                 Estimasi Angsuran / bulan:
@@ -113,7 +113,7 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#1c69d4] hover:bg-[#0653b6] text-white px-8 py-4 rounded-none font-bold font-sans text-xs uppercase flex items-center justify-center gap-2 transition-colors w-full md:w-auto tracking-widest"
+              className="bg-[#1c69d4] hover:bg-[#0653b6] text-white px-8 py-4 rounded-none font-bold font-sans text-xs uppercase flex items-center justify-center gap-2 transition-colors w-full md:w-auto lg:w-full xl:w-auto tracking-widest"
             >
               <Send size={14} />
               Ajukan Sekarang

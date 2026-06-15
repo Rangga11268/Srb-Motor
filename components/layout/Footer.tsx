@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
+import { cn } from "@/lib/utils";
 import {
   Facebook,
   Instagram,
@@ -13,7 +14,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export function Footer() {
+export function Footer({ compact = false }: { compact?: boolean }) {
   const currentYear = new Date().getFullYear();
 
   const links = {
@@ -42,9 +43,14 @@ export function Footer() {
   return (
     <footer className="bg-[#111111] text-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+        <div className={cn(
+          "grid grid-cols-1 gap-16",
+          compact
+            ? "sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2"
+            : "md:grid-cols-12"
+        )}>
           {/* Brand + Contact */}
-          <div className="md:col-span-4 space-y-8">
+          <div className={cn("space-y-8", compact ? "sm:col-span-2 lg:col-span-1 xl:col-span-2" : "md:col-span-4")}>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
                 <Link
@@ -103,7 +109,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-4 grid grid-cols-2 gap-8">
+          <div className={cn("grid grid-cols-2 gap-8", compact ? "col-span-1" : "md:col-span-4")}>
             <div className="space-y-8">
               <h4 className="text-[#757575] text-[10px] font-bold uppercase tracking-[0.2em]">
                 Produk & Layanan
@@ -143,7 +149,7 @@ export function Footer() {
           </div>
 
           {/* Leasing Partners */}
-          <div className="md:col-span-4 space-y-8">
+          <div className={cn("space-y-8", compact ? "col-span-1 lg:col-span-1 xl:col-span-2" : "md:col-span-4")}>
             <h4 className="text-[#757575] text-[10px] font-bold uppercase tracking-[0.2em]">
               Mitra Pembiayaan
             </h4>
@@ -189,7 +195,10 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-gray-800 py-6 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className={cn(
+          "max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-between items-center gap-6",
+          compact ? "xl:flex-row" : "md:flex-row"
+        )}>
           <div className="flex items-center gap-4">
             <p className="text-[10px] text-[#757575] font-bold uppercase tracking-[0.2em]">
               &copy; {currentYear} SRB MOTOR

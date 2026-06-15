@@ -112,7 +112,7 @@ export default function MotorDetailPage() {
               </p>
 
               {/* Highlights */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-16">
                 {motor.description.split("•").map((item, i) => (
                   <div
                     key={i}
@@ -238,7 +238,7 @@ export default function MotorDetailPage() {
               </div>
             </motion.div>
           </div>
-          <Footer />
+          <Footer compact={true} />
         </div>
       </div>
     </main>
