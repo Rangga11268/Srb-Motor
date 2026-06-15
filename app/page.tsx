@@ -50,13 +50,13 @@ export default function Home() {
   // Pick popular units to display
   const popularMotors = [
     motors.find((m) => m.id === "yamaha-nmax"),
-    motors.find((m) => m.id === "honda-pcx-160"),
+    motors.find((m) => m.id === "honda-pcx-160-cbs"),
     motors.find((m) => m.id === "yamaha-aerox-155"),
-    motors.find((m) => m.id === "honda-vario-160"),
+    motors.find((m) => m.id === "honda-vario-125-cbs-iss"),
     motors.find((m) => m.id === "yamaha-grand-filano"),
-    motors.find((m) => m.id === "honda-adv-160"),
+    motors.find((m) => m.id === "honda-genio-cbs-sp"),
     motors.find((m) => m.id === "yamaha-fazzio"),
-    motors.find((m) => m.id === "honda-beat"),
+    motors.find((m) => m.id === "honda-beat-smartkey"),
   ].filter(Boolean) as typeof motors;
 
   const handleSearchSubmit = () => {
