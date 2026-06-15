@@ -56,7 +56,7 @@ export default function Home() {
     motors.find((m) => m.id === "yamaha-grand-filano"),
     motors.find((m) => m.id === "honda-adv-160"),
     motors.find((m) => m.id === "yamaha-fazzio"),
-    motors.find((m) => m.id === "honda-beat-sporty"),
+    motors.find((m) => m.id === "honda-beat"),
   ].filter(Boolean) as typeof motors;
 
   const handleSearchSubmit = () => {

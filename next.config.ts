@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/uploads/products/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.hondacengkareng.com",
+        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
 };

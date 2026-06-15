@@ -12,6 +12,7 @@ export interface MotorSpec {
 
 export const motors: MotorSpec[] = [
   // YAMAHA COLLECTION
+  // YAMAHA COLLECTION
   {
     "id": "yamaha-tmax",
     "name": "Yamaha TMAX",
@@ -1033,122 +1034,296 @@ export const motors: MotorSpec[] = [
 },
 
   // HONDA COLLECTION
-// HONDA COLLECTION
   {
-    id: "honda-beat-sporty",
-    name: "Honda Beat Sporty CBS",
-    brand: "HONDA",
-    price: "Rp. 18.975.000,-",
-    image: "/assets/img/honda/beat.webp",
-    category: "CITY",
-    description: "New • 2025 • Matic • CBS",
-    specifications: [
-      { label: "Tipe Mesin", value: "4-Langkah, SOHC, eSP, Pendingin Udara" },
-      { label: "Kapasitas Mesin", value: "109.5cc" },
-      { label: "Sistem Bahan Bakar", value: "PGM-FI" },
-      { label: "Transmisi", value: "Otomatis, V-Matic" },
-      { label: "Daya Maksimum", value: "6.6 kW (9.0 PS) / 7,500 rpm" },
-      { label: "Torsi Maksimum", value: "9.3 Nm / 5,500 rpm" },
-      {
-        label: "Fitur Utama",
-        value: "CBS, Rangka eSAF, Lampu LED, Power Charger",
-      },
+    "id": "honda-beat",
+    "name": "Honda BeAT",
+    "brand": "HONDA",
+    "price": "Rp. 19.337.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Honda-Beat-Sporty-Deluxe-SmartKey-Matte-Brown-pp.jpg",
+    "category": "CITY",
+    "description": "109.5cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah SOHC"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "109.5cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "6.6 kW (9.0 PS)/7.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "9.2 N.m (0.95 kgf.m)/ 6.000 rpm"
+        }
     ],
-  },
+    "tag": "POPULAR"
+},
   {
-    id: "honda-beat-smartkey",
-    name: "Honda Beat SmartKey",
-    brand: "HONDA",
-    price: "Rp. 19.800.000,-",
-    image:
-      "/assets/img/honda/Honda-Beat-Sporty-Deluxe-SmartKey-Matte-Black.webp",
-    category: "CITY",
-    description: "110cc • SmartKey • CBS • Secure",
-    specifications: [
-      { label: "Tipe Mesin", value: "4-Langkah, SOHC, eSP, Pendingin Udara" },
-      { label: "Kapasitas Mesin", value: "109.5cc" },
-      { label: "Sistem Bahan Bakar", value: "PGM-FI" },
-      { label: "Transmisi", value: "Otomatis, V-Matic" },
-      { label: "Daya Maksimum", value: "6.6 kW (9.0 PS) / 7,500 rpm" },
-      { label: "Torsi Maksimum", value: "9.3 Nm / 5,500 rpm" },
-      {
-        label: "Fitur Utama",
-        value: "Smart Key, CBS, Rangka eSAF, Lampu LED, Alarm",
-      },
+    "id": "honda-scoopy",
+    "name": "Honda Scoopy",
+    "brand": "HONDA",
+    "price": "Rp. 23.754.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/Untitled-1.jpg.jpeg.jpg",
+    "category": "CITY",
+    "description": "109,5cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, SOHC dengan Pendingin Udara, eSP"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "109,5 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "Injeksi (PGM-FI)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "6,6 kW (9 PS / 7.500 rpm)"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "9,2 Nm (0,94 kgf.m) / 6.000 rpm"
+        }
     ],
-  },
+    "tag": "POPULAR"
+},
   {
-    id: "honda-pcx-160",
-    name: "Honda PCX 160 CBS",
-    brand: "HONDA",
-    price: "Rp. 33.500.000,-",
-    image: "/assets/img/honda/pcx 160.webp",
-    category: "PREMIUM",
-    tag: "PREMIUM",
-    description: "160cc • eSP+ • CBS • Elegant",
-    specifications: [
-      {
-        label: "Tipe Mesin",
-        value: "4-Langkah, 4-Katup, eSP+, Pendingin Cairan",
-      },
-      { label: "Kapasitas Mesin", value: "156.9cc" },
-      { label: "Sistem Bahan Bakar", value: "PGM-FI" },
-      { label: "Transmisi", value: "Otomatis, V-Matic" },
-      { label: "Daya Maksimum", value: "11.8 kW (16 PS) / 8,500 rpm" },
-      { label: "Torsi Maksimum", value: "14.7 Nm / 6,500 rpm" },
-      {
-        label: "Fitur Utama",
-        value: "CBS, Smart Key, Full LED, USB Charger, Digital Panel",
-      },
-    ],
-  },
+    "id": "honda-genio",
+    "name": "Honda Genio",
+    "brand": "HONDA",
+    "price": "Rp. 20.432.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/IMG_84422.jpg.jpeg",
+    "category": "CITY",
+    "description": "110cc \u2022 Otomatis \u2022 PGM \u2013 FI ( Programmed Fuel Injection )",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 \u2013 Langkah, SOHC, eSP"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "110 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM \u2013 FI ( Programmed Fuel Injection )"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Automatic, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "6,6 kW ( 9,0 PS ) / 7.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "9,3 Nm ( 0,95 kgf.m ) / 5.500 rpm"
+        }
+    ]
+},
   {
-    id: "honda-adv-160",
-    name: "Honda ADV 160 ABS",
-    brand: "HONDA",
-    price: "Rp. 39.450.000,-",
-    image: "/assets/img/honda/adv 160.webp",
-    category: "ADVENTURE",
-    description: "160cc • eSP+ • HSTC • Adventure",
-    specifications: [
-      {
-        label: "Tipe Mesin",
-        value: "4-Langkah, 4-Katup, eSP+, Pendingin Cairan",
-      },
-      { label: "Kapasitas Mesin", value: "156.9cc" },
-      { label: "Sistem Bahan Bakar", value: "PGM-FI" },
-      { label: "Transmisi", value: "Otomatis, V-Matic" },
-      { label: "Daya Maksimum", value: "11.8 kW (16 PS) / 8,500 rpm" },
-      { label: "Torsi Maksimum", value: "14.7 Nm / 6,500 rpm" },
-      {
-        label: "Fitur Utama",
-        value: "HSTC, ABS, Smart Key, Full LED, Adjustable Windscreen",
-      },
-    ],
-  },
+    "id": "honda-stylo-160",
+    "name": "Honda Stylo 160",
+    "brand": "HONDA",
+    "price": "Rp. 29.732.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2024/02/Stylo-160-ABS-Special-Burgundy.jpg",
+    "category": "PREMIUM",
+    "description": "156,9cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, 4-Valve, eSP+"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "156,9cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11,3 kW (15,4 PS) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13,8 Nm (1,5 kgf,m) / 7.000 rpm"
+        }
+    ]
+},
   {
-    id: "honda-vario-160",
-    name: "Vario 160 CBS",
-    brand: "HONDA",
-    price: "Rp. 28.225.000,-",
-    image: "/assets/img/honda/HondaVariong.webp",
-    category: "SPORT",
-    tag: "NEW DROP",
-    description: "160cc • eSP+ • CBS • Sporty",
-    specifications: [
-      {
-        label: "Tipe Mesin",
-        value: "4-Langkah, 4 Katup, eSP+, Pendingin Cairan",
-      },
-      { label: "Kapasitas Mesin", value: "156.9cc" },
-      { label: "Sistem Bahan Bakar", value: "PGM-FI" },
-      { label: "Transmisi", value: "Otomatis, V-Matic" },
-      { label: "Daya Maksimum", value: "11.3 kW (15.4 PS) / 8,500 rpm" },
-      { label: "Torsi Maksimum", value: "13.8 Nm / 7,000 rpm" },
-      {
-        label: "Fitur Utama",
-        value: "CBS, Full LED, USB Charger, Digital Panel, Wavy Disc Brake",
-      },
+    "id": "honda-vario-125",
+    "name": "Honda Vario 125 eSP",
+    "brand": "HONDA",
+    "price": "Rp. 25.332.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2018/11/Street-Black-Coral.jpg.jpeg",
+    "category": "SPORT",
+    "description": "125cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, SOHC, eSP, Pendinginan Cairan"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "125 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "8,2 kW (11,1 PS) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "10,8 Nm (1,1 kgf.m) / 5.000 rpm"
+        }
+    ]
+},
+  {
+    "id": "honda-pcx-160",
+    "name": "Honda PCX",
+    "brand": "HONDA",
+    "price": "Rp. 34.989.000.-",
+    "image": "https://www.hondacengkareng.com/wp-content/uploads/2026/04/PCX-ABS-Phenomenal-Green-1.jpg",
+    "category": "PREMIUM",
+    "description": "160cc \u2022 Otomatis \u2022 PGM-FI",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4 Langkah, SOHC, PGM-FI, berpendingin cairan, eSP"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "160 cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI (Programmed Fuel Injection)"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11,8 kW (16 PS) / 8.500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "14,7 Nm (1,5 kgf.m) / 6.500 rpm"
+        }
     ],
-  }
+    "tag": "POPULAR"
+},
+  {
+    "id": "honda-adv-160",
+    "name": "Honda ADV 160 ABS",
+    "brand": "HONDA",
+    "price": "Rp. 39.450.000,-",
+    "image": "/assets/img/honda/adv 160.webp",
+    "category": "ADVENTURE",
+    "description": "160cc \u2022 eSP+ \u2022 HSTC \u2022 Adventure",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, 4-Katup, eSP+, Pendingin Cairan"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "156.9cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11.8 kW (16 PS) / 8,500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "14.7 Nm / 6,500 rpm"
+        },
+        {
+            "label": "Fitur Utama",
+            "value": "HSTC, ABS, Smart Key, Full LED, Adjustable Windscreen"
+        }
+    ]
+},
+  {
+    "id": "honda-vario-160",
+    "name": "Vario 160 CBS",
+    "brand": "HONDA",
+    "price": "Rp. 28.225.000,-",
+    "image": "/assets/img/honda/HondaVariong.webp",
+    "category": "SPORT",
+    "tag": "NEW DROP",
+    "description": "160cc \u2022 eSP+ \u2022 CBS \u2022 Sporty",
+    "specifications": [
+        {
+            "label": "Tipe Mesin",
+            "value": "4-Langkah, 4 Katup, eSP+, Pendingin Cairan"
+        },
+        {
+            "label": "Kapasitas Mesin",
+            "value": "156.9cc"
+        },
+        {
+            "label": "Sistem Bahan Bakar",
+            "value": "PGM-FI"
+        },
+        {
+            "label": "Transmisi",
+            "value": "Otomatis, V-Matic"
+        },
+        {
+            "label": "Daya Maksimum",
+            "value": "11.3 kW (15.4 PS) / 8,500 rpm"
+        },
+        {
+            "label": "Torsi Maksimum",
+            "value": "13.8 Nm / 7,000 rpm"
+        },
+        {
+            "label": "Fitur Utama",
+            "value": "CBS, Full LED, USB Charger, Digital Panel, Wavy Disc Brake"
+        }
+    ]
+}
 ];
