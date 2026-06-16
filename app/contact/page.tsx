@@ -881,7 +881,7 @@ Tlp:`}
                         ALAMAT SHOWROOM
                       </p>
                       <p className="font-light text-gray-300 uppercase break-words">
-                        Jl. Raya Utama No. 12, Bekasi Selatan
+                        Jl. Lori Sakti No.22, RT.001/RW.001, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17125
                       </p>
                     </div>
                   </div>
@@ -899,20 +899,23 @@ Tlp:`}
                   </div>
                 </div>
               </div>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative h-[400px] border border-gray-800 bg-gray-900 overflow-hidden flex items-center justify-center p-8 group cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-[#1c69d4] mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700"></div>
-                <div className="text-center relative z-10">
-                  <MapPin className="w-12 h-12 text-[#1c69d4] mx-auto mb-4" />
-                  <span className="inline-block border border-[#1c69d4] text-[#1c69d4] px-8 py-4 font-black uppercase tracking-widest text-[10px] group-hover:bg-[#1c69d4] group-hover:text-white transition-all">
-                    BUKA GOOGLE MAPS
-                  </span>
+              <div className="relative h-[400px] border border-gray-800 bg-zinc-950 overflow-hidden group">
+                <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#1c69d4] z-20 pointer-events-none group-hover:scale-110 transition-transform" />
+                <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#1c69d4] z-20 pointer-events-none group-hover:scale-110 transition-transform" />
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#1c69d4] z-20 pointer-events-none group-hover:scale-110 transition-transform" />
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#1c69d4] z-20 pointer-events-none group-hover:scale-110 transition-transform" />
+                <div className="w-full h-full relative overflow-hidden grayscale contrast-[1.15] invert opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-700">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4623780824445!2d107.0002294108153!3d-6.202572560735418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6989612b68d3c1%3A0xa345594d8a856780!2sSRB%20Motor%20Bekasi!5e0!3m2!1sid!2sid!4v1781607811201!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </section>

@@ -33,7 +33,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
   const settings = {
     site_description:
       "Dealer motor terpercaya dengan proses kredit mudah, transparan, dan bergaransi resmi.",
-    contact_address: "Jl. Raya Utama No. 123, Bekasi Timur",
+    contact_address: "Jl. Lori Sakti No.22, RT.001/RW.001, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17125",
     contact_phone: "+62 897 8638 849",
     contact_email: "halo@srbmotor.id",
     social_instagram: "https://instagram.com",

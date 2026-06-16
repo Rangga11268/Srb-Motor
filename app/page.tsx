@@ -24,6 +24,7 @@ import {
   Gauge,
   Users,
   Award,
+  Navigation,
 } from "lucide-react";
 
 export default function Home() {
@@ -548,6 +549,104 @@ export default function Home() {
 
         {/* Visual Accent */}
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+      </section>
+
+      {/* SHOWROOM LOCATION SECTION (Sleek dark theme styled map) */}
+      <section className="py-24 bg-black text-white border-t border-zinc-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(28,105,212,0.05)_0%,_transparent_60%)] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Address Details */}
+            <div className="lg:col-span-5 space-y-8">
+              <div>
+                <span className="text-[#1c69d4] uppercase tracking-[0.2em] text-xs font-bold font-sans block mb-3">
+                  // Lokasi Showroom Kami
+                </span>
+                <h2 className="text-4xl md:text-5xl font-light uppercase tracking-tight text-white leading-tight">
+                  KUNJUNGI <span className="font-bold">SRB MOTOR</span>
+                </h2>
+              </div>
+              <p className="text-zinc-400 font-light leading-relaxed">
+                Silakan datang langsung ke showroom utama kami untuk melihat berbagai unit Honda & Yamaha secara langsung, berkonsultasi mengenai promo kredit, atau melakukan transaksi pembelian secara langsung.
+              </p>
+              
+              <div className="space-y-6 pt-4 border-t border-zinc-900">
+                <div className="flex gap-4">
+                  <MapPin className="w-6 h-6 text-[#1c69d4] shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#1c69d4] mb-1">
+                      Alamat Lengkap
+                    </h4>
+                    <p className="text-sm text-zinc-300 font-light leading-relaxed uppercase">
+                      Jl. Lori Sakti No.22, RT.001/RW.001, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17125
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4 pt-4 border-t border-zinc-850">
+                  <Clock className="w-6 h-6 text-[#1c69d4] shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#1c69d4] mb-1">
+                      Jam Kerja Showroom
+                    </h4>
+                    <p className="text-sm text-zinc-300 font-light leading-relaxed">
+                      SENIN - SABTU : 08:00 - 17:00 WIB <br />
+                      MINGGU : TUTUP (Pemesanan online tetap dilayani via WA)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 pt-4 border-t border-zinc-850">
+                  <Navigation className="w-6 h-6 text-[#1c69d4] shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#1c69d4] mb-1">
+                      Koordinat GPS
+                    </h4>
+                    <p className="text-sm text-zinc-300 font-mono">
+                      -6.202450, 107.002853
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <a
+                  href="https://maps.app.goo.gl/XY85E7th3cARM2719"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-[#1c69d4] hover:bg-[#0653b6] text-white font-bold uppercase text-[10px] tracking-widest transition-colors rounded-none cursor-pointer"
+                >
+                  <Navigation size={14} />
+                  Petunjuk Arah (Google Maps)
+                </a>
+              </div>
+            </div>
+
+            {/* Custom Styled Map Frame */}
+            <div className="lg:col-span-7">
+              <div className="relative w-full h-[450px] border border-zinc-800 shadow-[0_0_60px_rgba(28,105,212,0.1)] bg-zinc-950 p-2 md:p-3 overflow-hidden group">
+                {/* Decorative border overlays */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
+                
+                {/* Embedded Styled Map Iframe */}
+                <div className="w-full h-full relative overflow-hidden grayscale contrast-[1.1] invert opacity-80 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-700">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4623780824445!2d107.0002294108153!3d-6.202572560735418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6989612b68d3c1%3A0xa345594d8a856780!2sSRB%20Motor%20Bekasi!5e0!3m2!1sid!2sid!4v1781607811201!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* TRUST INDICATORS SECTION (Strict black on white) */}
