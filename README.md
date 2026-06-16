@@ -7,7 +7,7 @@
   [![Next.js](https://img.shields.io/badge/Next.js-15.x-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind--CSS-3.4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://srb-motor.vercel.app/)
+  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://srb-motors.vercel.app/)
 </div>
 
 ---

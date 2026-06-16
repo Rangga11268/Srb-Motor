@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { motors } from "@/lib/motor-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://srb-motor.vercel.app";
+  const baseUrl = "https://srb-motors.vercel.app";
 
   // Static routes
   const routes = [

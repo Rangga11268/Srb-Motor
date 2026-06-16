@@ -27,7 +27,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://srb-motor.vercel.app"),
+  metadataBase: new URL("https://srb-motors.vercel.app"),
   title: "SRB Motors Bekasi | Dealer Motor Baru Honda & Yamaha Premium",
   description:
     "Dealer motor baru Honda & Yamaha premium terbaik di Bekasi. Unit 100% resmi, proses transparan, dan pelayanan eksklusif. Temukan motor impian Anda di SRB Motors.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "SRB Motors Bekasi | Dealer Motor Baru Honda & Yamaha Premium",
     description:
       "Dealer motor baru Honda & Yamaha premium terbaik di Bekasi. Unit 100% resmi, proses transparan, dan pelayanan eksklusif.",
-    url: "https://srb-motor.vercel.app",
+    url: "https://srb-motors.vercel.app",
     siteName: "SRB Motors",
     images: [
       {
