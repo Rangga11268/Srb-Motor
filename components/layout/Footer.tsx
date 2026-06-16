@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import {
   Facebook,
   Instagram,
@@ -91,7 +92,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
                 </span>
               </div>
               <div className="flex items-center gap-4">
-                <Phone className="w-4 h-4 text-[#1c69d4] shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] shrink-0" />
                 <a
                   href={`https://wa.me/${settings.contact_phone.replace(/\D/g, "")}`}
                   target="_blank"

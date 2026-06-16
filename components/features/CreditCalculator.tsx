@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Calculator, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 interface CreditCalculatorProps {
   price: string;
@@ -113,9 +114,9 @@ export function CreditCalculator({ price, motorName }: CreditCalculatorProps) {
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#1c69d4] hover:bg-[#0653b6] text-white px-8 py-4 rounded-none font-bold font-sans text-xs uppercase flex items-center justify-center gap-2 transition-colors w-full md:w-auto lg:w-full xl:w-auto tracking-widest"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-8 py-4 rounded-none font-bold font-sans text-xs uppercase flex items-center justify-center gap-2 transition-all w-full md:w-auto lg:w-full xl:w-auto tracking-widest shadow-[0_4px_14px_0_rgba(37,211,102,0.25)] hover:shadow-[0_6px_20px_0_rgba(37,211,102,0.35)]"
             >
-              <Send size={14} />
+              <WhatsAppIcon className="w-4 h-4" />
               Ajukan Sekarang
             </a>
           </div>

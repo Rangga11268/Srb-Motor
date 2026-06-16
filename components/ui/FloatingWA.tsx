@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { motion } from "framer-motion";
 
 export function FloatingWA() {
@@ -25,10 +25,10 @@ export function FloatingWA() {
         aria-label="Chat on WhatsApp"
       >
         {/* Pulse Animation Effect */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 group-hover:animate-ping"></span>
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-35 animate-pulse group-hover:animate-ping"></span>
 
         {/* WhatsApp Icon */}
-        <MessageCircle className="w-8 h-8 relative z-10" />
+        <WhatsAppIcon className="w-8 h-8 relative z-10" />
 
         {/* Tooltip */}
         <div className="absolute right-full mr-4 px-4 py-2 bg-black text-white text-xs font-bold uppercase tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden md:block">

@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import {
   Search,
   MessageSquare,
@@ -134,16 +135,16 @@ Tlp:`;
       link: "tel:+628978638849",
     },
     {
-      icon: <MessageSquare size={24} />,
+      icon: <WhatsAppIcon className="w-6 h-6" />,
       title: "CHAT WHATSAPP",
       desc: "Jalur komunikasi utama tim representatif kami.",
       value: "Mulai Percakapan (CS)",
-      bg: "bg-black",
+      bg: "bg-[#25D366]",
       text: "text-white",
-      descClass: "text-gray-400",
-      border: "border-black",
-      hoverText: "group-hover:text-blue-400",
-      hoverBg: "hover:bg-[#1c69d4]",
+      descClass: "text-green-50",
+      border: "border-[#25D366]",
+      hoverText: "group-hover:text-green-100",
+      hoverBg: "hover:bg-[#20ba5a]",
       link: "https://wa.me/628978638849",
     },
     {

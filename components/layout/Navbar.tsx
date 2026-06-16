@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import {
   Menu,
   X,
@@ -199,9 +200,9 @@ export function Navbar() {
               href="https://wa.me/628978638849"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex px-6 py-2.5 bg-[#1c69d4] hover:bg-[#0653b6] text-white font-bold uppercase text-[10px] tracking-widest transition-colors rounded-none items-center gap-2"
+              className="hidden sm:inline-flex px-6 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold uppercase text-[10px] tracking-widest transition-colors rounded-none items-center gap-2 shadow-[0_4px_14px_0_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_0_rgba(37,211,102,0.4)]"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-3.5 h-3.5" />
               WhatsApp
             </a>
 
@@ -343,8 +344,9 @@ export function Navbar() {
                   href="https://wa.me/628978638849"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-4 text-center border border-white text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors rounded-none"
+                  className="py-4 text-center bg-[#25D366] hover:bg-[#20ba5a] text-white text-[10px] font-bold uppercase tracking-widest transition-colors rounded-none flex items-center justify-center gap-2"
                 >
+                  <WhatsAppIcon className="w-4 h-4" />
                   WhatsApp
                 </a>
               </div>

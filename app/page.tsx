@@ -9,6 +9,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MotorCard } from "@/components/ui/MotorCard";
 import { Logo } from "@/components/ui/Logo";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { motors } from "@/lib/motor-data";
 import {
   ChevronRight,
@@ -117,9 +118,10 @@ export default function Home() {
                 href="https://wa.me/628978638849"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-10 py-4 bg-transparent text-white border border-white font-bold uppercase text-xs tracking-widest transition-colors hover:bg-white hover:text-[#262626] rounded-none shadow-none flex items-center justify-center gap-3"
+                className="w-full sm:w-auto px-10 py-4 bg-transparent text-white border border-white font-bold uppercase text-xs tracking-widest transition-all hover:bg-[#25D366] hover:border-[#25D366] hover:text-white rounded-none shadow-none flex items-center justify-center gap-3 group"
               >
-                WhatsApp
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:text-white transition-colors" />
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -710,8 +712,9 @@ export default function Home() {
                 href="https://wa.me/628978638849"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-[#1c69d4] border border-[#1c69d4] text-white hover:bg-transparent hover:text-[#1c69d4] transition-colors uppercase text-xs tracking-widest font-bold flex items-center justify-center gap-3"
+                className="px-8 py-4 bg-[#25D366] border border-[#25D366] text-white hover:bg-transparent hover:text-[#25D366] transition-all uppercase text-xs tracking-widest font-bold flex items-center justify-center gap-3 shadow-[0_4px_14px_0_rgba(37,211,102,0.3)]"
               >
+                <WhatsAppIcon className="w-4 h-4" />
                 Hubungi WhatsApp
               </a>
             </div>

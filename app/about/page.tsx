@@ -22,6 +22,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export default function AboutPage() {
   const [filterService, setFilterService] = useState(false);
@@ -341,9 +342,9 @@ export default function AboutPage() {
                             href={`https://wa.me/${branch.whatsapp}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 py-3 bg-[#25D366]/10 text-[#25D366] text-[9px] font-black uppercase tracking-widest hover:bg-[#25D366] hover:text-white transition-all"
+                            className="flex items-center justify-center gap-2 py-3 bg-[#25D366]/10 text-[#25D366] text-[9px] font-black uppercase tracking-widest hover:bg-[#25D366] hover:text-white transition-all border border-transparent hover:border-[#25D366]"
                           >
-                            <MessageSquare size={10} /> CHAT
+                            <WhatsAppIcon className="w-3.5 h-3.5" /> CHAT
                           </a>
                         )}
                       </div>

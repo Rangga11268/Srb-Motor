@@ -10,6 +10,7 @@ import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { CreditCalculator } from "@/components/features/CreditCalculator";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export default function MotorDetailPage() {
   const { id } = useParams();
@@ -244,10 +245,11 @@ export default function MotorDetailPage() {
                     `Saya tertarik dengan unit ${motor.name}${selectedVariant ? ` - Tipe: ${selectedVariant}` : ''}${selectedColor ? ` - Warna: ${selectedColor}` : ''}`
                   )}`}
                   target="_blank"
-                  className="flex-1 bg-[#1c69d4] hover:bg-[#0653b6] text-white py-5 rounded-none font-sans font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-3 group shadow-2xl cursor-pointer"
+                  className="flex-1 bg-[#25D366] hover:bg-[#20ba5a] text-white py-5 rounded-none font-sans font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-3 group shadow-[0_10px_25px_-5px_rgba(37,211,102,0.4)] cursor-pointer"
                 >
-                  Pesan Unit Ini (WhatsApp)
-                  <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" size={16} />
+                  <WhatsAppIcon className="w-5 h-5 shrink-0 transition-transform group-hover:scale-110" />
+                  <span>Pesan Unit Ini (WhatsApp)</span>
+                  <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform shrink-0" size={16} />
                 </Link>
               </div>
             </motion.div>
