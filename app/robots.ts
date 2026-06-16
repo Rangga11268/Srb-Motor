@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://srb-motors.vercel.app/sitemap.xml",
+    sitemap: "https://srb-motor.vercel.app/sitemap.xml",
   };
 }
