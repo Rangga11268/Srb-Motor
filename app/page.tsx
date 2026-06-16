@@ -52,7 +52,7 @@ export default function Home() {
   const popularMotors = [
     motors.find((m) => m.id === "yamaha-nmax"),
     motors.find((m) => m.id === "honda-pcx-160-cbs"),
-    motors.find((m) => m.id === "yamaha-aerox-155"),
+    motors.find((m) => m.id === "yamaha-aerox-standard"),
     motors.find((m) => m.id === "honda-vario-125-cbs-iss"),
     motors.find((m) => m.id === "yamaha-grand-filano"),
     motors.find((m) => m.id === "honda-genio-cbs-sp"),

@@ -172,7 +172,7 @@ export const motors: MotorSpec[] = [
     "price": "Rp. 30.200.000,-",
     "image": "https://www.yamaha-motor.co.id/uploads/products/featured_image/2026020516255618687C33585.png",
     "category": "MAXI",
-    "description": "155cc • V-Belt Otomatis / YECVT (TURBO & TURBO Ultimate) • Fuel FI",
+    "description": "155cc • YECVT (TURBO & TURBO Ultimate) • Fuel Injection",
     "specifications": [
         {
             "label": "Tipe Mesin",
@@ -188,7 +188,7 @@ export const motors: MotorSpec[] = [
         },
         {
             "label": "Transmisi",
-            "value": "V-Belt Otomatis / YECVT (TURBO & TURBO Ultimate)"
+            "value": "YECVT (TURBO & TURBO Ultimate)"
         },
         {
             "label": "Daya Maksimum",
@@ -200,23 +200,18 @@ export const motors: MotorSpec[] = [
         },
         {
             "label": "Tipe / Varian",
-            "value": "\"TURBO\" 70th Livery, \"TURBO\" Ultimate, \"TURBO\", CyberCity ABS, Cybercity, Standard"
+            "value": "\"TURBO\" 70th Livery, \"TURBO\" Ultimate, \"TURBO\""
         },
         {
             "label": "Pilihan Warna",
-            "value": "70th Livery, Elixir Dark Silver, Matte Purple Black, White Pearl Blue, Matte Blue Red, Black, Red, Blue"
+            "value": "70th Livery, Elixir Dark Silver, Matte Purple Black"
         }
     ],
     "tag": "POPULAR",
     "colorImages": {
         "70th Livery": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026012212211612160Y45922.png",
         "Elixir Dark Silver": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515050852238N68798.png",
-        "Matte Purple Black": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202602051705357793P60642.png",
-        "White Pearl Blue": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020516022374054T48660.png",
-        "Matte Blue Red": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020516063336640M90207.png",
-        "Black": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515082054412B82352.png",
-        "Red": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515061329919C46613.png",
-        "Blue": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515060448745C51316.png"
+        "Matte Purple Black": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202602051705357793P60642.png"
     }
 },
   {
@@ -320,55 +315,53 @@ export const motors: MotorSpec[] = [
     }
 },
   {
-    "id": "yamaha-aerox-155",
-    "name": "Yamaha Aerox 155",
+    "id": "yamaha-aerox-standard",
+    "name": "Yamaha Aerox Standard",
     "brand": "YAMAHA",
-    "price": "Rp. 28.880.000,-",
-    "image": "https://www.yamaha-motor.co.id/uploads/products/featured_image/2023102519190474792T91675.png",
+    "price": "Rp. 28.850.000,-",
+    "image": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515082054412B82352.png",
     "category": "MAXI",
-    "description": "Single Cylinder • V-belt Automatic • FI (Fuel FI)",
+    "description": "155cc • Otomatis • Fuel Injection",
     "specifications": [
         {
             "label": "Tipe Mesin",
-            "value": "Liquid cooled 4-stroke, SOHC"
+            "value": "4 Langkah, berpendingin cairan, SOHC 4 katup, VVA"
         },
         {
             "label": "Kapasitas Mesin",
-            "value": "Single Cylinder"
+            "value": "155 cc"
         },
         {
             "label": "Sistem Bahan Bakar",
-            "value": "FI (Fuel Injection)"
+            "value": "Fuel Injection"
         },
         {
             "label": "Transmisi",
-            "value": "V-belt Automatic"
+            "value": "Otomatis, V-Belt"
         },
         {
             "label": "Daya Maksimum",
-            "value": "11.3 kW / 8000 rpm"
+            "value": "11,3 kW (15,4PS) / 8000 rpm"
         },
         {
             "label": "Torsi Maksimum",
-            "value": "13.9Nm / 6500rpm"
+            "value": "14,2 Nm / 6500 rpm"
         },
         {
             "label": "Tipe / Varian",
-            "value": "Connected/ABS, CyberCity, Standard"
+            "value": "CyberCity ABS, Cybercity, Standard"
         },
         {
             "label": "Pilihan Warna",
-            "value": "Prestige Silver, Maxi Signature, Cyber City Livery, Dull Blue Orange, Silver Cyan, Metallic Red, Black Grey"
+            "value": "White Pearl Blue, Matte Blue Red, Black, Red, Blue"
         }
     ],
     "colorImages": {
-        "Prestige Silver": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2023041415280563814D66821.png",
-        "Maxi Signature": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2023041415280299726S94464.png",
-        "Cyber City Livery": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2023041415280991628A58578.png",
-        "Dull Blue Orange": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2023102416264470586E6961.png",
-        "Silver Cyan": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2023102416255597157E83827.png",
-        "Metallic Red": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/202310241625591732N30808.png",
-        "Black Grey": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2023102416263316247N20315.png"
+        "White Pearl Blue": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020516022374054T48660.png",
+        "Matte Blue Red": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020516063336640M90207.png",
+        "Black": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515082054412B82352.png",
+        "Red": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515061329919C46613.png",
+        "Blue": "https://www.yamaha-motor.co.id/uploads/products/new_product_model_image/2026020515060448745C51316.png"
     }
 },
   {
