@@ -30,6 +30,7 @@ import {
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [mapActive, setMapActive] = useState(false);
   const router = useRouter();
 
   const brandLogos = {
@@ -626,20 +627,36 @@ export default function Home() {
 
             {/* Custom Styled Map Frame */}
             <div className="lg:col-span-7">
-              <div className="relative w-full h-[450px] border border-zinc-800 shadow-[0_0_60px_rgba(28,105,212,0.1)] bg-zinc-950 p-2 md:p-3 overflow-hidden group">
+              <div 
+                className="relative w-full h-[450px] border border-zinc-800 shadow-[0_0_60px_rgba(28,105,212,0.1)] bg-zinc-950 p-2 md:p-3 overflow-hidden group"
+                onMouseLeave={() => setMapActive(false)}
+              >
                 {/* Decorative border overlays */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
                 <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-[#1c69d4] z-20 pointer-events-none group-hover:scale-[1.1] transition-transform" />
                 
+                {/* Interactive Click-to-Activate Map Overlay */}
+                {!mapActive && (
+                  <div 
+                    onClick={() => setMapActive(true)}
+                    className="absolute inset-0 bg-black/45 hover:bg-black/25 transition-colors z-10 flex flex-col items-center justify-center cursor-pointer text-white p-4 text-center"
+                  >
+                    <div className="px-6 py-3 bg-zinc-950 border border-zinc-800 text-[9px] font-black uppercase tracking-[0.2em] flex items-center gap-2.5 shadow-2xl backdrop-blur-sm select-none">
+                      <Navigation className="w-3.5 h-3.5 text-[#1c69d4] animate-pulse" />
+                      Klik untuk interaksi peta
+                    </div>
+                  </div>
+                )}
+
                 {/* Embedded Styled Map Iframe */}
                 <div className="w-full h-full relative overflow-hidden grayscale contrast-[1.1] invert opacity-80 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-700">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4623780824445!2d107.0002294108153!3d-6.202572560735418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6989612b68d3c1%3A0xa345594d8a856780!2sSRB%20Motor%20Bekasi!5e0!3m2!1sid!2sid!4v1781607811201!5m2!1sid!2sid"
                     width="100%"
                     height="100%"
-                    style={{ border: 0 }}
+                    style={{ border: 0, pointerEvents: mapActive ? "auto" : "none" }}
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
