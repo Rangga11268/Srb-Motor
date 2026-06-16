@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import {
@@ -171,10 +172,13 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-[#1c69d4] blur-3xl opacity-20 transform -rotate-12 translate-x-10 pointer-events-none"></div>
                 <div className="absolute right-0 top-0 w-full h-full flex items-center justify-center z-10">
                   <div className="p-12 border border-gray-800 bg-black/40 backdrop-blur-sm grayscale hover:grayscale-0 transition-all duration-700">
-                    <img
+                    <Image
                       src="/assets/icon/logo-trans.webp"
                       alt="SRB Motor Logo"
+                      width={128}
+                      height={128}
                       className="h-32 w-auto object-contain opacity-80"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -377,10 +381,13 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="bg-black aspect-video relative overflow-hidden group">
-              <img
+              <Image
                 src="/assets/img/about-us.webp"
-                className="w-full h-full object-cover opacity-60 grayscale group-hover:scale-110 transition-transform duration-700"
                 alt="About SRB"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="w-full h-full object-cover opacity-60 grayscale group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="p-8 border border-white/20 backdrop-blur-md">

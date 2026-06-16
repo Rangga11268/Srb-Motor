@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
 import {
@@ -149,11 +150,14 @@ export function Navbar() {
                               }}
                               className="flex items-center gap-6 p-5 border-b border-gray-100 hover:bg-[#f9f9f9] transition-colors group/item"
                             >
-                              <div className="w-20 h-16 flex items-center justify-center shrink-0 bg-gray-50">
-                                <img
+                              <div className="w-20 h-16 flex items-center justify-center shrink-0 bg-gray-50 relative">
+                                <Image
                                   src={motor.image}
                                   alt={motor.name}
-                                  className="h-full object-contain"
+                                  fill
+                                  sizes="80px"
+                                  className="object-contain"
+                                  loading="lazy"
                                 />
                               </div>
                               <div className="flex-1 min-w-0 pr-4">
@@ -282,11 +286,14 @@ export function Navbar() {
                             }}
                             className="flex items-center gap-4 p-4 border-b border-gray-800 hover:bg-[#1c69d4] transition-colors group/item"
                           >
-                            <div className="w-14 h-10 flex items-center justify-center shrink-0 bg-[#333333]">
-                              <img
+                            <div className="w-14 h-10 flex items-center justify-center shrink-0 bg-[#333333] relative">
+                              <Image
                                 src={motor.image}
                                 alt={motor.name}
-                                className="h-full object-contain"
+                                fill
+                                sizes="56px"
+                                className="object-contain"
+                                loading="lazy"
                               />
                             </div>
                             <div className="flex-1 min-w-0 pr-2">

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,10 +31,13 @@ export function Preloader() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-center"
           >
-            <img
+            <Image
               src="/assets/icon/logo trans.webp"
               alt="SRB Logo"
+              width={128}
+              height={128}
               className="w-24 md:w-32 h-auto object-contain mb-6 opacity-90"
+              priority
             />
             <h1 className="font-display font-medium text-xl md:text-2xl tracking-[0.2em] text-white uppercase">
               SRB Motors

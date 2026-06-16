@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
@@ -74,10 +75,13 @@ export default function Home() {
       <section className="relative w-full pt-20 min-h-[90vh] bg-[#111111] overflow-hidden flex flex-col justify-center">
         {/* Full Bleed Image (Cinematic lighting) */}
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-          <img
+          <Image
             src="/assets/img/banner.webp"
             alt="SRB Motor Showcase"
-            className="w-full h-full object-cover opacity-60 scale-105"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-60 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-[#111111]/80 to-transparent"></div>
         </div>
@@ -229,10 +233,13 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-[#f9f9f9] transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-in-out z-0"></div>
                 <div className="relative z-10 lg:w-64 lg:h-48 w-40 h-32 mb-8 flex items-center justify-center">
-                  <img
+                  <Image
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-full w-full object-contain transition-all duration-300 drop-shadow-2xl"
+                    fill
+                    sizes="(max-width: 768px) 160px, 256px"
+                    className="object-contain transition-all duration-300 drop-shadow-2xl"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="relative z-10 text-2xl font-light text-[#262626] uppercase tracking-widest">
@@ -359,12 +366,15 @@ export default function Home() {
               ].map((partner) => (
                 <div
                   key={partner.name}
-                  className="w-full h-12 md:h-16 flex items-center justify-center p-2 rounded-xl hover:bg-gray-50 transition-all duration-300 group"
+                  className="w-full h-12 md:h-16 flex items-center justify-center p-2 rounded-xl hover:bg-gray-50 transition-all duration-300 group relative"
                 >
-                  <img
+                  <Image
                     src={partner.src}
                     alt={partner.name}
-                    className="max-h-full max-w-[80%] md:max-w-full object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    sizes="(max-width: 768px) 80px, 120px"
+                    className="object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -498,10 +508,13 @@ export default function Home() {
               className="relative w-full max-w-5xl aspect-[16/10] overflow-hidden border border-zinc-800 bg-zinc-950/50 p-2 md:p-4 shadow-[0_0_80px_rgba(28,105,212,0.15)] group/poster"
             >
               <div className="relative w-full h-full overflow-hidden">
-                <img
+                <Image
                   src="/assets/promotion/promotionPoster.webp"
                   alt="SRB Motor Digital Showroom Mockup"
-                  className="w-full h-full object-cover opacity-85 group-hover/poster:opacity-100 group-hover/poster:scale-[1.02] transition-all duration-700 ease-out"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  className="object-cover opacity-85 group-hover/poster:opacity-100 group-hover/poster:scale-[1.02] transition-all duration-700 ease-out"
+                  loading="lazy"
                 />
               </div>
             </motion.div>

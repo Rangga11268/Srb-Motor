@@ -15,12 +15,18 @@ function GalleryContent() {
   const [filter, setFilter] = useState("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [priceFilter, setPriceFilter] = useState("ALL");
+  const [visibleCount, setVisibleCount] = useState(12);
 
   // Sync state with URL search param
   useEffect(() => {
     const urlQuery = searchParams.get("search") || "";
     setSearchQuery(urlQuery);
   }, [searchParams]);
+
+  // Reset pagination when search query or filters change
+  useEffect(() => {
+    setVisibleCount(12);
+  }, [filter, searchQuery, priceFilter]);
 
   const filteredImages = useMemo(() => {
     return motors.filter((motor) => {
@@ -130,13 +136,24 @@ function GalleryContent() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-8"
         >
           <AnimatePresence>
-            {filteredImages.map((img, i) => (
+            {filteredImages.slice(0, visibleCount).map((img) => (
               <div key={img.id} className="h-full">
                 <MotorCard motor={img} />
               </div>
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {filteredImages.length > visibleCount && (
+          <div className="flex justify-center mt-20">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 12)}
+              className="w-full md:w-auto px-12 py-5 border border-black hover:bg-black hover:text-white text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer"
+            >
+              Load More / Lihat Lebih Banyak
+            </button>
+          </div>
+        )}
       </section>
 
       <Footer />

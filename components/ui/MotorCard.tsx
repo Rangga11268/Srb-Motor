@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
 
 interface Motor {
   id: string;
@@ -18,6 +20,8 @@ interface MotorCardProps {
 }
 
 export function MotorCard({ motor }: MotorCardProps) {
+  const [imageLoading, setImageLoading] = useState(true);
+
   const formatPrice = (priceStr: string) => {
     const cleanPrice = parseInt(priceStr.replace(/[^0-9]/g, ""));
     return isNaN(cleanPrice) ? priceStr : cleanPrice.toLocaleString("id-ID");
@@ -44,13 +48,20 @@ export function MotorCard({ motor }: MotorCardProps) {
         </div>
 
         {/* Image Container */}
-        <div className="relative h-56 mb-8 mt-6 flex items-center justify-center">
-          <img
+        <div className="relative w-full h-56 mb-8 mt-6 overflow-hidden bg-gray-50 flex items-center justify-center">
+          {imageLoading && (
+            <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 z-10" />
+          )}
+          <Image
             src={motor.image}
             alt={motor.name}
-            className={`max-h-full object-contain filter transition-transform duration-700 ease-out group-hover:scale-105 ${
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={`object-contain filter transition-transform duration-700 ease-out group-hover:scale-105 ${
               !isAvailable ? "opacity-30 grayscale" : ""
-            }`}
+            } ${imageLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300"}`}
+            onLoad={() => setImageLoading(false)}
+            loading="lazy"
           />
         </div>
 

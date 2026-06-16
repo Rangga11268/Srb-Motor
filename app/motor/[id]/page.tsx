@@ -34,6 +34,7 @@ export default function MotorDetailPage() {
 
   const [selectedVariant, setSelectedVariant] = useState(variants[0] || "");
   const [selectedColor, setSelectedColor] = useState(colors[0] || "");
+  const [imageLoading, setImageLoading] = useState(true);
 
   const colorImage = (motor.colorImages && selectedColor && motor.colorImages[selectedColor]) || motor.image;
 
@@ -45,6 +46,11 @@ export default function MotorDetailPage() {
     if (colors.length > 0) setSelectedColor(colors[0]);
     else setSelectedColor("");
   }, [id]);
+
+  // Reset loading when color image changes
+  useEffect(() => {
+    setImageLoading(true);
+  }, [colorImage]);
 
   return (
     <main className="min-h-screen bg-white text-[#262626] font-sans">
@@ -76,13 +82,21 @@ export default function MotorDetailPage() {
             transition={{ duration: 0.3 }}
             className="relative w-full max-w-xl h-[50vh] lg:h-[60vh] z-10 pt-20 lg:pt-0"
           >
+            {imageLoading && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-10 h-10 border-4 border-gray-200 border-t-[#1c69d4] rounded-full animate-spin" />
+              </div>
+            )}
             <Image
               src={colorImage}
               alt={motor.name}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain drop-shadow-2xl"
+              className={`object-contain drop-shadow-2xl transition-opacity duration-300 ${
+                imageLoading ? "opacity-0" : "opacity-100"
+              }`}
               priority
+              onLoad={() => setImageLoading(false)}
             />
           </motion.div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface LogoProps {
   className?: string;
@@ -14,10 +15,12 @@ export function Logo({
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
       <div className="relative flex items-center justify-center">
-        <img
+        <Image
           src="/assets/icon/logo-trans.webp"
           alt="SRB Motor Logo"
-          className="w-10 h-10 object-contain drop-shadow-md"
+          width={40}
+          height={40}
+          className="object-contain drop-shadow-md"
         />
       </div>
 

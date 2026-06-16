@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Logo } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
 import {
@@ -60,11 +61,15 @@ export function Footer({ compact = false }: { compact?: boolean }) {
                   <Logo className="h-8" dark={true} />
                 </Link>
                 <div className="h-6 w-px bg-gray-700"></div>
-                <img
-                  src="/assets/img/logoSSM.webp"
-                  alt="SSM Logo"
-                  className="h-6 w-auto object-contain brightness-0 invert"
-                />
+                <div className="relative h-6 w-16">
+                  <Image
+                    src="/assets/img/logoSSM.webp"
+                    alt="SSM Logo"
+                    fill
+                    sizes="64px"
+                    className="object-contain brightness-0 invert"
+                  />
+                </div>
               </div>
               <div className="space-y-1">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1c69d4] leading-none">
@@ -166,23 +171,16 @@ export function Footer({ compact = false }: { compact?: boolean }) {
                   title={provider.name}
                   className="bg-white border border-gray-800 p-4 flex items-center justify-center h-20 transition-colors rounded-none hover:bg-[#f9f9f9]"
                 >
-                  <img
-                    src={provider.logo}
-                    alt={provider.name}
-                    className="max-h-8 max-w-full object-contain transition-all duration-300"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = "none";
-                      const sibling = target.nextSibling as HTMLSpanElement;
-                      if (sibling) sibling.style.display = "block";
-                    }}
-                  />
-                  <span
-                    className="text-[10px] font-bold text-[#262626] uppercase tracking-widest"
-                    style={{ display: "none" }}
-                  >
-                    {provider.name}
-                  </span>
+                  <div className="relative w-full h-8">
+                    <Image
+                      src={provider.logo}
+                      alt={provider.name}
+                      fill
+                      sizes="(max-width: 768px) 80px, 120px"
+                      className="object-contain transition-all duration-300"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -208,11 +206,15 @@ export function Footer({ compact = false }: { compact?: boolean }) {
               <span className="text-[10px] text-[#757575] uppercase tracking-widest">
                 A Part of
               </span>
-              <img
-                src="/assets/img/logoSSM.webp"
-                alt="SSM"
-                className="h-3 w-auto brightness-0 invert opacity-50"
-              />
+              <div className="relative h-3 w-8">
+                <Image
+                  src="/assets/img/logoSSM.webp"
+                  alt="SSM"
+                  fill
+                  sizes="32px"
+                  className="object-contain brightness-0 invert opacity-50"
+                />
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-6">
